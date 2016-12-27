@@ -23,7 +23,7 @@ for "_i" from 0 to 1000 do {
 	if (isNil "_dtar") exitWith {
 		d_last_target_idx = _i - 1;
 	};
-	
+
 	private _ar = [];
 	_ar resize 3;
 	private _name = _dtar getVariable "d_cityname";
@@ -92,8 +92,10 @@ private _msize = markerSize "d_base_marker";
 d_base_array = [[markerPos "d_base_marker" select 0, markerPos "d_base_marker" select 1, 1.9], _msize select 0, _msize select 1, markerDir "d_base_marker", true];
 
 // position of anti air at own base
+/*
 d_base_anti_air1 = markerPos "d_base_anti_air1";
 d_base_anti_air2 = markerPos "d_base_anti_air2";
+*/
 #else
 d_EFLAG_BASE allowDamage false;
 d_WFLAG_BASE allowDamage false;
@@ -260,9 +262,9 @@ if (isNil "d_winterw") then {
 
 if (isServer) then {
 	execVM "x_bikb\kbinit.sqf";
-	
+
 	call compile preprocessFileLineNumbers "x_server\x_initx.sqf";
-	
+
 	if (d_weather == 0) then {execFSM "fsms\fn_WeatherServer.fsm"};
 
 	if (d_MainTargets_num < 200) then {
@@ -313,11 +315,11 @@ if (isServer) then {
 		d_MainTargets = count d_maintargets_list;
 	};
 	publicVariable "d_MainTargets";
-	
+
 	// create random list of side missions
 	d_side_missions_random = d_sm_array call d_fnc_RandomArray;
 	__TRACE_1("","d_side_missions_random")
-	
+
 	d_current_mission_counter = 0;
 
 #ifndef __TT__
@@ -337,7 +339,7 @@ if (isServer) then {
 #else
 	[[d_chopper_1,3001,true],[d_chopper_2,3002,true],[d_chopper_3,3003,false,1500],[d_chopper_4,3004,false,1500],[d_chopper_5,3005,false,600],[d_chopper_6,3006,false,600],
 	[d_choppero_1,4001,true],[d_choppero_2,4002,true],[d_choppero_3,4003,false,1500],[d_choppero_4,4004,false,1500],[d_choppero_5,4005,false,600],[d_choppero_6,4006,false,600]] call compile preprocessFileLineNumbers "x_server\x_inithelirespawn2.sqf";
-	
+
 	[
 		[d_vec_mhq_1,0],[d_vec_mhq_2,1],[d_vec_med_1,100],[d_vec_rep_1,200],[d_vec_fuel_1,201],[d_vec_ammo_1,202], [d_vec_rep_2,203],
 		[d_vec_fuel_2,204], [d_vec_ammo_2,205], [d_vec_eng_1,300], [d_vec_eng_2,301], [d_vec_trans_1,400], [d_vec_trans_2,401],
@@ -354,12 +356,12 @@ if (isServer) then {
 
 	call compile preprocessFileLineNumbers "x_server\x_setupserver.sqf";
 	if (d_MissionType != 2) then {0 spawn d_fnc_createnexttarget};
-	
+
 	if (d_with_ai) then {
 		d_player_groups = [];
 		d_player_groups_lead = [];
 	};
-	
+
 #ifdef __TT__
 	d_points_blufor = 0;
 	d_points_opfor = 0;
@@ -368,7 +370,7 @@ if (isServer) then {
 	d_points_array = [0,0,0,0];
 	publicVariable "d_points_array";
 #endif
-	
+
 	addMissionEventHandler ["HandleDisconnect", {_this call d_fnc_handledisconnect}];
 };
 
@@ -387,7 +389,7 @@ if (!isDedicated) then {
 	["d_vec_service", d_vecre_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_4",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_Ammobox_Reload", d_AMMOLOAD,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_5",0,"hd_dot"] call d_fnc_CreateMarkerLocal;
 	["d_teleporter", d_WFLAG_BASE,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_6",0,"mil_flag"] call d_fnc_CreateMarkerLocal;
-	
+
 	["d_wreck_serviceR", d_wreck_rep2,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_1",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_aircraft_serviceR", d_jet_trigger2,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_2",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_chopper_serviceR", d_chopper_triggerR,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_3",0,"n_service"] call d_fnc_CreateMarkerLocal;
