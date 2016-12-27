@@ -87,6 +87,9 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 };
 
 ["d_sm_task"] call BIS_fnc_deleteTask;
+/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+/**************************************************************/
 
 sleep 1;
 d_sm_winner = 0;

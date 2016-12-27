@@ -26,12 +26,12 @@ if (d_string_player in d_entities_tt_blufor) then {
 	d_create_bike = [["B_Quadbike_01_F"], ["B_Quadbike_01_F", "B_T_LSV_01_unarmed_F"]] select d_tanoa;
 	d_FLAG_BASE = d_WFLAG_BASE;
 	d_player_entities = d_entities_tt_blufor;
-	
+
 	{
 		_x setMarkerAlphaLocal 1;
 		false
 	} count ["d_chopper_service", "d_wreck_service", "d_teleporter", "d_aircraft_service", "bonus_air", "bonus_vehicles", "d_Ammobox_Reload", "d_vec_service", "Start", "d_runwaymarker"];
-	
+
 	d_jump_helo = "B_Heli_Transport_01_F";
 	d_UAV_Small = "B_UAV_01_F";
 	d_UAV_Terminal = "B_UavTerminal";
@@ -43,12 +43,12 @@ if (d_string_player in d_entities_tt_blufor) then {
 	d_create_bike = [["O_Quadbike_01_F"], ["O_Quadbike_01_F", "O_T_LSV_02_unarmed_F"]] select d_tanoa;
 	d_FLAG_BASE = d_EFLAG_BASE;
 	d_player_entities = d_entities_tt_opfor;
-	
+
 	{
 		_x setMarkerAlphaLocal 1;
 		false
 	} count ["d_chopper_serviceR","d_wreck_serviceR","d_teleporter_1","d_aircraft_serviceR","bonus_airR","bonus_vehiclesR","d_Ammobox ReloadR","Start_opfor","d_vehicle_serviceR", "d_runwaymarker_o"];
-	
+
 	d_jump_helo = "O_Heli_Light_02_unarmed_F";
 	d_UAV_Small = "O_UAV_01_F";
 	d_UAV_Terminal = "O_UavTerminal";
@@ -100,7 +100,7 @@ if (d_the_end) exitWith {
 if (!isMultiplayer) then {
 	0 spawn {
 		scriptName "spawn_playerstuff";
-		sleep 1 + random 3;		
+		sleep 1 + random 3;
 		d_player_autokick_time = d_AutoKickTime;
 		xr_phd_invulnerable = false;
 		sleep 10;
@@ -142,11 +142,11 @@ if (d_with_ranked) then {
 	player setVariable ["d_psecweapitems", secondaryWeaponItems player];
 	player setVariable ["d_phandgweapitems", handgunItems player];
 	player addEventhandler ["Put", {_this call d_fnc_pputweapon}];
-	
+
 	if (!d_with_ace) then {
 		player addEventHandler ["handleHeal", {_this call d_fnc_handleheal}];
 	};
-	
+
 	d_sm_p_pos = nil;
 };
 
@@ -277,6 +277,7 @@ private _alpha = 1 - (_distp / 200)
 	d_pl_wreck_trig = d_wreck_rep;
 	d_pl_ammoload_trig = d_AMMOLOAD;
 #else
+/*
 	if (d_player_side == blufor) then {
 		d_pl_flag_base = d_WFLAG_BASE;
 		d_pl_vec_trig = d_vecre_trigger;
@@ -292,7 +293,9 @@ private _alpha = 1 - (_distp / 200)
 		d_pl_wreck_trig = d_wreck_rep2;
 		d_pl_ammoload_trig = d_AMMOLOAD2;
 	};
+*/
 #endif
+/*
 	addMissionEventHandler ["Draw3D", {
 		if (player distance2D d_pl_flag_base < 1000) then {
 			private _pos_cam = positionCameraToWorld [0,0,0];
@@ -312,7 +315,7 @@ private _alpha = 1 - (_distp / 200)
 			if (_distp < 200) then {
 				private _pos = getPosATL d_pl_chop_trig;
 				__scale3;
-				
+
 				drawIcon3D ["#(argb,8,8,3)color(0,0,0,0)", [0,0,1,_alpha], _pos, 1, 1, 0, d_d3d_locs3, 1, _scale, "RobotoCondensed"];
 			};
 			_distp = _pos_cam distance2D d_pl_wreck_trig;
@@ -339,6 +342,7 @@ private _alpha = 1 - (_distp / 200)
 				drawIcon3D ["#(argb,8,8,3)color(0,0,0,0)", [1,1,0,_alpha], _pos, 1, 1, 0, d_d3d_locs6, 1, _scale, "RobotoCondensed"];
 			};
 		};
+
 		if !(d_all_p_a_boxes isEqualTo []) then {
 			private _pos_cam = positionCameraToWorld [0,0,0];
 			{
@@ -358,12 +362,12 @@ private _alpha = 1 - (_distp / 200)
 			} count d_all_p_a_boxes;
 		};
 	}];
-	
+*/
 	"d_fpsresource" cutRsc ["d_fpsresource", "PLAIN"];
 	if (d_player_can_call_arti > 0 || {d_player_can_call_drop > 0 || {d_string_player in d_can_call_cas || {!d_no_ai}}}) then {
 		"d_RscSupportL" cutRsc ["d_RscSupportL", "PLAIN"];
 	};
-	
+
 	xr_phd_invulnerable = false;
 	sleep 2;
 	player setVariable ["d_player_old_rank", 0];
@@ -567,7 +571,7 @@ if (_primw != "") then {
 if (d_MissionType != 2) then {
 	execFSM "fsms\fn_CampDialog.fsm";
 	// call d_fnc_CampDialog;
-	
+
 	if (!isNil "d_searchbody" && {!isNull d_searchbody} && {isNil {d_searchbody getVariable "d_search_body"}}) then {
 		d_searchbody setVariable ["d_search_id", d_searchbody addAction [localize "STR_DOM_MISSIONSTRING_518", {_this spawn d_fnc_searchbody}]];
 	};
@@ -637,7 +641,7 @@ d_p_isju = false;
 			private _veloH = [(_v select 0) + 0.6, (_v select 1) + 0.6, (_v select 2) + 0.1];
 			private _veloL = [_v select 0, _v select 1, (_v select 2) - 1];
 			private _maxHight = (getPosATL player select 2) + 1.3;
-			
+
 			[player, "AovrPercMrunSrasWrflDf"] remoteExecCall ["switchMove"];
 			sleep 0.05;
 			while {animationState player == "AovrPercMrunSrasWrflDf"} do {
@@ -683,7 +687,7 @@ player addEventhandler ["getOutMan", {
 			if (alive player && {!(player getVariable ["xr_pluncon", false]) && {!(player getVariable ["ace_isunconscious", false]) && {player inArea (d_base_array select 0) || {player inArea (d_base_array select 1)}}}}) then {
 #endif
 				d_player_in_base = true;
-			};			
+			};
 		};
 	} else {
 #ifndef __TT__
