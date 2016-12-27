@@ -200,7 +200,7 @@ d_player_entities = ["d_artop_1","d_artop_2",
 d_entities_tt_blufor = ["d_artop_blufor","d_blufor_1","d_blufor_2","d_blufor_3","d_blufor_4","d_blufor_5","d_blufor_6","d_blufor_7",
 	"d_blufor_8","d_blufor_9","d_blufor_10","d_blufor_11","d_blufor_12","d_blufor_13","d_blufor_14","d_blufor_15","d_blufor_16",
 	"d_blufor_17","d_blufor_18","d_blufor_19","d_blufor_20","d_blufor_21","d_blufor_22","d_blufor_23","d_blufor_24"];
-	
+
 d_entities_tt_opfor = ["d_artop_opfor","d_opfor_1","d_opfor_2","d_opfor_3","d_opfor_4","d_opfor_5","d_opfor_6","d_opfor_7",
 	"d_opfor_8","d_opfor_9","d_opfor_10","d_opfor_11","d_opfor_12","d_opfor_13","d_opfor_14","d_opfor_15","d_opfor_16","d_opfor_17",
 	"d_opfor_18","d_opfor_19","d_opfor_20","d_opfor_21","d_opfor_22","d_opfor_23","d_opfor_24"];
@@ -266,22 +266,22 @@ d_farp_classes = ["Land_HelipadSquare_F", "Land_Cargo40_military_green_F"];
 
 // artillery operators
 #ifndef __TT__
-d_can_use_artillery = ["d_artop_1", "d_artop_2"]; // case has to be the same as in mission.sqm, d_artop_1 D_ARTOP_1 is not the same :)
+d_can_use_artillery = []; // case has to be the same as in mission.sqm, d_artop_1 D_ARTOP_1 is not the same :)
 #else
-d_can_use_artillery = ["d_artop_blufor", "d_artop_opfor"];
+d_can_use_artillery = [];
 #endif
 
 // those units can mark artillery targets but can not call in artillery strikes (only d_can_use_artillery can call in artillery strikes and also mark arty targets)
 #ifndef __TT__
-d_can_mark_artillery = ["d_alpha_1", "d_bravo_1", "d_charlie_1", "d_echo_1"];
+d_can_mark_artillery = [];
 #else
-d_can_mark_artillery = ["d_blufor_1", "d_blufor_2", "d_blufor_3", "d_opfor_1", "d_opfor_2", "d_opfor_3"];
+d_can_mark_artillery = [];
 #endif
 
 #ifndef __TT__
-d_can_call_cas = ["d_alpha_1", "d_bravo_1", "d_charlie_1", "d_echo_1"];
+d_can_call_cas = [];
 #else
-d_can_call_cas = ["d_blufor_1", "d_blufor_2", "d_blufor_3", "d_opfor_1", "d_opfor_2", "d_opfor_3"];
+d_can_call_cas = [];
 #endif
 
 d_arty_m_marker =
@@ -381,12 +381,12 @@ if (_isserv_or_hc) then {
 				};
 			};
 		};
-		
+
 		if (d_timemultiplier > 1) then {
 			setTimeMultiplier d_timemultiplier;
 		};
-	};	
-	
+	};
+
 	// _E = Opfor
 	// _W = Blufor
 	// _G = Independent
@@ -486,7 +486,7 @@ if (!d_tt_tanoa) then {
 	d_veh_a_W = [
 		#include "d_veh_a_B_default.sqf"
 	];
-		
+
 	d_veh_a_G = [
 		#include "d_veh_a_G_default.sqf"
 	];
@@ -508,13 +508,13 @@ d_arti_observer_E = [["O_T_Recon_JTAC_F"]];
 #endif
 #ifdef __STRATIS__
 d_arti_observer_E = [["O_recon_JTAC_F"]];
-#endif	
+#endif
 	d_arti_observer_W = [["B_recon_JTAC_F"]];
 	d_arti_observer_G = [["I_Soldier_TL_F"]];
-	
+
 	d_number_attack_planes = 1;
 	d_number_attack_choppers = 1;
-	
+
 	// Type of aircraft, that will air drop stuff
 	d_drop_aircraft =
 #ifdef __OWN_SIDE_INDEPENDENT__
@@ -545,7 +545,7 @@ d_arti_observer_E = [["O_recon_JTAC_F"]];
 			"O_Heli_Light_02_unarmed_F";
 #endif
 	};
-d_cas_plane = 
+d_cas_plane =
 #ifdef __OWN_SIDE_INDEPENDENT__
 			"I_Plane_Fighter_03_CAS_F";
 #endif
@@ -565,7 +565,7 @@ d_cas_plane =
 	d_tank_count_for_target_clear = 1;
 	// max cars for main target clear
 	d_car_count_for_target_clear = 1;
-	
+
 	// time (in sec) between attack planes and choppers over main target will respawn once they were shot down (a random value between 0 and 240 will be added)
 	d_airai_respawntime = 1200;
 
@@ -578,7 +578,7 @@ d_cas_plane =
 	// max number of cities that the enemy will recapture at once
 	// if set to -1 no check is done
 	d_max_recaptures = 2;
-	
+
 	d_time_until_next_sidemission = [
 		[10,300], // if player number <= 10, it'll take 300 seconds until the next sidemission
 		[20,400], // if player number <= 20, it'll take 400 seconds until the next sidemission
@@ -587,7 +587,7 @@ d_cas_plane =
 	];
 
 	d_civilians_t = ["C_man_1","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F"];
-	
+
 	d_base_aa_vec =
 #ifdef __OWN_SIDE_INDEPENDENT__
 	"";
@@ -601,9 +601,9 @@ d_cas_plane =
 #ifdef __TT__
 	"";
 #endif
-	
+
 	d_wreck_cur_ar = [];
-	
+
 	d_sm_fortress = "Land_Cargo_House_V2_F";
 	d_functionary = "C_Nikos_aged";
 	d_fuel_station = "Land_FuelStation_Build_F";//Land_FuelStation_Shed_F
@@ -622,7 +622,7 @@ d_cas_plane =
 	d_sm_land_tanksmall = "Land_dp_smallTank_F";
 	d_sm_land_factory = "Land_u_Barracks_V2_F";
 	d_sm_small_radar = "Land_Radar_Small_F";
-	
+
 	d_soldier_officer = switch (d_enemy_side_short) do {
 		case "E": {"O_officer_F"};
 		case "W": {"B_officer_F"};
@@ -688,7 +688,7 @@ d_cas_plane =
 		case "W": {"B_Truck_01_ammo_F"};
 		case "G": {"I_Truck_02_ammo_F"};
 	};
-	
+
 	d_intel_unit = objNull;
 
 	d_ArtyShellsBlufor = [
@@ -836,7 +836,7 @@ if (!isDedicated) then {
 	// d_uids_for_reserved_slots = ["1234567", "7654321"];
 	d_uid_reserved_slots = [];
 	d_uids_for_reserved_slots = [];
-	
+
 	// this vehicle will be created if you use the "Create XXX" at a mobile respawn (old "Create Motorcycle") or at a jump flag
 	// IMPORTANT !!!! for ranked version !!!!
 	// if there is more than one vehicle defined in the array the vehicle will be selected by player rank
@@ -858,7 +858,7 @@ if (!isDedicated) then {
 	if (d_weather == 1) then {
 		0 setOvercast 0;
 	};
-	
+
 #ifdef __OWN_SIDE_BLUFOR__
 	d_UAV_Small = "B_UAV_01_F";
 	d_UAV_Terminal = "B_UavTerminal";
@@ -871,7 +871,7 @@ if (!isDedicated) then {
 	d_UAV_Small = "I_UAV_01_F";
 	d_UAV_Terminal = "I_UavTerminal";
 #endif
-	
+
 	d_still_in_intro = true;
 
 	d_cur_sm_txt = "";
@@ -895,7 +895,7 @@ if (!isDedicated) then {
 #ifdef __TT__
 	["B_Heli_Light_01_F", "B_APC_Tracked_01_CRV_F", "O_Heli_Light_02_unarmed_F", "B_T_APC_Tracked_01_CRV_F"];
 #endif
-	
+
 	d_check_ammo_load_vecs = d_check_ammo_load_vecs apply {toUpper _x};
 
 	d_weapon_respawn = true;
@@ -926,21 +926,21 @@ if (!isDedicated) then {
 
 	// is engineer
 #ifndef __TT__
-	d_is_engineer = ["d_delta_1","d_delta_2","d_delta_3","d_delta_4","d_delta_5","d_delta_6"];
+	d_is_engineer = [];
 #else
-	d_is_engineer = ["d_blufor_17","d_blufor_18","d_blufor_19","d_opfor_17","d_opfor_18","d_opfor_19"];
+	d_is_engineer = [];
 #endif
 
 	// can build mash
 #ifndef __TT__
-	d_is_medic = ["d_alpha_6","d_bravo_6","d_charlie_6","d_echo_6"];
+	d_is_medic = [];
 #else
-	d_is_medic = ["d_blufor_20","d_blufor_21","d_blufor_22","d_blufor_23","d_blufor_24","d_opfor_20","d_opfor_21","d_opfor_22","d_opfor_23","d_opfor_24"];
+	d_is_medic = [];
 #endif
 
 	// can call in air drop
 #ifndef __TT__
-	d_can_call_drop_ar = ["d_alpha_1","d_charlie_1","d_echo_1"];
+	d_can_call_drop_ar = [];
 #else
 	d_can_call_drop_ar = [];
 #endif
@@ -960,9 +960,9 @@ if (!isDedicated) then {
 #ifdef __TT__
 	"I_Heli_light_03_unarmed_F";
 #endif
-	
+
 	d_headbug_vehicle = "B_Quadbike_01_F";
-	
+
 	d_drop_max_dist = 500;
 
 	// if the array is empty, anybody with a pilot uniform and headgear can fly (if the latter is enabled)
@@ -971,7 +971,7 @@ if (!isDedicated) then {
 	// for example: ["pilot_1","pilot_2"];, case sensitiv
 	// PLEASE DO NOT CHANGE THIS FOR THE TT VERSION, IT SHOULD BE AN EMPTY ARRAY!!!!
 	d_only_pilots_can_fly = [];
-	
+
 	d_the_box = switch (d_own_side) do {
 		case "GUER": {"Box_IND_Wps_F"};
 		case "EAST": {"Box_East_Wps_F"};
@@ -982,7 +982,7 @@ if (!isDedicated) then {
 		case "EAST": {"O_supplyCrate_F"};//Box_East_WpsSpecial_F
 		case "WEST": {"B_supplyCrate_F"};//Box_NATO_WpsSpecial_F
 	};
-	
+
 	d_rev_respawn_vec_types = [d_the_box, "B_MRAP_01_F", "O_MRAP_02_F", "I_MRAP_03_F", "B_APC_Tracked_01_CRV_F"];
 
 	// internal variables
@@ -1005,9 +1005,9 @@ if (!isDedicated) then {
 	d_areArtyVecsAvailable = false;
 	d_ao_arty_vecs = [];
 	d_misc_store = d_HeliHEmpty createVehicleLocal [0,0,0];
-	
+
 	d_virtual_entities = ["d_virt_man_1", "d_virt_man_2", "d_virt_man_3", "d_virt_man_4", "d_virt_man_5"];
-	
+
 	// If you want to add additional non MHQ respawn points like additional bases for example
 	// Usage: Each point array needs a unique name, position or marker name, description and a side (side is only valid for the TT version)
 	// Example:
@@ -1018,22 +1018,22 @@ if (!isDedicated) then {
 	//	["D_UNIQUE_NAME_2", "myevencoolerbase", "My Even Cooler Base", blufor]
 	//];
 	d_additional_respawn_points = [];
-	
+
 	d_last_beam_target = "";
-	
+
 	d_add_resp_points_uni = [];
 	{
 		d_add_resp_points_uni pushBack (_x select 0);
 		false
 	} count d_additional_respawn_points;
-	
+
 	d_earplugs_fitted = false;
-	
+
 	d_phud_loc883 = localize "STR_DOM_MISSIONSTRING_883";
 	d_phud_loc884 = localize "STR_DOM_MISSIONSTRING_884";
 	d_phud_loc886 = localize "STR_DOM_MISSIONSTRING_906";
 	d_phud_loc493 = localize "STR_DOM_MISSIONSTRING_493";
-	
+
 	if (isMultiplayer) then {
 		// does work but not in EDEN preinit!!!
 		// In 1.60 not working EachFrame in EDEN preinit is fixed.... PreloadFinished still doesn't work...
@@ -1051,7 +1051,7 @@ if (!isDedicated) then {
 			d_prl_fin_id = nil;
 		}] call bis_fnc_addStackedEventHandler;
 	};
-	
+
 	d_client_check_init = addMissionEventhandler ["EachFrame", {
 		if (!isNull player) then {
 			if (isMultiplayer && {isNil "xr_phd_invulnerable"}) then {
