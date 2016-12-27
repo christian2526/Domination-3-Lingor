@@ -82,7 +82,7 @@ if (d_WithIsleDefense == 0) then {
 __TRACE_1("","d_with_isledefense")
 
 #ifndef __TT__
-if (d_MissionType != 2) then {
+if (false) then { //replace statement: d_MissionType != 2
 	0 spawn {
 		scriptName "spawn_ServicePoint_Building";
 		private _stype = [d_servicepoint_building] call BIS_fnc_simpleObjectData;
