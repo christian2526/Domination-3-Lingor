@@ -11,7 +11,7 @@ allowFunctionsLog = 1;
 #include "cfgfunctions.hpp"
 
 author = "Xeno";
-OnLoadName = "Domination!";
+OnLoadName = "Domination! by TF47";
 onLoadMission = __D_VER_NAME__;
 onLoadIntroTime = false;
 onLoadMissionTime = false;
@@ -468,14 +468,14 @@ class Params {
 	class d_WithRevive {
 		title = "$STR_DOM_MISSIONSTRING_1005";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 
 	class d_WithReviveSpectating {
 		title = "$STR_DOM_MISSIONSTRING_1567";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 
@@ -638,7 +638,7 @@ class Params {
 	class d_WithMHQTeleport {
 		title = "$STR_DOM_MISSIONSTRING_1056";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 
@@ -659,21 +659,21 @@ class Params {
 	class d_with_mhq_camo {
 		title = "$STR_DOM_MISSIONSTRING_1067";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 
 	class d_WithTeleToBase {
 		title = "$STR_DOM_MISSIONSTRING_1068";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 
 	class d_respawnatsql {
 		title = "$STR_DOM_MISSIONSTRING_1705";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 
@@ -695,7 +695,7 @@ class Params {
 	class d_WithRecapture {
 		title = "$STR_DOM_MISSIONSTRING_1130";
 		values[] = {0,1};
-		default = 1;
+		default = 0;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1006","$STR_DOM_MISSIONSTRING_1007"};
 	};
 #endif

@@ -764,7 +764,7 @@ d_cas_plane =
 #ifdef __TANOA__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["rhsgref_ins_Mi8amt"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
 		case "G": {["I_Heli_Transport_02_F"]};
 	};
@@ -772,7 +772,7 @@ d_cas_plane =
 #ifdef __STRATIS__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["rhsgref_ins_Mi8amt"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
 		case "G": {["I_Heli_Transport_02_F"]};
 	};
@@ -780,7 +780,7 @@ d_cas_plane =
 #ifdef __TT__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["rhsgref_ins_Mi8amt"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
 		case "G": {["I_Heli_Transport_02_F"]};
 	};
@@ -810,13 +810,13 @@ d_cas_plane =
 #ifndef __CUP__
 	// light attack chopper (for example I_Heli_light_03_F with MG)
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_black_F"]};
+		case "E": {["RHS_Mi24P_CAS_vvsc"]};
 		case "W": {["B_Heli_Light_01_armed_F"]};
 		case "G": {["I_Heli_light_03_F"]};
 	};
 #else
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_black_F", "CUP_O_Mi8_RU"]};
+		case "E": {["RHS_Mi24P_CAS_vvsc", "CUP_O_Mi8_RU"]};
 		case "W": {["B_Heli_Light_01_F"]};
 		case "G": {["I_Heli_light_03_F"]};
 	};
