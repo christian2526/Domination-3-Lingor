@@ -1,12 +1,12 @@
-["O_MBT_02_cannon_F"],
-["O_APC_Tracked_02_cannon_F"],
-["O_APC_Wheeled_02_rcws_F"],
-["O_APC_Tracked_02_AA_F"],
-["O_MRAP_02_hmg_F","O_MRAP_02_gmg_F"],
-["O_G_Offroad_01_armed_F"],
-["O_GMG_01_F","O_GMG_01_high_F"], //O_GMG_01_A_F, removed because it creates an invisible gunner (UAV type)
-["O_HMG_01_F","O_HMG_01_high_F","O_static_AA_F","O_static_AT_F"], // O_HMG_01_A_F, removed because it creates an invisible gunner (UAV type)
-["O_Mortar_01_F"],
-["O_Truck_02_fuel_F"],
-["O_Truck_02_box_F"],
-["O_Truck_02_Ammo_F"]
+["rhsgref_ins_t72ba","rhsgref_ins_t72bb","rhsgref_ins_t72bc"],
+["rhsgref_ins_bmp2k","rhsgref_ins_bmp2d","rhsgref_ins_bmp1p","rhsgref_ins_bmd1"],
+["rhsgref_ins_btr60","rhsgref_ins_btr70"],
+["rhsgref_ins_zsu234"],
+["rhsgref_ins_uaz_ags","rhsgref_ins_uaz_spg9","rhsgref_BRDM2_ATGM_ins"],
+["rhsgref_ins_uaz_dshkm","rhsgref_BRDM2_ins"],
+["rhsgref_ins_AGS30_TriPod"], //O_GMG_01_A_F, removed because it creates an invisible gunner (UAV type)
+["rhsgref_ins_DSHKM","rhsgref_ins_NSV_TriPod","rhsgref_ins_ZU23","rhsgref_ins_SPG9"], // O_HMG_01_A_F, removed because it creates an invisible gunner (UAV type)
+["rhsgref_ins_2b14"],
+["rhsgref_ins_gaz66_zu23"],
+["rhsgref_ins_ural"],
+["rhsgref_ins_gaz66_ammo"]
