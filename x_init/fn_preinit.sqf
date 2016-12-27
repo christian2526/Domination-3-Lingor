@@ -492,7 +492,7 @@ if (!d_tt_tanoa) then {
 	];
 
 #ifdef __ALTIS__
-d_arti_observer_E = [["O_recon_JTAC_F"]];
+d_arti_observer_E = [["rhsgref_ins_squadleader"]];
 #endif
 #ifdef __CUP_CHERNARUS__
 d_arti_observer_E = [["O_recon_JTAC_F"]];
@@ -509,8 +509,8 @@ d_arti_observer_E = [["O_T_Recon_JTAC_F"]];
 #ifdef __STRATIS__
 d_arti_observer_E = [["O_recon_JTAC_F"]];
 #endif
-	d_arti_observer_W = [["B_recon_JTAC_F"]];
-	d_arti_observer_G = [["I_Soldier_TL_F"]];
+	d_arti_observer_W = [["rhsusf_socom_marsoc_jtac"]];
+	d_arti_observer_G = [["rhsgref_cdf_ngd_rifleman_m92"]];
 
 	d_number_attack_planes = 1;
 	d_number_attack_choppers = 1;
@@ -518,31 +518,31 @@ d_arti_observer_E = [["O_recon_JTAC_F"]];
 	// Type of aircraft, that will air drop stuff
 	d_drop_aircraft =
 #ifdef __OWN_SIDE_INDEPENDENT__
-		"I_Heli_Transport_02_F";
+		"rhsgref_ins_g_Mi8amt";
 #endif
 #ifdef __OWN_SIDE_BLUFOR__
-		"B_Heli_Transport_01_camo_F";
+		"rhsusf_CH53E_USMC_D";
 #endif
 #ifdef __OWN_SIDE_OPFOR__
-		"O_Heli_Light_02_unarmed_F";
+		"rhsgref_ins_Mi8amt";
 #endif
 #ifdef __TT__
-		"O_Heli_Light_02_unarmed_F";
+		"rhsgref_ins_Mi8amt";
 #endif
 
 	if (isServer && {!d_no_ai}) then {
 		d_taxi_aircraft =
 #ifdef __OWN_SIDE_INDEPENDENT__
-			"I_Heli_Transport_02_F";
+			"rhsgref_ins_g_Mi8amt";
 #endif
 #ifdef __OWN_SIDE_BLUFOR__
-			"B_Heli_Transport_01_camo_F";
+			"rhsusf_CH53E_USMC_D";
 #endif
 #ifdef __OWN_SIDE_OPFOR__
-			"O_Heli_Light_02_unarmed_F";
+			"rhsgref_ins_Mi8amt";
 #endif
 #ifdef __TT__
-			"O_Heli_Light_02_unarmed_F";
+			"rhsgref_ins_Mi8amt";
 #endif
 	};
 d_cas_plane =
@@ -550,13 +550,13 @@ d_cas_plane =
 			"I_Plane_Fighter_03_CAS_F";
 #endif
 #ifdef __OWN_SIDE_BLUFOR__
-			"B_Plane_CAS_01_F";
+			"RHS_A10";
 #endif
 #ifdef __OWN_SIDE_OPFOR__
-			"O_Plane_CAS_02_F";
+			"RHS_Su25SM_CAS_vvsc";
 #endif
 #ifdef __TT__
-			["B_Plane_CAS_01_F", "O_Plane_CAS_02_F"];
+			["RHS_A10", "RHS_Su25SM_CAS_vvsc"];
 #endif
 
 	// max men for main target clear
@@ -586,17 +586,17 @@ d_cas_plane =
 		[40,600] // if player number <= 40, it'll take 600 seconds until the next sidemission
 	];
 
-	d_civilians_t = ["C_man_1","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F"];
+	d_civilians_t = ["C_Man_casual_1_F_tanoan","C_Man_casual_2_F_tanoan","C_Man_casual_3_F_tanoan","C_Man_casual_4_F_tanoan","C_Man_casual_5_F_tanoan","C_Man_casual_6_F_tanoan","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F"];
 
 	d_base_aa_vec =
 #ifdef __OWN_SIDE_INDEPENDENT__
 	"";
 #endif
 #ifdef __OWN_SIDE_BLUFOR__
-	"B_APC_Tracked_01_AA_F";
+	"RHS_Stinger_AA_pod_USMC_D";
 #endif
 #ifdef __OWN_SIDE_OPFOR__
-	"O_APC_Tracked_02_AA_F";
+	"rhsgref_ins_zsu234";
 #endif
 #ifdef __TT__
 	"";
@@ -608,9 +608,9 @@ d_cas_plane =
 	d_functionary = "C_Nikos_aged";
 	d_fuel_station = "Land_FuelStation_Build_F";//Land_FuelStation_Shed_F
 	d_sm_cargo = switch (d_enemy_side_short) do {
-		case "E": {"O_Truck_02_box_F"};
-		case "W": {"B_Truck_01_box_F"};
-		case "G": {"I_Truck_02_box_F"};
+		case "E": {"rhsgref_ins_ural"};
+		case "W": {"rhsusf_M977A4_BKIT_M2_usarmy_wd"};
+		case "G": {"rhsgref_ins_g_ural"};
 	};
 	//d_sm_hangar = "Land_TentHangar_V1_F"; // Land_TentHangar_V1_F creates 3 objects and adding a killed eh makes it useless as the correct object might never get destroyed
 	d_sm_hangar = "Land_Hangar_F";
@@ -624,38 +624,38 @@ d_cas_plane =
 	d_sm_small_radar = "Land_Radar_Small_F";
 
 	d_soldier_officer = switch (d_enemy_side_short) do {
-		case "E": {"O_officer_F"};
-		case "W": {"B_officer_F"};
-		case "G": {"I_officer_F"};
+		case "E": {"rhsgref_ins_squadleader"};
+		case "W": {"rhsusf_usmc_marpat_wd_officer"};
+		case "G": {"rhsgref_cdf_ngd_officer"};
 	};
 	d_sniper = switch (d_enemy_side_short) do {
-		case "E": {"O_sniper_F"};
-		case "W": {"B_sniper_F"};
-		case "G": {"I_sniper_F"};
+		case "E": {"rhsgref_ins_sniper"};
+		case "W": {"rhsusf_usmc_marpat_wd_sniper"};
+		case "G": {"rhsgref_ins_g_sniper"};
 	};
 	d_sm_arty = switch (d_enemy_side_short) do {
-		case "E": {"O_MBT_02_arty_F"};
-		case "W": {"B_MBT_01_arty_F"};
-		case "G": {"B_MBT_01_arty_F"}; // no independent arty in Alpha 3
+		case "E": {"rhsgref_ins_d30"};
+		case "W": {"rhsusf_m109_usarmy"};
+		case "G": {"rhsgref_ins_g_d30"}; // no independent arty in Alpha 3
 	};
 	d_sm_plane = switch (d_enemy_side_short) do {
-		case "E": {"O_Plane_CAS_02_F"};
-		case "W": {"B_Plane_CAS_01_F"};
+		case "E": {"RHS_Su25SM_CAS_vvsc"};
+		case "W": {"RHS_A10"};
 		case "G": {"I_Plane_Fighter_03_CAS_F"};
 	};
 	d_sm_tank = switch (d_enemy_side_short) do {
-		case "E": {"O_MBT_02_cannon_F"};
-		case "W": {"B_MBT_01_cannon_F"};
-		case "G": {"I_MBT_03_cannon_F"};
+		case "E": {"rhsgref_ins_t72ba"};
+		case "W": {"rhsusf_m1a2sep1tuskiwd_usarmy"};
+		case "G": {"rhsgref_ins_g_t72ba"};
 	};
 	d_sm_HunterGMG = switch (d_enemy_side_short) do {
-		case "E": {"O_MRAP_02_gmg_F"};
-		case "W": {"B_MRAP_01_gmg_F"};
-		case "G": {"I_MRAP_03_hmg_F"};
+		case "E": {"rhsgref_BRDM2_ins"};
+		case "W": {"rhsusf_M1117_W"};
+		case "G": {"rhsgref_BRDM2_ins_g"};
 	};
 	d_sm_SpeedBoat = switch (d_enemy_side_short) do {
 		case "E": {"O_Boat_Armed_01_hmg_F"};
-		case "W": {"B_Boat_Armed_01_hmg_F"};
+		case "W": {"rhsusf_mkvsoc"};
 		case "G": {"I_Boat_Armed_01_hmg_F"};
 	};
 	d_sm_submarine = switch (d_enemy_side_short) do {
@@ -665,28 +665,28 @@ d_cas_plane =
 	};
 	d_sm_AssaultBoat = switch (d_enemy_side_short) do {
 		case "E": {"O_Boat_Transport_01_F"};
-		case "W": {"B_Boat_Transport_01_F"};
+		case "W": {"rhsusf_mkvsoc"};
 		case "G": {"I_Boat_Transport_01_F"};
 	};
 	d_sm_chopper = switch (d_enemy_side_short) do {
-		case "E": {"O_Heli_Attack_02_black_F"};
-		case "W": {"B_Heli_Attack_01_F"};
-		case "G": {"I_Heli_light_03_F"};
+		case "E": {"RHS_Ka52_vvs"};
+		case "W": {"RHS_AH64D_wd"};
+		case "G": {"rhsgref_ins_g_Mi8amt"};
 	};
 	d_sm_pilottype = switch (d_enemy_side_short) do {
-		case "E": {"B_Helipilot_F"};
-		case "W": {"O_helipilot_F"};
-		case "G": {"I_helipilot_F"};
+		case "E": {"rhsusf_usmc_marpat_wd_helipilot"};
+		case "W": {"rhsgref_ins_pilot"};
+		case "G": {"rhsgref_ins_g_pilot"};
 	};
 	d_sm_wrecktype = switch (d_enemy_side_short) do {
 		case "E": {"Land_Wreck_Heli_Attack_01_F"};
-		case "W": {"Land_UWreck_Heli_Attack_02_F"};
+		case "W": {"BlackhawkWreck"};
 		case "G": {"Land_Wreck_Heli_Attack_02_F"};
 	};
 	d_sm_ammotrucktype = switch (d_enemy_side_short) do {
-		case "E": {"O_Truck_02_Ammo_F"};
-		case "W": {"B_Truck_01_ammo_F"};
-		case "G": {"I_Truck_02_ammo_F"};
+		case "E": {"rhs_gaz66_ammo_vmf"};
+		case "W": {"rhsusf_M977A4_AMMO_BKIT_usarmy_wd"};
+		case "G": {"rhsgref_ins_g_gaz66_ammo"};
 	};
 
 	d_intel_unit = objNull;
@@ -725,14 +725,14 @@ d_cas_plane =
 	// type of enemy plane that will fly over the main target
 #ifndef __CUP__
 	d_airai_attack_plane = switch (d_enemy_side_short) do {
-		case "E": {["O_Plane_CAS_02_F"]};
-		case "W": {["B_Plane_CAS_01_F"]};
+		case "E": {["RHS_Su25SM_CAS_vvsc"]};
+		case "W": {["RHS_A10"]};
 		case "G": {["I_Plane_Fighter_03_CAS_F"]};
 	};
 #else
 	d_airai_attack_plane = switch (d_enemy_side_short) do {
-		case "E": {["O_Plane_CAS_02_F","CUP_O_Su25_RU_3","CUP_O_Su25_RU_1","CUP_O_Su25_RU_2"]};
-		case "W": {["B_Plane_CAS_01_F"]};
+		case "E": {["RHS_Su25SM_CAS_vvsc","CUP_O_Su25_RU_3","CUP_O_Su25_RU_1","CUP_O_Su25_RU_2"]};
+		case "W": {["RHS_A10"]};
 		case "G": {["I_Plane_Fighter_03_CAS_F"]};
 	};
 #endif
@@ -740,25 +740,25 @@ d_cas_plane =
 #ifndef __CUP__
 	// type of enemy chopper that will fly over the main target
 	d_airai_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_F"]};
-		case "W": {["B_Heli_Attack_01_F"]};
-		case "G": {["I_Heli_light_03_F"]};
+		case "E": {["RHS_Mi24V_vvs"]};
+		case "W": {["RHS_AH64D_wd_GS"]};
+		case "G": {["rhsgref_cdf_Mi35"]};
 	};
 #else
 	// type of enemy chopper that will fly over the main target
 	d_airai_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_F","CUP_O_Mi24_P_RU","CUP_O_Mi24_V_RU","CUP_O_Ka50_SLA"]};
-		case "W": {["B_Heli_Attack_01_F"]};
-		case "G": {["I_Heli_light_03_F"]};
+		case "E": {["RHS_Mi24V_vvs","CUP_O_Mi24_P_RU","CUP_O_Mi24_V_RU","CUP_O_Ka50_SLA"]};
+		case "W": {["RHS_AH64D_wd_GS"]};
+		case "G": {["rhsgref_cdf_Mi35"]};
 	};
 #endif
 
 #ifdef __ALTIS__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
-		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "E": {["rhsgref_ins_Mi8amt"]};
+		case "W": {["RHS_UH60M"]};
+		case "G": {["rhsgref_ins_g_Mi8amt"]};
 	};
 #endif
 #ifdef __TANOA__
@@ -884,7 +884,7 @@ if (!isDedicated) then {
 	// the only vehicles that can load an ammo box are the transport choppers and MHQs__
 	d_check_ammo_load_vecs =
 #ifdef __OWN_SIDE_BLUFOR__
-	["B_Heli_Light_01_F", "B_MRAP_01_F", "B_APC_Tracked_01_CRV_F", "B_T_APC_Tracked_01_CRV_F","CUP_B_M1133_MEV_Woodland","CUP_B_LAV25_HQ_USMC","CUP_B_M1133_MEV_Desert","CUP_B_UH1Y_UNA_USMC"];
+	["RHS_UH1Y_UNARMED", "RHS_UH60M", "RHS_CH_47F", "rhsusf_CH53E_USMC"];
 #endif
 #ifdef __OWN_SIDE_OPFOR__
 	["O_MRAP_02_F", "O_Heli_Light_02_unarmed_F"];
@@ -949,7 +949,7 @@ if (!isDedicated) then {
 
 	d_jump_helo =
 #ifdef __OWN_SIDE_BLUFOR__
-	"B_Heli_Transport_01_F";
+	"RHS_UH1Y_UNARMED";
 #endif
 #ifdef __OWN_SIDE_OPFOR__
 	"O_Heli_Light_02_unarmed_F";
@@ -975,15 +975,15 @@ if (!isDedicated) then {
 	d_the_box = switch (d_own_side) do {
 		case "GUER": {"Box_IND_Wps_F"};
 		case "EAST": {"Box_East_Wps_F"};
-		case "WEST": {"Box_NATO_Wps_F"};
+		case "WEST": {"rhsusf_weapon_crate"};
 	};
 	d_the_base_box = switch (d_own_side) do {
 		case "GUER": {"I_supplyCrate_F"};//Box_IND_WpsSpecial_F
 		case "EAST": {"O_supplyCrate_F"};//Box_East_WpsSpecial_F
-		case "WEST": {"B_supplyCrate_F"};//Box_NATO_WpsSpecial_F
+		case "WEST": {"rhsusf_weapon_crate"};//Box_NATO_WpsSpecial_F
 	};
 
-	d_rev_respawn_vec_types = [d_the_box, "B_MRAP_01_F", "O_MRAP_02_F", "I_MRAP_03_F", "B_APC_Tracked_01_CRV_F"];
+	d_rev_respawn_vec_types = [d_the_box, "rhsusf_M1117_W", "rhsusf_rg33_wd", "I_MRAP_03_F", "B_APC_Tracked_01_CRV_F"];
 
 	// internal variables
 	d_flag_vec = objNull;
