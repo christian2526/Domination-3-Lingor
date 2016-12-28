@@ -64,7 +64,6 @@ for "_i" from 0 to 1000 do {
 };
 __TRACE_1("All targets found","d_target_names")
 
-/*
 // positions of service buildings
 // first jet service, second chopper service, third wreck repair
 
@@ -86,8 +85,6 @@ if (isServer) then {
 	deleteMarker "d_base_wreck_sb";
 	d_FLAG_BASE enableSimulationGlobal false;
 };
-*/
-
 
 // position base, side a and b length, direction and circle (false)/rectangle(true), like trigger; for the enemy at base area and marker
 "d_base_marker" setMarkerAlphaLocal 0;
@@ -123,8 +120,6 @@ if (isServer) then {
 #include "i_server.sqf"
 };
 
-/*
-
 if (!isDedicated) then {
 	// position of the player ammobox at base
 #ifndef __TT__
@@ -139,8 +134,6 @@ if (!isDedicated) then {
 	deleteMarkerLocal "d_player_ammobox_pos_e";
 #endif
 };
-
-*/
 
 if (isDedicated && {d_WithRevive == 0}) then {
 	call compile preprocessFileLineNumbers "x_revive.sqf";
@@ -383,19 +376,18 @@ if (isServer) then {
 	addMissionEventHandler ["HandleDisconnect", {_this call d_fnc_handledisconnect}];
 };
 
-/*
 if (!isDedicated) then {
 #ifndef __TT__
-
+/*
 	["d_wreck_service", d_wreck_rep,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_1",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_aircraft_service", d_jet_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_2",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_chopper_service", d_chopper_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_3",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_vec_service", d_vecre_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_4",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_Ammobox_Reload", d_AMMOLOAD,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_5",0,"hd_dot"] call d_fnc_CreateMarkerLocal;
 	["d_teleporter", d_FLAG_BASE,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_6",0,"mil_flag"] call d_fnc_CreateMarkerLocal;
-
+*/
 #else
-
+/*
 	["d_wreck_service", d_wreck_rep,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_1",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_aircraft_service", d_jet_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_2",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_chopper_service", d_chopper_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_3",0,"n_service"] call d_fnc_CreateMarkerLocal;
@@ -409,7 +401,7 @@ if (!isDedicated) then {
 	["d_vehicle_serviceR", d_vecre_trigger2,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_4",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_Ammobox ReloadR", d_AMMOLOAD2,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_5",0,"hd_dot"] call d_fnc_CreateMarkerLocal;
 	["d_teleporter_1", d_EFLAG_BASE,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_6",0,"mil_flag"] call d_fnc_CreateMarkerLocal;
-
+*/
 	{
 		_x setMarkerAlphaLocal 0;
 		false
@@ -419,7 +411,7 @@ if (!isDedicated) then {
 
 	call compile preprocessFileLineNumbers "i_weapons.sqf";
 };
-*/
+
 d_init_processed = true;
 
 diag_log [diag_frameno, diag_ticktime, time, "Dom d_init.sqf processed"];
