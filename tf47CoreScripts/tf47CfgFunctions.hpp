@@ -15,6 +15,7 @@
 			//class vehicleOnEnter;
 			class addGetInEvent;
 			class addGetOutEvent;
+			class unitMarkerInit;
 		};
 
 		class Helpers {

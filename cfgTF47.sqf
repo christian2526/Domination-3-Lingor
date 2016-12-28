@@ -71,7 +71,10 @@ _statusMarkerData = [
 	["tank1",			["callsign_tank1",			"b_armor",			"ColorOrange",	"RHINO-01",														false]],
 	["tank2",			["callsign_tank2",			"b_armor",			"ColorOrange",	"RHINO-02",														false]],
 	["bradley1",	["callsign_bradley1",		"b_mech_inf",			"ColorOrange",	"LION-01",														false]],
-	["bradley2",	["callsign_bradley2",		"b_mech_inf",		"ColorOrange",	"LION-01",														false]]
+	["bradley2",	["callsign_bradley2",		"b_mech_inf",		"ColorOrange",	"LION-01",														false]],
+	//Boats
+	["mark51",	["callsign_mark51",		"b_naval",		"ColorOrange",	"SHARK-01",														false]],
+	["mark52",	["callsign_mark52",		"b_naval",		"ColorOrange",	"SHARK-02",														false]]
 ];
 _statusMarkers = [_statusMarkerData, []] call CBA_fnc_hashCreate;
 
