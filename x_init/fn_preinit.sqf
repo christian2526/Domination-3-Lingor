@@ -190,20 +190,22 @@ d_jumpflag_vec = "";
 
 // please note, player string names are case sensitive! You have to use exactly the same case as in the editor here!
 #ifndef __TT__
-d_player_entities = ["d_artop_1","d_artop_2",
-	"d_alpha_1","d_alpha_2","d_alpha_3","d_alpha_4","d_alpha_5","d_alpha_6","d_alpha_7","d_alpha_8",
-	"d_bravo_1","d_bravo_2","d_bravo_3","d_bravo_4","d_bravo_5","d_bravo_6","d_bravo_7","d_bravo_8",
-	"d_charlie_1","d_charlie_2","d_charlie_3","d_charlie_4","d_charlie_5","d_charlie_6","d_charlie_7","d_charlie_8",
-	"d_delta_1","d_delta_2","d_delta_3","d_delta_4","d_delta_5","d_delta_6",
-	"d_echo_1","d_echo_2","d_echo_3","d_echo_4","d_echo_5","d_echo_6","d_echo_7","d_echo_8"];
+d_player_entities = [	"alphaact","alpha21","alpha22","alpha23","alpha24","alpha31","alpha32","alpha33","alpha34","alpha41","alpha42","alpha43","alpha44",
+	"bravoact","bravo21","bravo22","bravo23","bravo24","bravo31","bravo32","bravo33","bravo34","bravo41","bravo42","bravo43","bravo44",
+	"charlieact","charlie21","charlie22","charlie23","charlie24","charlie31","charlie32","charlie33","charlie34",
+	"armor11","armor12","armor13",
+	"armor21","armor22","armor23",
+	"rotwt11","rotwt12","rotwt16","rotwt17","airmedic11","airmedic12",
+	"rotwa21","rotwa22","rotwt22","rotwt21","rotwt26","rotwt27",
+	"fixwa11","fixwa12","fixwa31",
+	"mc1","mc2","mc3",
+	"ghost1","ghost2",
+	"Zeus2_u",
+	"Zeus3_u"];
 #else
-d_entities_tt_blufor = ["d_artop_blufor","d_blufor_1","d_blufor_2","d_blufor_3","d_blufor_4","d_blufor_5","d_blufor_6","d_blufor_7",
-	"d_blufor_8","d_blufor_9","d_blufor_10","d_blufor_11","d_blufor_12","d_blufor_13","d_blufor_14","d_blufor_15","d_blufor_16",
-	"d_blufor_17","d_blufor_18","d_blufor_19","d_blufor_20","d_blufor_21","d_blufor_22","d_blufor_23","d_blufor_24"];
+d_entities_tt_blufor = [];
 
-d_entities_tt_opfor = ["d_artop_opfor","d_opfor_1","d_opfor_2","d_opfor_3","d_opfor_4","d_opfor_5","d_opfor_6","d_opfor_7",
-	"d_opfor_8","d_opfor_9","d_opfor_10","d_opfor_11","d_opfor_12","d_opfor_13","d_opfor_14","d_opfor_15","d_opfor_16","d_opfor_17",
-	"d_opfor_18","d_opfor_19","d_opfor_20","d_opfor_21","d_opfor_22","d_opfor_23","d_opfor_24"];
+d_entities_tt_opfor = [];
 #endif
 
 d_servicepoint_building = "Land_Cargo_House_V2_F";

@@ -58,13 +58,13 @@ d_sm_array =
 
 d_number_side_missions = count d_sm_array;
 
-if (call d_fnc_checkSHC) then {		
+if (call d_fnc_checkSHC) then {
 	// these vehicles get spawned in a convoy sidemission. Be aware that it is the best to use a wheeled vehicle first as leader.
 	// at least wheeled AI vehicles try to stay on the road somehow
 #ifdef __ALTIS__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
 		//case "E": {["O_MRAP_02_gmg_F","O_APC_Tracked_02_cannon_F", "O_MBT_02_cannon_F", "O_Truck_02_box_F", "O_Truck_02_fuel_F", "O_Truck_02_Ammo_F", "O_APC_Tracked_02_AA_F"]};
-		case "E": {["O_MRAP_02_hmg_F","O_APC_Wheeled_02_rcws_F", "O_MRAP_02_gmg_F", "O_Truck_03_repair_F", "O_Truck_03_fuel_F", "O_Truck_03_ammo_F", "O_APC_Wheeled_02_rcws_F"]};
+		case "E": {["rhsgref_ins_btr60","rhsgref_ins_btr70", "rhsgref_ins_bmp2d", "rhsgref_ins_ural_Zu23", "rhsgref_BRDM2_ins", "rhsgref_BRDM2_ATGM_ins", "rhsgref_BRDM2_HQ_ins"]};
 		case "W": {["B_MRAP_01_hmg_F","B_APC_Wheeled_01_cannon_F", "B_MRAP_01_gmg_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Wheeled_01_cannon_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};

@@ -376,6 +376,7 @@ private _alpha = 1 - (_distp / 200)
 
 diag_log ["Internal D Version: 3.64e"];
 
+/*
 if (!d_no_ai) then {
 	if (d_with_ai) then {
 		if (isNil "d_AI_HUT") then {
@@ -420,6 +421,7 @@ if (!d_no_ai) then {
 		d_player_can_call_cas = 1;
 	};
 };
+*/
 player setUnitTrait ["explosiveSpecialist", true];
 
 private _respawn_marker = "";
