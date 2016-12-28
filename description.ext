@@ -1,5 +1,7 @@
 //__EXEC(diag_log format ["############################# %1 #############################", missionName];);
 //__EXEC(diag_log [diag_frameno, diag_ticktime, time, "Executing Dom description.ext"]);
+enableDebugConsole = 1;//dangerous in M
+
 
 #include "x_setup.sqf"
 #ifdef __ALLOW_RECOMPILE__
