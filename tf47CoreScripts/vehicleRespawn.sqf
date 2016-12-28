@@ -11,7 +11,7 @@
 * param 4: marker icon (default: "b_air")
 * param 5: marker color (optional, default by side)
 * param 6: marker side  (WEST/EAST/RESISTANCE, default WEST)
-* param 7: licence type (default: "")
+* param 7: licence type (default: "") / harmor or rottrans / cct
 * param 8: ticket cost on destruction (default: 5)
 * param 9: delay first spawn (default: 0)
 * param 10: limited respawns (default: 0 means off)

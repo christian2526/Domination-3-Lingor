@@ -27,6 +27,9 @@ _pathtoscripts = "tf47CoreScripts\";
 
 // _infantryStaminaClass = "US_Delta_Force_EP1";
 
+
+//Whitelist ID: 0=None 1=Air 2=Armor 3=CCT 5=ZEUS
+
 // --- DESPAWN PREVENTION MARKERS -------------------------------------------------------------------------------------------------------------------
 _despawnPreventionMarkers = [
 	["SafeZone",525]
@@ -46,26 +49,29 @@ _statusMarkersInit = false;
 _statusMarkerData = [
 	["gbc1",			["gbc1_marker",				"b_hq",				"ColorGreen",	"CCT - Ground Battle Commander ""GODFATHER""",					true]],
 	["gbc2",			["gbc2_marker",				"b_hq",				"ColorGreen",	"CCT - Asst. Ground Battle Commander ""BOWMAN""",	true]],
-	//["mc3",		["mc3marker",				"b_hq",				"ColorGreen",	"CCT - 2nd Joint Terminal Attack Controller ""REAPER-01""",	true]],
-	//["mc3",			["mc4marker",				"b_hq",				"ColorGreen",	"Air Traffic Control ""TOWER""",							true]],
-	//["mc5",		["mc5marker",				"b_hq",				"ColorGreen",	"TOC - Tactical Operations Center ""GODFATHER""",			true]],
-	["uh601mev",		["callsign_uh60mev_m_1",		"b_air",			"ColorRed",	"DUSTOFF-01",													false]],
-	["uh602mev",		["callsign_uh60mev_m_2",		"b_air",			"ColorRed",	"DUSTOFF-02",													false]],
-	["mh6",			["callsign_mh6",			"b_air",			"ColorBrown",	"BUTTEFLY",													false]],
-	["AH6J",		["callsign_ah6j",			"b_air",			"ColorBrown",	"FIREFLY",													false]],
-	["ch47f",		["callsign_ch47f",			"b_air",			"ColorBrown",	"PELICAN",													false]],
-	["mh47e",		["callsign_mh47e",			"b_air",			"ColorBrown",	"FALCON-01",												false]],
-	["dustoff",		["callsign_dustoff",		"b_air",			"ColorBrown",	"DUSTOFF",													false]],
-	["ah64d",		["callsign_ah64d",			"b_air",			"ColorOrange",	"DRAGON",													false]],
-	["a10",			["callsign_a10",			"b_plane",			"ColorOrange",	"THUNDERBIRD",												false]],
-	["fa18f",		["callsign_fa18f",			"b_plane",			"ColorOrange",	"FALCON-02",												false]],
-	["m1a2_1",		["callsign_m1a2_1",			"b_armor",			"ColorOrange",	"M1A2",														false]],
-	["m1a2_2",		["callsign_m1a2_2",			"b_armor",			"ColorOrange",	"M1A2",														false]],
-	["m1a2_3",		["callsign_m1a2_3",			"b_armor",			"ColorOrange",	"M1A2",														false]],
-	["m2a3_1",		["callsign_m2a3_1",			"b_mech_inf",		"ColorOrange",	"M2A3",														false]],
-	["m2a3_2",		["callsign_m2a3_2",			"b_mech_inf",		"ColorOrange",	"M2A3",														false]],
-	["m2a3_3",		["callsign_m2a3_3",			"b_mech_inf",		"ColorOrange",	"M2A3",														false]],
-	["aav7",		["callsign_aav7",			"b_mech_inf",		"ColorOrange",	"AAV7",														false]]
+	["jtac1",			["jtac1_marker",				"b_hq",				"ColorGreen",	"JTAC #1 ""TOPMAN""",	true]],
+	["jtac2",			["jtac2_marker",				"b_hq",				"ColorGreen",	"JTAC #2 ""REAPER""",	true]],
+	["jfo",				["jfo_marker",				"b_hq",				"ColorGreen",	"JFO ""ROCKSTAR""",	true]],
+	["tower",			["tower_marker",				"b_hq",				"ColorGreen",	"TOWER",	true]],
+	//Air
+	["uh601mev",	["callsign_uh60mev_m_1",		"b_air",			"ColorRed",	"DUSTOFF-01",													false]],
+	["uh602mev",	["callsign_uh60mev_m_2",		"b_air",			"ColorRed",	"DUSTOFF-02",													false]],
+	["ah1z1",			["callsign_ah1z1",			"b_air",			"ColorBrown",	"MANTICORE",													false]],
+	["uh1y1",			["callsign_uh1y1",			"b_air",			"ColorBrown",	"GRIFFIN-01",													false]],
+	["uh1y2",			["callsign_uh1y2",			"b_air",			"ColorBrown",	"GRIFFIN-02",													false]],
+	["uh1y3",			["callsign_uh1y3",			"b_air",			"ColorBrown",	"GRIFFIN-03",												false]],
+	["lb1",				["callsign_lb1",				"b_air",			"ColorBrown",	"BUTTERFLY-01",													false]],
+	["lb2",				["callsign_lb2",				"b_air",			"ColorOrange",	"BUTTERFLY-02",													false]],
+	["ch531",			["callsign_ch531",				"b_air",			"ColorOrange",	"SEAGULL",													false]],
+	["a101",			["callsign_a101",				"b_plane",			"ColorOrange",	"THUNDERBIRD-01",												false]],
+	["a102",			["callsign_a102",				"b_plane",			"ColorOrange",	"THUNDERBIRD-02",												false]],
+	["a103",			["callsign_a103",				"b_plane",			"ColorOrange",	"THUNDERBIRD-03",												false]],
+	["a104",			["callsign_a104",				"b_plane",			"ColorOrange",	"THUNDERBIRD-04",												false]],
+	//Tanks
+	["tank1",			["callsign_tank1",			"b_armor",			"ColorOrange",	"RHINO-01",														false]],
+	["tank2",			["callsign_tank2",			"b_armor",			"ColorOrange",	"RHINO-02",														false]],
+	["bradley1",	["callsign_bradley1",		"b_mech_inf",			"ColorOrange",	"LION-01",														false]],
+	["bradley2",	["callsign_bradley2",		"b_mech_inf",		"ColorOrange",	"LION-01",														false]]
 ];
 _statusMarkers = [_statusMarkerData, []] call CBA_fnc_hashCreate;
 
@@ -79,45 +85,32 @@ _statusMarkers = [_statusMarkerData, []] call CBA_fnc_hashCreate;
 
 // --- No JUMP OUT VEH -----------------------------------------------------------------------------------------------------------------------------------
 //		see vehicleOnEnter.sqf
-_JumpOutHelicopters = ["uh601","uh602","dustoff"];
+_JumpOutHelicopters = ["uh601mev","uh602mev","uh1y1","uh1y2","uh1y3","ch531","lb1","lb2"];
 
 
 
 // --- VEHICLE RESTRICTIONS -------------------------------------------------------------------------------------------------------------------------
 // Vehicle Name, Driver Whitelist ID (0 for None), Crew Whitelist ID (0 for None), Driver Slots, Crew Slots
 _vehicleRestrictionData = [
-	["uh601mev", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["uh602mev", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["mh6", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["ah6j", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["ch47f", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["mh47e", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["dustoff", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-
-	["ah64d", 			[1, 1,	["rotwa11","rotwa12","mc2","mc3"], 														["rotwa11","rotwa12"]]],
-	//["dragon2", 		[1, 1,	["rotwa21","rotwa11","mc2","mc3"], 														["rotwa22","rotwa12"]]],
-
-
-	["a10", 			[1, 1,	["fixwa21","mc2","mc3"], 													[]]],
-	["fa18f", 			[1, 1,	["fixwa11","fixwa12","mc2","mc3"], 													["fixwa11","fixwa12"]]],
-	//["strike1", 		[1, 1,	["fixwa21","mc2","mc3"], 											[]]],
-	//["strike2", 		[1, 1,	["fixwa21","mc2","mc3"],			 								[]]],
-	//["albatros1", 		[1, 1,	["fixwa11","fixwa12","fixwa21","fixwa31","mc2","mc3"],			[]]],
-	//["albatros2", 		[1, 1,	["fixwa11","fixwa12","fixwa21","fixwa31","mc2","mc3"],			[]]],
-
-	//["towtrac1",	[1, 0,	["rotwt11","rotwt12","rotwt21","rotwt22","fixwa11","fixwa12","fixwa13","mc4","mc5"], 		[]]],
-	//["towtrac2",	[1, 0,	["rotwt11","rotwt12","rotwt21","rotwt22","fixwa11","fixwa12","fixwa13","mc4","mc5"], 		[]]],
-
-	//["tiger1",			[2, 2,	["armor11","armor21","mc5"], 													["armor11","armor12","armor13","armor21","armor22","armor23"]]],
-	//["tiger2",			[2, 2,	["armor11","armor21","mc5"], 													["armor11","armor12","armor13","armor21","armor22","armor23"]]],
-	["m1a2_1",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
-	["m1a2_2",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
-	["m1a2_3",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
-	["m2a3_1",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
-	["m2a3_2",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
-	["m2a3_3",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
-	["aav7",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]]
-
+	//Aircraft
+	["uh601mev", 			[1, 1,	["sar11","sar12","sar21","sar22"],									["sar13","sar14","sar15","sar16","sar23","sar24"]]],
+	["uh602mev", 			[1, 1,	["sar11","sar12","sar21","sar22"],									["sar13","sar14","sar15","sar16","sar23","sar24"]]],
+	["ah1z1", 				[1, 1,	["rwa11","rwa12"],																	["rwa11","rwa12"]]],
+	["uh1y1", 				[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
+	["uh1y2", 				[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
+	["uh1y3", 				[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
+	["lb1", 					[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
+	["lb2", 					[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
+	["ch531", 				[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
+	["a10", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
+	["a10", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
+	["a10", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
+	["a10", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
+	//Tank
+	["tank1",					[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
+	["tank2",					[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
+	["bradley1",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
+	["bradley2",			[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]]
 ];
 _vehicleRestrictions = [_vehicleRestrictionData, []] call CBA_fnc_hashCreate;
 
