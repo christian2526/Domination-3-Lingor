@@ -37,13 +37,13 @@ class Header {
 #endif
 	minPlayers = 1;
 #ifdef __ALTIS__
-	maxPlayers = 46;
+	maxPlayers = 92;
 #endif
 #ifdef __CUP_CHERNARUS__
 	maxPlayers = 41;
 #endif
 #ifdef __CUP_TAKISTAN__
-	maxPlayers = 41;
+	maxPlayers = 98;
 #endif
 #ifdef __CUP_SARA__
 	maxPlayers = 41;
@@ -67,7 +67,7 @@ disableChannels[] = {{0,0,1},{1,0,1},{6,1,1}};
 enableItemsDropping = 0;
 
 //(0 - default, options based; 1 forced on; 2 forced off)
-forceRotorLibSimulation = 2;
+forceRotorLibSimulation = 0;
 
 /*0 = None - None of the units are managed by the manager
 1 = All - All units are managed by the manager

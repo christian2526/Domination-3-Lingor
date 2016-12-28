@@ -1006,4 +1006,3 @@
 		["AmmoboxInit",[_X,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
 
 } forEach [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
-//};
