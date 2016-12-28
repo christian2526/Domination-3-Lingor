@@ -866,7 +866,7 @@ player addEventhandler ["WeaponAssembled", {
 ["Preload"] call bis_fnc_arsenal;
 
 missionNamespace setVariable ["BIS_dynamicGroups_allowInterface", false];
-
+/*
 if (d_with_ace) then {
 	addMissionEventHandler ["Draw3D", {
 		if (alive player && {!(player getVariable ["ace_isunconscious", false])}) then {
@@ -885,7 +885,7 @@ if (d_with_ace) then {
 		};
 	}];
 };
-
+*/
 #ifndef __TT__
 d_last_placed_zeus_obj = objNull;
 {
