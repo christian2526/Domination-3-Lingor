@@ -83,10 +83,10 @@ if(_initialdelay <= 0) then {
 		//_unit setVehicleInit format ["[%1, '%2', '%3', %4, '%5', %6] execVM '%7unitMarkerInit.sqf';", "this", _markertext, _markertype, _markerside, _markercolor, _markerdespawn, _pathToScripts];
 		//processInitCommands;
 		// FIX
-		[[_unit, _markertext, _markertype, _markerside, _markercolor, _markerdespawn], "tf47_fnc_unitMarkerInit", true] spawn BIS_fnc_MP;
+		[[_unit, _markertext, _markertype, _markerside, _markercolor, _markerdespawn], "tf47_fnc_unitMarkerInit", true, true] spawn BIS_fnc_MP;
 		//[_unit, _markertext, _markertype, _markerside, _markercolor, _markerdespawn] remoteExecCall ["tf47_fnc_unitMarkerInit", 0, true];
 	} else {
-		[[_unit, _markertext, "hd_dot", _markerside, "ColorBlue", _markerdespawn], "tf47_fnc_unitMarkerInit", true] spawn BIS_fnc_MP;
+		[[_unit, _markertext, "hd_dot", _markerside, "ColorBlue", _markerdespawn], "tf47_fnc_unitMarkerInit", true, true] spawn BIS_fnc_MP;
 	};
 
 	// Trigger OnSpawn Handler
