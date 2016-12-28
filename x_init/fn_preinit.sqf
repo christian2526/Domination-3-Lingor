@@ -190,20 +190,49 @@ d_jumpflag_vec = "";
 
 // please note, player string names are case sensitive! You have to use exactly the same case as in the editor here!
 #ifndef __TT__
-d_player_entities = ["d_artop_1","d_artop_2",
-	"d_alpha_1","d_alpha_2","d_alpha_3","d_alpha_4","d_alpha_5","d_alpha_6","d_alpha_7","d_alpha_8",
-	"d_bravo_1","d_bravo_2","d_bravo_3","d_bravo_4","d_bravo_5","d_bravo_6","d_bravo_7","d_bravo_8",
-	"d_charlie_1","d_charlie_2","d_charlie_3","d_charlie_4","d_charlie_5","d_charlie_6","d_charlie_7","d_charlie_8",
-	"d_delta_1","d_delta_2","d_delta_3","d_delta_4","d_delta_5","d_delta_6",
-	"d_echo_1","d_echo_2","d_echo_3","d_echo_4","d_echo_5","d_echo_6","d_echo_7","d_echo_8"];
-#else
-d_entities_tt_blufor = ["d_artop_blufor","d_blufor_1","d_blufor_2","d_blufor_3","d_blufor_4","d_blufor_5","d_blufor_6","d_blufor_7",
-	"d_blufor_8","d_blufor_9","d_blufor_10","d_blufor_11","d_blufor_12","d_blufor_13","d_blufor_14","d_blufor_15","d_blufor_16",
-	"d_blufor_17","d_blufor_18","d_blufor_19","d_blufor_20","d_blufor_21","d_blufor_22","d_blufor_23","d_blufor_24"];
+d_player_entities = [
 
-d_entities_tt_opfor = ["d_artop_opfor","d_opfor_1","d_opfor_2","d_opfor_3","d_opfor_4","d_opfor_5","d_opfor_6","d_opfor_7",
-	"d_opfor_8","d_opfor_9","d_opfor_10","d_opfor_11","d_opfor_12","d_opfor_13","d_opfor_14","d_opfor_15","d_opfor_16","d_opfor_17",
-	"d_opfor_18","d_opfor_19","d_opfor_20","d_opfor_21","d_opfor_22","d_opfor_23","d_opfor_24"];
+//USMC Infantry 48
+"a1","a2","a3","a4",
+"b1","b2","b3","b4",
+"c1","c2","c3","c4",
+"d1","d2","d3","d4",
+"e1","e2","e3","e4",
+"f1","f2","f3","f4",
+"g1","g2","g3","g4",
+"h1","h2","h3","h4",
+"a1_1","a2_1","a3_1","a4_1",
+"b1_1","b2","b3_1","b4_1",
+"c1_1","c2_1","c3_1","c4_1",
+"d1_1","d2_1","d3_1","d4_1",
+//Sniper
+"snp1","snp2",
+//Command and Control
+"gbc1","gbc2","jtac1","jtac2","tower","jfo",
+//Armor Crew
+"armor11","armor12","armor13","armor14",
+"armor21","armor22","armor23","armor24",
+"armor31","armor32","armor33","armor34",
+//Medevac Crew
+"sar11","sar12",
+"sar13","sar14",
+"sar15","sar16",
+
+"sar21","sar22",
+"sar23","sar24",
+//Rotary Wing Transport
+"rwrt11","rwrt12","rwrt13","rwrt14",
+"rwrt21","rwrt22","rwrt23","rwrt24",
+//Rortary Wing Attack
+"rwa11","rwa12",
+//Fixed Wing Attack
+"fixwa11","fixwa12","fixwa13","fixwa14"
+
+];
+#else
+d_entities_tt_blufor = [];
+
+d_entities_tt_opfor = [];
 #endif
 
 d_servicepoint_building = "Land_Cargo_House_V2_F";

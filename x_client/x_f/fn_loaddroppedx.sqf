@@ -3,7 +3,7 @@
 #include "..\..\x_setup.sqf"
 
 if (isDedicated) exitWith {};
-
+/*
 params ["_unit", "_caller"];
 
 private _chatfunc = {
@@ -33,3 +33,5 @@ if (_nobjs isEqualTo []) exitWith {[_unit, _caller, localize "STR_DOM_MISSIONSTR
 _unit setVariable ["d_ammobox", true, true];
 _unit setVariable ["d_ammobox_next", time + d_drop_ammobox_time, true];
 [_unit, _caller, localize "STR_DOM_MISSIONSTRING_273"] call _chatfunc;
+
+*/
