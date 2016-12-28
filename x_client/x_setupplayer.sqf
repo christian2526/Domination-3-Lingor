@@ -270,12 +270,14 @@ private _alpha = 1 - (_distp / 200)
 	d_d3d_locs5 = localize "STR_DOM_MISSIONSTRING_531";
 	d_d3d_locs6 = localize "STR_DOM_MISSIONSTRING_1644";
 #ifndef __TT__
+/*
 	d_pl_flag_base = d_FLAG_BASE;
 	d_pl_vec_trig = d_vecre_trigger;
 	d_pl_jet_trig = d_jet_trigger;
 	d_pl_chop_trig = d_chopper_trigger;
 	d_pl_wreck_trig = d_wreck_rep;
 	d_pl_ammoload_trig = d_AMMOLOAD;
+	*/
 #else
 /*
 	if (d_player_side == blufor) then {

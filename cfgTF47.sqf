@@ -21,7 +21,7 @@ TICKETS_HARDCAP = 120;
 TF47_MISSIONID = 99;
 
 // Mission Name/Version Info for Log
-TF47_MISSIONINFO = "CO@64 Invade&Annex Takistan 0.6";
+TF47_MISSIONINFO = "CO@92 Domination 3 Lingor 1.0";
 
 _pathtoscripts = "tf47CoreScripts\";
 
@@ -29,8 +29,7 @@ _pathtoscripts = "tf47CoreScripts\";
 
 // --- DESPAWN PREVENTION MARKERS -------------------------------------------------------------------------------------------------------------------
 _despawnPreventionMarkers = [
-	["SafeZone",300],
-	["fob_chapman",120]
+	["SafeZone",525]
 ];
 
 // --- BASE CLEAN-UP MARKERS ------------------------------------------------------------------------------------------------------------------------
@@ -45,13 +44,13 @@ _baseCleanupMarkers = [];
 // 		see mcmarker.sqf and mcmarkerchange.sqf for details
 _statusMarkersInit = false;
 _statusMarkerData = [
-	["mc1",			["mc1marker",				"b_hq",				"ColorGreen",	"CCT - Command and Control ""SPECTRE""",					true]],
-	["mc2",			["mc2marker",				"b_hq",				"ColorGreen",	"CCT - 1st Joint Terminal Attack Controller ""TOPMAN""",	true]],
+	["gbc1",			["gbc1_marker",				"b_hq",				"ColorGreen",	"CCT - Ground Battle Commander ""GODFATHER""",					true]],
+	["gbc2",			["gbc2_marker",				"b_hq",				"ColorGreen",	"CCT - Asst. Ground Battle Commander ""BOWMAN""",	true]],
 	//["mc3",		["mc3marker",				"b_hq",				"ColorGreen",	"CCT - 2nd Joint Terminal Attack Controller ""REAPER-01""",	true]],
-	["mc3",			["mc4marker",				"b_hq",				"ColorGreen",	"Air Traffic Control ""TOWER""",							true]],
+	//["mc3",			["mc4marker",				"b_hq",				"ColorGreen",	"Air Traffic Control ""TOWER""",							true]],
 	//["mc5",		["mc5marker",				"b_hq",				"ColorGreen",	"TOC - Tactical Operations Center ""GODFATHER""",			true]],
-	["uh601",		["callsign_uh60m_1",		"b_air",			"ColorBrown",	"RAVEN-01",													false]],
-	["uh602",		["callsign_uh60m_2",		"b_air",			"ColorBrown",	"RAVEN-02",													false]],
+	["uh601mev",		["callsign_uh60mev_m_1",		"b_air",			"ColorRed",	"DUSTOFF-01",													false]],
+	["uh602mev",		["callsign_uh60mev_m_2",		"b_air",			"ColorRed",	"DUSTOFF-02",													false]],
 	["mh6",			["callsign_mh6",			"b_air",			"ColorBrown",	"BUTTEFLY",													false]],
 	["AH6J",		["callsign_ah6j",			"b_air",			"ColorBrown",	"FIREFLY",													false]],
 	["ch47f",		["callsign_ch47f",			"b_air",			"ColorBrown",	"PELICAN",													false]],
@@ -67,7 +66,7 @@ _statusMarkerData = [
 	["m2a3_2",		["callsign_m2a3_2",			"b_mech_inf",		"ColorOrange",	"M2A3",														false]],
 	["m2a3_3",		["callsign_m2a3_3",			"b_mech_inf",		"ColorOrange",	"M2A3",														false]],
 	["aav7",		["callsign_aav7",			"b_mech_inf",		"ColorOrange",	"AAV7",														false]]
-];	
+];
 _statusMarkers = [_statusMarkerData, []] call CBA_fnc_hashCreate;
 
 
@@ -87,8 +86,8 @@ _JumpOutHelicopters = ["uh601","uh602","dustoff"];
 // --- VEHICLE RESTRICTIONS -------------------------------------------------------------------------------------------------------------------------
 // Vehicle Name, Driver Whitelist ID (0 for None), Crew Whitelist ID (0 for None), Driver Slots, Crew Slots
 _vehicleRestrictionData = [
-	["uh601", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
-	["uh602", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
+	["uh601mev", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
+	["uh602mev", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
 	["mh6", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
 	["ah6j", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
 	["ch47f", 			[1, 1,	["rotwt11","rotwt12","rotwt21","rotwt22","rotwt16","rotwt17","rotwt26","rotwt27","mc2","mc3"],							["rotwt16","rotwt17","rotwt26","rotwt27","rotwt11","rotwt12","rotwt21","rotwt22","mc2","mc3"]]],
@@ -127,28 +126,54 @@ _vehicleRestrictions = [_vehicleRestrictionData, []] call CBA_fnc_hashCreate;
 // --- SECURE SLOTS ---------------------------------------------------------------------------------------------------------------------------------
 // Slot Name, Whitelist ID
 _secureSlots = [
-	["mc1",	3],	// CCT Command and Control
-	["mc2",	3], // CCT 1st JTAC
-	["mc3",	1],  // TOWER
-	["Zeus3_u", 5],	//Zeus 1
-	["Zeus2_u", 5]	//Zeus 2
+	["gbc1",	3],	// CCT Command and Control
+	["gbc2",	3], // CCT Command and Control
+	["jtac1",	3],  // JTAC
+	["jtac2",	3],  // JTAC
+	["jfo",	3],  // JFO
+	["tower", 1]	//Tower
+	//["Zeus2_u", 5]	//Zeus 2
 ];
 
 // --- ALL SLOTS ------------------------------------------------------------------------------------------------------------------------------------
 // used by Domination for Playermarkers, etc...
 _allslots = [
-	"alphaact","alpha21","alpha22","alpha23","alpha24","alpha31","alpha32","alpha33","alpha34","alpha41","alpha42","alpha43","alpha44",
-	"bravoact","bravo21","bravo22","bravo23","bravo24","bravo31","bravo32","bravo33","bravo34","bravo41","bravo42","bravo43","bravo44",
-	"charlieact","charlie21","charlie22","charlie23","charlie24","charlie31","charlie32","charlie33","charlie34",
-	"armor11","armor12","armor13",
-	"armor21","armor22","armor23",
-	"rotwt11","rotwt12","rotwt16","rotwt17","airmedic11","airmedic12",
-	"rotwa21","rotwa22","rotwt22","rotwt21","rotwt26","rotwt27",
-	"fixwa11","fixwa12","fixwa31",
-	"mc1","mc2","mc3",
-	"ghost1","ghost2",
-	"Zeus2_u",
-	"Zeus3_u"
+
+	//USMC Infantry 48
+	"a1","a2","a3","a4",
+	"b1","b2","b3","b4",
+	"c1","c2","c3","c4",
+	"d1","d2","d3","d4",
+	"e1","e2","e3","e4",
+	"f1","f2","f3","f4",
+	"g1","g2","g3","g4",
+	"h1","h2","h3","h4",
+	"a1_1","a2_1","a3_1","a4_1",
+	"b1_1","b2","b3_1","b4_1",
+	"c1_1","c2_1","c3_1","c4_1",
+	"d1_1","d2_1","d3_1","d4_1",
+	//Sniper
+	"snp1","snp2",
+	//Command and Control
+	"gbc1","gbc2","jtac1","jtac2","tower","jfo",
+	//Armor Crew
+	"armor11","armor12","armor13","armor14",
+	"armor21","armor22","armor23","armor24",
+	"armor31","armor32","armor33","armor34",
+	//Medevac Crew
+	"sar11","sar12",
+	"sar13","sar14",
+	"sar15","sar16",
+
+	"sar21","sar22",
+	"sar23","sar24",
+	//Rotary Wing Transport
+	"rwrt11","rwrt12","rwrt13","rwrt14",
+	"rwrt21","rwrt22","rwrt23","rwrt24",
+	//Rortary Wing Attack
+	"rwa11","rwa12",
+	//Fixed Wing Attack
+	"fixwa11","fixwa12","fixwa13","fixwa14"
 ];
 
 // --- Infantry Ticket Costs ------------------------------------------------------------------------------------------------------------------------
@@ -163,20 +188,28 @@ _allslots = [
 // Fixed Attack Pilot:				10 Tickets
 // Mission Control Slots:			10 Tickets
 // Admin Slot:						0 Tickets
-_infantryTicketsDefault = 1;
+_infantryTicketsDefault = 2;
 _infantryTicketsData = [
-	["charlie22", 3],	["charlie32", 3],		
-	["alpha22", 3],		["alpha32", 3],		["alpha42", 3],
-	["bravo22", 3],		["bravo32", 3],		["bravo42", 3],
-	["armor11", 3],		["armor12", 3], 	["armor13", 3],
-	["armor21", 3], 	["armor22", 3], 	["armor23", 3],	
-	["rotwt11", 5],		["rotwt12", 5],		["rotwt16", 5],		["rotwt17", 5],
-	["airmedic11", 3],	["airmedic12", 3],
-	["rotwt21", 5],		["rotwt22", 5], 	["rotwt26", 5],		["rotwt27", 5],
-	["rotwa11", 5],		["rotwa12", 5],
-	//["rotwa21", 5],	["rotwa22", 5],
-	["fixwa11", 5],		["fixwa12", 3],		["fixwa21", 5],
-	["mc1", 10],			["mc2", 10],			["mc3", 10]
+
+	//medics
+	["a4", 3], ["b4", 3], ["c4", 3], ["d4", 3],
+	["e4", 3], ["f4", 3], ["g4", 3], ["h4", 3],
+	["a4_1", 3], ["b4_1", 3], ["c4_1", 3], ["d4_1", 3],
+	//Sniper&Spotter
+	["snp1", 3], ["snp2", 3],
+	//CCT
+	["gbc1", 5], ["gbc2", 5], ["jtac1", 5], ["jtac2", 5],["tower", 5], ["jfo", 5],
+	//Medevac
+	["sar11", 5], ["sar12", 5], ["sar13", 3], ["sar14", 3],["sar15", 3], ["sar16", 3],
+	["sar21", 5], ["sar22", 5], ["sar23", 3], ["sar24", 3],
+	//RWRT
+	["rwrt11", 5], ["rwrt12", 5], ["rwrt13", 3], ["rwrt14", 3],
+	["rwrt21", 5], ["rwrt22", 5], ["rwrt23", 3], ["rwrt24", 3],
+	//RWA
+	["rwa11", 5], ["rwa12", 5],
+	//FIXWA
+	["fixwa11", 5], ["fixwa12", 5], ["fixwa13", 3], ["fixwa14", 3]
+
 ];
 _infantryTickets = [_infantryTicketsData, _infantryTicketsDefault] call CBA_fnc_hashCreate;
 

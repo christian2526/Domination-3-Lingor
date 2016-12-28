@@ -190,18 +190,45 @@ d_jumpflag_vec = "";
 
 // please note, player string names are case sensitive! You have to use exactly the same case as in the editor here!
 #ifndef __TT__
-d_player_entities = [	"alphaact","alpha21","alpha22","alpha23","alpha24","alpha31","alpha32","alpha33","alpha34","alpha41","alpha42","alpha43","alpha44",
-	"bravoact","bravo21","bravo22","bravo23","bravo24","bravo31","bravo32","bravo33","bravo34","bravo41","bravo42","bravo43","bravo44",
-	"charlieact","charlie21","charlie22","charlie23","charlie24","charlie31","charlie32","charlie33","charlie34",
-	"armor11","armor12","armor13",
-	"armor21","armor22","armor23",
-	"rotwt11","rotwt12","rotwt16","rotwt17","airmedic11","airmedic12",
-	"rotwa21","rotwa22","rotwt22","rotwt21","rotwt26","rotwt27",
-	"fixwa11","fixwa12","fixwa31",
-	"mc1","mc2","mc3",
-	"ghost1","ghost2",
-	"Zeus2_u",
-	"Zeus3_u"];
+d_player_entities = [
+
+//USMC Infantry 48
+"a1","a2","a3","a4",
+"b1","b2","b3","b4",
+"c1","c2","c3","c4",
+"d1","d2","d3","d4",
+"e1","e2","e3","e4",
+"f1","f2","f3","f4",
+"g1","g2","g3","g4",
+"h1","h2","h3","h4",
+"a1_1","a2_1","a3_1","a4_1",
+"b1_1","b2","b3_1","b4_1",
+"c1_1","c2_1","c3_1","c4_1",
+"d1_1","d2_1","d3_1","d4_1",
+//Sniper
+"snp1","snp2",
+//Command and Control
+"gbc1","gbc2","jtac1","jtac2","tower","jfo",
+//Armor Crew
+"armor11","armor12","armor13","armor14",
+"armor21","armor22","armor23","armor24",
+"armor31","armor32","armor33","armor34",
+//Medevac Crew
+"sar11","sar12",
+"sar13","sar14",
+"sar15","sar16",
+
+"sar21","sar22",
+"sar23","sar24",
+//Rotary Wing Transport
+"rwrt11","rwrt12","rwrt13","rwrt14",
+"rwrt21","rwrt22","rwrt23","rwrt24",
+//Rortary Wing Attack
+"rwa11","rwa12",
+//Fixed Wing Attack
+"fixwa11","fixwa12","fixwa13","fixwa14"
+
+];
 #else
 d_entities_tt_blufor = [];
 
