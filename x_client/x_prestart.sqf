@@ -11,7 +11,7 @@ if !(str player in d_virtual_entities) then {
 		call compile preprocessFileLineNumbers "x_shc\x_setuphc.sqf";
 		disableRemoteSensors true;
 	} else {
-		//call compile preprocessFileLineNumbers "x_client\x_setupplayer.sqf";
+		call compile preprocessFileLineNumbers "x_client\x_setupplayer.sqf";
 		// TODO check if it works, not sure about it
 		//disableRemoteSensors !d_with_ai;
 		disableRemoteSensors true;

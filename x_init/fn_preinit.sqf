@@ -913,7 +913,7 @@ if (!isDedicated) then {
 	// the only vehicles that can load an ammo box are the transport choppers and MHQs__
 	d_check_ammo_load_vecs =
 #ifdef __OWN_SIDE_BLUFOR__
-	["RHS_UH1Y_UNARMED", "RHS_UH60M", "RHS_CH_47F", "rhsusf_CH53E_USMC"];
+	[];
 #endif
 #ifdef __OWN_SIDE_OPFOR__
 	["O_MRAP_02_F", "O_Heli_Light_02_unarmed_F"];
