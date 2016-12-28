@@ -59,7 +59,7 @@ class Header {
 #endif
 };
 
-joinUnassigned = false; // auto assign
+joinUnassigned = 0; // auto assign
 
 // 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System
 // {channelid, disablechat, disablevoice}
