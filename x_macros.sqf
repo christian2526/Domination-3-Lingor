@@ -1,5 +1,5 @@
 // uncomment for debugging with __TRACE. see below
-#define __DEBUG__
+//#define __DEBUG__
 
 #ifdef THIS_FILE
 #define THIS_FILE_ 'THIS_FILE'
