@@ -11,7 +11,7 @@
 #define CT_STATIC_SKEW		10
 #define CT_ACTIVETEXT		11
 #define CT_TREE				12
-#define CT_STRUCTURED_TEXT	13 
+#define CT_STRUCTURED_TEXT	13
 #define CT_3DSTATIC			20
 #define CT_3DACTIVETEXT		21
 #define CT_3DLISTBOX		22
@@ -164,7 +164,7 @@ class RscButton {
 	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
 	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
 	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
-	default = false;
+	default = 0;
 };
 class RscNavButton:RscButton {
 	w = 0.1; h = 0.04;
@@ -194,7 +194,7 @@ class RscListBox {
 	colorScrollbar[] = {0.95,0.95,0.95,1};
 	shadow = 2;
 	period = 1.2;
-	default = false;
+	default = 0;
 	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
 	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
 	tooltipColorText[] = {1,1,1,1};
@@ -777,7 +777,7 @@ class RscLinkButtonBase {
 	idc = -1;
 	type = CT_BUTTON;
 	style = ST_CENTER;
-	default = false;
+	default = 0;
 	font = DEFAULTFONT;
 	sizeEx = 0.029;
 	colorText[] = {1, 1, 1, 1};
@@ -1049,7 +1049,7 @@ class RscIGUIListNBox: RscListNBox {
 		colorText[] = {1, 1, 1, 1}; \
 		text = __DOM_NVER_STR__; \
 	};
-	
+
 #define __CANCELCLOSEB(bidc) \
 	class CancelCloseButton: RscButton { \
 			idc = bidc; \
@@ -1077,7 +1077,7 @@ class RscIGUIListNBox: RscListNBox {
 		h = 1/6 * safezoneH; \
 		colorBackground[] = {0,0,0,0.1}; \
 	};
-	
+
 #define COMMON_BACKGROUND_TILES\
 	class TileGroup: RscControlsGroupNoScrollbars\
 	{\
