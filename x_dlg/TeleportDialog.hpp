@@ -1,6 +1,6 @@
 class d_TeleportDialog {
 	idd = -1;
-	movingEnable = false;
+	movingEnable = 0;
 	onLoad="uiNamespace setVariable ['d_TeleportDialog', param [0]];d_teleport_dialog_open = true;d_teleport_off = false;[param [0], 0] call d_fnc_teleportdialoginit";
 	onUnLoad="uiNamespace setVariable ['d_TeleportDialog', nil];d_teleport_dialog_open = false;d_teleport_off = nil;";
 	class controlsBackground {
@@ -52,7 +52,7 @@ class d_TeleportDialog {
 		class respawn: RscButton {
 			idc = 100102;
 			colorBackgroundActive[] = {1,1,1,0.1};
-			text = "$STR_DOM_MISSIONSTRING_1250"; 
+			text = "$STR_DOM_MISSIONSTRING_1250";
 			action = "[0] call d_fnc_beam_tele";
 			x = "27 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "23.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -62,7 +62,7 @@ class d_TeleportDialog {
 		};
 		class cancelb: respawn {
 			idc = 100103;
-			text = "$STR_DOM_MISSIONSTRING_1229"; 
+			text = "$STR_DOM_MISSIONSTRING_1229";
 			action = "CloseDialog 0";
 			x = "1 *(((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "23.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -70,7 +70,7 @@ class d_TeleportDialog {
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			default = false;
 		};
-		
+
 		class LogTxt: RscText2 {
 			idc = 11002;
 			style = ST_MULTI;
