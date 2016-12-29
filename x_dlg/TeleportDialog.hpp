@@ -58,7 +58,7 @@ class d_TeleportDialog {
 			y = "23.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			default = true;
+			default = 1;
 		};
 		class cancelb: respawn {
 			idc = 100103;
@@ -68,7 +68,7 @@ class d_TeleportDialog {
 			y = "23.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			default = false;
+			default = 0;
 		};
 
 		class LogTxt: RscText2 {

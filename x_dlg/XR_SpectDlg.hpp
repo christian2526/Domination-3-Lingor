@@ -215,7 +215,7 @@ class xr_SpectDlg {
 					y = 1 - 0.045;
 					w = 0.3;
 					h = 0.04;
-					default = true;
+					1;
 				};
 				class LogTxt: RscText2 {
 					idc = 11002;
