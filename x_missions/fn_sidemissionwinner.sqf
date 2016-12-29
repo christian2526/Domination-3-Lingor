@@ -44,6 +44,10 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text, lineBreak, lineBreak,
 			_bonus_string
+
+			/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+			["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+			/**************************************************************/
 		];
 #ifdef __TT__
 		} else {
@@ -87,9 +91,6 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 };
 
 ["d_sm_task"] call BIS_fnc_deleteTask;
-/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-/**************************************************************/
 
 sleep 1;
 d_sm_winner = 0;

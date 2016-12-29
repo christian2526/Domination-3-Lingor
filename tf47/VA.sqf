@@ -30,7 +30,8 @@
 			"tf47_smaw_optic",
 			"tf47_optic_smaw",
 			"tf47_smaw_optic",
-
+			"rhs_weap_M136_hedp",
+			"rhs_weap_M136_hp"
 			"UK3CB_BAF_L16",
 			"UK3CB_BAF_Javelin_Slung_Tube",
 
@@ -45,6 +46,13 @@
 			"BWA3_RGW90",
 			"BWA3_Fliegerfaust",
 			*/
+			"rhs_weap_M136_hedp",
+			"rhs_weap_M136_hp",
+			"rhs_weap_fim92",
+			"rhs_weap_fgm148",
+			"rhs_weap_smaw",
+			"rhs_weap_smaw_green",
+
 			//PRIMARY
 
 			"rhs_weap_m4a1_blockII",
@@ -236,6 +244,10 @@
 			"rhsusf_8Rnd_doomsday_Buck",
 			"rhsusf_8Rnd_Slug",
 			"rhsusf_8Rnd_HE",
+			"rhs_mag_smaw_HEAA",
+			"rhs_mag_smaw_HEDP",
+			"rhs_mag_smaw_SR",
+			"rhs_fim92_mag",
 			"rhsusf_8Rnd_FRAG",
 			"rhs_weap_M590_8RD",
 			"rhs_weap_M590_5RD",
@@ -918,6 +930,7 @@
 			"rhsusf_acc_SF3P556",
 			"rhsusf_acc_SFMB556",
 			"rhsusf_acc_M2010S",
+			"rhs_weap_optic_smaw",
 			"optic_NVS",
 			"optic_Holosight",
 
@@ -989,6 +1002,8 @@
 			"BWA3_muzzle_snds_MG4",
 			"BWA3_muzzle_snds_MG5",
 			*/
+			"ACE_optic_Hamr_2D",
+			"ACE_optic_Hamr_PIP",
 			"optic_AMS",
 			"optic_LRPS",
 			"optic_KHS_blk",
@@ -1006,4 +1021,3 @@
 		["AmmoboxInit",[_X,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
 
 } forEach [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
-//};
