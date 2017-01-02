@@ -171,18 +171,18 @@ if (isServer) then {
                                         if(_playerid != "") then {
                                                 if(_comment != "") then {
                                                         diag_log format ["using playerid query with comment"];
-                                                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `arma2uid`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5', '%6')", _missionid, _action, _dbchange, westTickets, _playerid, _comment];
+                                                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `arma2uid`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5', '%6')", _missionid, _action, _dbchange, westTickets, _playerid, _comment];
                                                 } else {
                                                         diag_log format ["using playerid query without comment"];
-                                                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `arma2uid`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, _action, _dbchange, westTickets, _playerid];
+                                                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `arma2uid`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, _action, _dbchange, westTickets, _playerid];
                                                 };
                                         } else {
                                                 if(_comment != "") then {
                                                         diag_log format ["using default query with comment"];
-                                                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, _action, _dbchange, westTickets, _comment];
+                                                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, _action, _dbchange, westTickets, _comment];
                                                 } else {
                                                         diag_log format ["using default query without comment"];
-                                                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4')", _missionid, _action, _dbchange, westTickets];
+                                                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4')", _missionid, _action, _dbchange, westTickets];
                                                 };
                                         };
 
@@ -307,7 +307,7 @@ if (isServer) then {
 
                                         diag_log format["*** BLUFOR is out of Tickets, the Mission is lost"];
 
-                                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 98, 0, 0, "Mission Lost"];
+                                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 98, 0, 0, "Mission Lost"];
                                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
 
                                         "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
@@ -333,7 +333,7 @@ if (isServer) then {
                         _comment = _this;
                         _missionid= ticketsMID;
 
-                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 97, 0, westTickets, _comment];
+                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 97, 0, westTickets, _comment];
                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
 
                         "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
@@ -348,7 +348,7 @@ if (isServer) then {
                         _comment = _this;
                         _missionid= ticketsMID;
 
-                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 95, 0, westTickets, _comment];
+                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 95, 0, westTickets, _comment];
                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
 
                         "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
@@ -363,7 +363,7 @@ if (isServer) then {
                         _comment = _this;
                         _missionid= ticketsMID;
 
-                        _query = format ["INSERT INTO ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 96, 0, westTickets, _comment];
+                        _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 96, 0, westTickets, _comment];
                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
 
                         "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
@@ -382,7 +382,7 @@ if (isServer) then {
                                 _slotname = format["%1", _player];
                                 _playername = name _player;
 
-                                _query = format ["INSERT INTO loginlog (`timestamp`, `playerid`, `nick`, `missionid`, `slot`) VALUES ( UNIX_TIMESTAMP(), '%1', '%2', '%3', '%4')", _playerid, _playername, _missionid, _slotname];
+                                _query = format ["INSERT INTO gadget_loginlog (`timestamp`, `playerid`, `nick`, `missionid`, `slot`) VALUES ( UNIX_TIMESTAMP(), '%1', '%2', '%3', '%4')", _playerid, _playername, _missionid, _slotname];
                                 diag_log format["--- TF47 Loginlog DB Query: %1", _query];
 
                                 "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
@@ -407,7 +407,7 @@ if (isServer) then {
                         _playerId = _this select 1;
                         _listID = _this select 2;
 
-                        _query = format ["SELECT `playerid` FROM playerlist WHERE `listid` = '%1' AND playerid = '%2'", _listID, _playerId];
+                        _query = format ["SELECT `playerid` FROM gadget_playerlist WHERE `listid` = '%1' AND playerid = '%2'", _listID, _playerId];
                         diag_log format["--- TF47 CheckList DB Query: %1", _query];
 
                         _get = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
