@@ -8,6 +8,6 @@ if (hasInterface) then {
 	["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 };
 _null = [] execVM "tf47\VA.sqf";
-_null = [] execVM "tf47CoreScripts\infantryInit.sqf";
+_null = _this execVM "tf47CoreScripts\infantryInit.sqf";
 execVM "tasks.sqf";
 diag_log [diag_frameno, diag_ticktime, time, "MPF initPlayerLocal.sqf processed"];
