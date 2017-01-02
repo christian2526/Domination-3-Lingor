@@ -30,7 +30,3 @@ _player = _params select 2;
 if (_position == "driver") then {
 	[_vehicle] execVM format["%1mapMarkerUpdate.sqf", _pathToScripts];
 };
-
-if (_vehicle typeOf "ship") then {
-	_vehicle enableSimulationGlobal false;
-};

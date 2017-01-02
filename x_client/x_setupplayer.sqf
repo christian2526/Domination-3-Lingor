@@ -23,7 +23,7 @@ if (d_string_player in d_entities_tt_blufor) then {
 	d_player_side = blufor;
 	d_own_side = "WEST";
 	d_own_sides = ["WEST"];
-	d_create_bike = [["B_Quadbike_01_F"], ["B_Quadbike_01_F", "B_T_LSV_01_unarmed_F"]] select d_tanoa;
+	d_create_bike = [["B_Quadbike_01_F"], ["B_Quadbike_01_F"]] select d_tanoa;
 	d_FLAG_BASE = d_WFLAG_BASE;
 	d_player_entities = d_entities_tt_blufor;
 

@@ -188,7 +188,3 @@ if (_player == player) then {
 		};
 	};
 };
-
-if (_vehicle isTypeOf "ship") then {
-	_vehicle enableSimulationGlobal true;
-};

@@ -45,10 +45,10 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 			d_current_mission_resolved_text, lineBreak, lineBreak,
 			_bonus_string
 
-			/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-			["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-			/**************************************************************/
 		];
+		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+		["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+		/**************************************************************/
 #ifdef __TT__
 		} else {
 			hint composeText[
