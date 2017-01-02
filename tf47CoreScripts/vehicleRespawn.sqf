@@ -156,17 +156,16 @@ while {_run} do
 		if(_spwndist < 10) then { _preventDespawn = true; };
 
 		// Despawn Prevention Markers (see cfgTF47.sqf)
-		/*
-		{
-			_marker = _x select 0;
-			_dist = _x select 1;
+		//Is bugged, use _marker = _x select 0; and _dist = _x select 1; to use cfgTF47.sqf / hardcode for the moment
+		//with forEach
+			_marker = "Safezone";
+			_dist = 525;
 			_mpos = getMarkerPos _marker;
 			if(((_mpos select 0) != 0) || ((_mpos select 1) != 0) || ((_mpos select 2) != 0)) then {
 				_mdist = getPosASL _unit distance _mpos;
 				if (_mdist < _dist) then { _preventDespawn = true; };
 			};
-		} forEach _despawnPreventionMarkers;
-		*/
+
 		// Check Despawn
 		_crewalive = {alive _x} count crew _unit;
 		if (!_preventDespawn and (!_dead) and (_crewalive <= 0)) then {

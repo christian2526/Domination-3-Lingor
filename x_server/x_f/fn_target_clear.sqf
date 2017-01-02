@@ -114,12 +114,10 @@ if (!isNil "d_HC_CLIENT_OBJ_OWNER") then {
 
 sleep 0.5;
 
-if !(d_maintargets_list isEqualTo []) then {
-	//0 spawn d_fnc_gettargetbonus;
-} else {
+
 	d_target_clear = true; publicVariable "d_target_clear";
-	//["d_" + _cur_tgt_name + "_dommtm", "ColorGreen"] remoteExecCall ["setMarkerColor", 2];
-	("d_" + _cur_tgt_name + "_dommtm") setMarkerColor "ColorGreen";
+	["d_" + _cur_tgt_name + "_dommtm", "ColorGreen"] remoteExecCall ["setMarkerColor", 2];
+	//("d_" + _cur_tgt_name + "_dommtm") setMarkerColor "ColorGreen";
 #ifndef __TT__
 	"" remoteExec ["d_fnc_target_clear_client", [0, -2] select isDedicated];
 #else
@@ -132,7 +130,7 @@ if !(d_maintargets_list isEqualTo []) then {
 	d_hq_logic_blufor1 kbTell [d_hq_logic_blufor2,"HQ_W","Captured2",["1","",_cur_tgt_name,[_cur_tgt_name]],"SIDE"];
 	d_hq_logic_opfor1 kbTell [d_hq_logic_opfor2,"HQ_E","Captured2",["1","",_cur_tgt_name,[_cur_tgt_name]],"SIDE"];
 #endif
-};
+
 
 sleep 2.123;
 
