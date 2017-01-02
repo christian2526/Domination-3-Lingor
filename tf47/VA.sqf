@@ -12,6 +12,7 @@
 			//"UK3CB_BAF_L131A1",
 			"rhsusf_weap_m9",
 			"rhsusf_weap_glock17g4",
+			"rhsusf_weap_MP7A1_base_f",
 			//"BWA3_MP7",
 
 			//LAUNCHER
@@ -59,6 +60,7 @@
 			"rhs_weap_m4a1_blockII_KAC",
 			"rhs_weap_m4a1_blockII_grip2",
 			"rhs_weap_m4a1_blockII_grip2_KAC",
+			"rhs_weap_m4a1_blockII_KAC_bk",
 			"rhs_weap_m4a1_blockII_M203",
 			"rhs_weap_mk18",
 			"rhs_weap_mk18_KAC",
@@ -106,8 +108,16 @@
 			"rhs_weap_m4a1_m203",
 			"rhs_weap_m4a1_m320",
 			"rhs_weap_m27iar",
-			"arifle_SDAR_F",
-			"SMG_01_F"
+			"rhs_weap_hk416d10",
+			"rhs_weap_hk416d10_m320",
+			"rhs_weap_hk416d10_LMT",
+			"rhs_weap_hk416d145",
+			"rhs_weap_hk416d145_m320",
+			"rhs_weap_M107",
+			"rhs_weap_M107_w",
+			"rhs_weap_m24sws",
+			"rhs_weap_m24sws_blk",
+			"rhs_weap_m24sws_ghillie"
 			/*
 			"BWA3_G36K",
 			"BWA3_G36",
@@ -206,6 +216,7 @@
 			*/
 			//PISTOL AMMO
 			"rhsusf_mag_7x45acp_MHP",
+			"rhsusf_mag_40Rnd_46x30_FMJ",
 			"11Rnd_45ACP_Mag",
 			//"UK3CB_BAF_17Rnd_9mm",
 			"rhsusf_mag_15Rnd_9x19_FMJ",
@@ -251,9 +262,8 @@
 			"30Rnd_45ACP_Mag_SMG_01_Tracer_Green",
 			"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
 			"30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow",
-			"20Rnd_556x45_UW_mag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_9x21_Mag",
+			"rhsusf_mag_10Rnd_STD_50BMG_M33",
+			"rhsusf_mag_10Rnd_STD_50BMG_mk211",
 			/*
 			"UK3CB_BAF_150Rnd_762x51_X",
 
@@ -929,6 +939,10 @@
 			"rhs_weap_optic_smaw",
 			"optic_NVS",
 			"optic_Holosight",
+			"rhsusf_acc_premier_low",
+			"rhsusf_acc_premier_anpvs27",
+			"rhsusf_acc_premier",
+			"rhsusf_acc_SpecterDR",
 
 			/*
 			"UK3CB_BAF_Silencer_L115A3",
