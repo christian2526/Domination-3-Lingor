@@ -18,7 +18,7 @@ TICKETS_HARDCAP = 120;
 // 5 ... Takistan Domination Gefechtsübungszentrum (GUeZ) Version
 // 7 ... ISLA DI CAPRAIA PatrolOps Mod
 // 99 ... Development Server
-TF47_MISSIONID = 99;
+TF47_MISSIONID = 1;
 
 // Mission Name/Version Info for Log
 TF47_MISSIONINFO = "CO@92 Domination 3 Lingor 1.0";
