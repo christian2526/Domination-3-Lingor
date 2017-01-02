@@ -15,7 +15,7 @@
 			//"BWA3_MP7",
 
 			//LAUNCHER
-			/*
+
 			"rhs_weap_fim92",
 			"tf47_m3maaws",
 			"tf47_optic_m3maaws",
@@ -30,6 +30,7 @@
 			"tf47_smaw_optic",
 			"tf47_optic_smaw",
 			"tf47_smaw_optic",
+			/*
 			"rhs_weap_M136_hedp",
 			"rhs_weap_M136_hp"
 			"UK3CB_BAF_L16",
@@ -45,14 +46,13 @@
 			"BWA3_Pzf3",
 			"BWA3_RGW90",
 			"BWA3_Fliegerfaust",
-			*/
 			"rhs_weap_M136_hedp",
 			"rhs_weap_M136_hp",
 			"rhs_weap_fim92",
 			"rhs_weap_fgm148",
 			"rhs_weap_smaw",
 			"rhs_weap_smaw_green",
-
+			*/
 			//PRIMARY
 
 			"rhs_weap_m4a1_blockII",
@@ -183,23 +183,19 @@
 
 			//LAUNCHER AMMO
 			"rhs_fim92_mag",
-			/*
+
 			"tf47_m3maaws_HEAT",
 			"tf47_m3maaws_HEDP",
 			"tf47_m3maaws_HE",
 			"tf47_m3maaws_SMOKE",
 			"tf47_m3maaws_ILLUM",
-			// "tf47_at4_m_HEAT",
-			// "tf47_at4_m_HEDP",
-			// "tf47_at4_m_HP",
-			"tf47??_smaw_heaa",
-			"tf47_smaw_hedp",
-			"tf47_smaw_sr?",
-			"tf47_smaw_sr?_",
+			"tf47_at4_m_HEAT",
+			"tf47_at4_m_HEDP",
+			"tf47_at4_m_HP",
 			"tf47_smaw_HEAA",
 			"tf47_smaw_HEDP",
 			"tf47_smaw_SR",
-
+			/*
 			"UK3CB_BAF_1Rnd_81mm_Mo_Flare_white",
 			"UK3CB_BAF_1Rnd_81mm_Mo_Smoke_white",
 			"UK3CB_BAF_1Rnd_81mm_Mo_shells",
@@ -984,7 +980,7 @@
 			"BWA3_optic_24x72_NSV",
 			"BWA3_optic_NSV600",
 			"BWA3_optic_NSA80",
-
+			*/
 			//ATTACHMENTS
 			"tf47_optic_m3maaws",
 			"tf47_smaw_optic",
@@ -993,7 +989,7 @@
 			"tf47_optic_smaw",
 			"tf47_smaw_optic","tf47_optic_smaw",
 			"tf47_smaw_optic",
-
+			/*
 			"BWA3_acc_LLM01_irlaser",
 			"BWA3_acc_LLM01_flash",
 			"BWA3_acc_VarioRay_irlaser",
