@@ -21,7 +21,7 @@ TICKETS_HARDCAP = 120;
 TF47_MISSIONID = 1;
 
 // Mission Name/Version Info for Log
-TF47_MISSIONINFO = "CO@92 Domination 3 Lingor 1.0";
+TF47_MISSIONINFO = "{MISSIONINFO}";
 
 _pathtoscripts = "tf47CoreScripts\";
 
