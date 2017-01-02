@@ -2,10 +2,10 @@
 * This script kicks in when somebody leaves a vehicle
 *
 * Long Description
-* 
+*
 * Tested with :
 * Arma 3 1.23
-* 
+*
 * @category   Clienside Serverside Scripts
 * @package    TF47 CoreScripts
 * @author     [TF47] Amadox
@@ -13,7 +13,7 @@
 * @version    1.0
 */
 
- 
+
 if(isNil "cfgTF47") then {
 	cfgTF47 = compile preprocessFileLineNumbers "cfgTF47.sqf";
 };
@@ -29,4 +29,8 @@ _player = _params select 2;
 
 if (_position == "driver") then {
 	[_vehicle] execVM format["%1mapMarkerUpdate.sqf", _pathToScripts];
+};
+
+if (_vehicle typeOf "ship") then {
+	_vehicle enableSimulationGlobal false;
 };

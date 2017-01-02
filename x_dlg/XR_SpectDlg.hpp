@@ -143,7 +143,7 @@ class xr_SpectDlg {
 		class MapButton: RscButton {
 			idc = 1002;
 			colorBackgroundActive[] = {1,1,1,0.1};
-			text = "$STR_DOM_MISSIONSTRING_1333"; 
+			text = "$STR_DOM_MISSIONSTRING_1333";
 			action = "if (ctrlShown ((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1000)) then {ctrlShow [1000, false];((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1003) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1334');};if (ctrlShown ((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 3000)) then {ctrlShow [3000, false];((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1002) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1333');d_x_loop_end = true;} else {ctrlShow [3000, true];((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1002) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1333a'); call xr_fnc_updaterlb}";
 			x = "SafeZoneX + SafeZoneW - 0.33";
 			y = "SafeZoneY + SafeZoneH - 0.063";
@@ -151,17 +151,17 @@ class xr_SpectDlg {
 		};
 		class ShowPlayersButton: MapButton {
 			idc = 1003;
-			text = "$STR_DOM_MISSIONSTRING_1334"; 
+			text = "$STR_DOM_MISSIONSTRING_1334";
 			action = "if (ctrlShown ((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 3000)) then {ctrlShow [3000, false];((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1002) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1333');};if (ctrlShown ((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1000)) then {ctrlShow [1000, false];((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1003) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1334')} else {ctrlShow [1000, true];((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1003) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1334a')}";
 			x = "SafeZoneX + 0.03";
 		};
 		class NVGButton: MapButton {
 			idc = 1004;
-			text = "$STR_DOM_MISSIONSTRING_1335"; 
+			text = "$STR_DOM_MISSIONSTRING_1335";
 			action = "if (!xr_camnvgon) then {camUseNVG true; xr_camnvgon = true;((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1004) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1335a')} else {camUseNVG false; xr_camnvgon = false;((uiNamespace getVariable 'XR_SpectDlg') displayCtrl 1004) ctrlSetText (localize 'STR_DOM_MISSIONSTRING_1335')}";
 			x = "SafeZoneX + 0.35";
 		};
-		
+
 		class RCGroup: RscControlsGroupNoScrollbars {
 			idc = 3000;
 			x = 0;
@@ -193,7 +193,7 @@ class xr_SpectDlg {
 					y = 0;
 					w = 0.3;
 					h = 0.038;
-					text = "$STR_DOM_MISSIONSTRING_1532"; 
+					text = "$STR_DOM_MISSIONSTRING_1532";
 					action = "call xr_fnc_showppos";
 					SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 				};
@@ -209,13 +209,13 @@ class xr_SpectDlg {
 				class respawn: RscButton {
 					idc = 100102;
 					colorBackgroundActive[] = {1,1,1,0.1};
-					text = "$STR_DOM_MISSIONSTRING_298"; 
+					text = "$STR_DOM_MISSIONSTRING_298";
 					action = "call xr_fnc_closeSpectControls;0 spawn xr_fnc_buttonclickrespawn";
 					x = 1 - 0.3;
 					y = 1 - 0.045;
 					w = 0.3;
 					h = 0.04;
-					1;
+					default = 1;
 				};
 				class LogTxt: RscText2 {
 					idc = 11002;
