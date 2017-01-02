@@ -28,7 +28,35 @@ _veh addWeaponCargoGlobal ["ACE_Vector",1];
 _veh addItemCargoGlobal ["B_UavTerminal",1];
 
 
-switch (tf47_param_vehiclemod) do {
+
+//Items
+_veh addItemCargoGlobal ["ACE_NVG_Gen1",4];
+// Weapons
+_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
+_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle",1];
+_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle_M203",1];
+
+// Ammo
+_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
+_veh addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",12];
+_veh addMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",8];
+_veh addMagazineCargoGlobal ["1Rnd_SmokeGreen_Grenade_shell",8];
+_veh addMagazineCargoGlobal ["1Rnd_SmokeRed_Grenade_shell",4];
+
+// Attachments
+_veh addItemCargoGlobal ["rhsusf_acc_eotech_552",2];
+_veh addItemCargoGlobal ["rhsusf_acc_ACOG_USMC",2];
+_veh addItemCargoGlobal ["rhsusf_acc_anpeq15",4];
+
+// Launcher
+_veh addWeaponCargoGlobal ["tf47_at4_heat",3];
+
+// LMG
+_veh addWeaponCargoGlobal ["rhs_weap_m249_pip_L",1];
+_veh addMagazineCargoGlobal ["rhs_200rnd_556x45_T_SAW",4];
+_veh addItemCargoGlobal ["tf_rt1523g",1];
+_veh addItemCargoGlobal ["tf_anprc152",6];
+/*switch (tf47_param_vehiclemod) do {
 	// Vanilla
 	case 0 : {
 		// Items
@@ -117,4 +145,4 @@ switch (tf47_param_vehiclemod) do {
 		_veh addMagazineCargoGlobal ["rhs_200rnd_556x45_T_SAW",4];
 
 	};
-};
+};*/
