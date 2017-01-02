@@ -238,7 +238,7 @@ d_entities_tt_opfor = [];
 d_servicepoint_building = "Land_Cargo_House_V2_F";
 
 d_illum_tower = "Land_TTowerBig_2_F";
-d_wcamp = "Land_Cargo_Patrol_V1_F";
+d_wcamp = "Land_BagBunker_Large_F";
 
 d_mash = "Land_TentDome_F";
 d_mash_flag = "Flag_RedCrystal_F";

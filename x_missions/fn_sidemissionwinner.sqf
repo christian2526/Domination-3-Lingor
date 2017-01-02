@@ -63,6 +63,9 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text
 		];
+		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+		["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+		/**************************************************************/
 	};
 } else {
 	private _s = switch (d_sm_winner) do {

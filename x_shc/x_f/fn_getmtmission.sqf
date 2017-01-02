@@ -35,7 +35,7 @@ switch (_sec_kind) do {
 	case 1: {
 		private _newgroup = [d_side_enemy] call d_fnc_creategroup;
 		private _the_officer = switch (d_enemy_side_short) do {
-			case "E": {"O_officer_F"};
+			case "E": {"rhsgref_ins_squadleader"};
 			case "W": {"B_officer_F"};
 			case "G": {"I_Story_Colonel_F"};
 		};
@@ -82,7 +82,7 @@ switch (_sec_kind) do {
 	};
 	case 2: {
 		__getPos;
-		private _ctype = "Land_Radar_Small_F";
+		private _ctype = "rhs_prv13";
 		private _vec = createVehicle [_ctype, _poss, [], 0, "NONE"];
 		private _svec = sizeOf _ctype;
 		private _isFlat = (getPosATL _vec) isFlatEmpty [_svec / 2, -1, 0.7, _svec, 0, false, _vec]; // 150
@@ -102,7 +102,7 @@ switch (_sec_kind) do {
 	case 3: {
 		__getPos;
 		private _truck = switch (d_enemy_side_short) do {
-			case "E": {"O_Truck_02_Ammo_F"};
+			case "E": {"rhsgref_ins_gaz66_ammo"};
 			case "W": {"B_Truck_01_ammo_F"};
 			case "G": {"I_Truck_02_ammo_F"};
 		};
@@ -128,7 +128,7 @@ switch (_sec_kind) do {
 	};
 	case 4: {
 		private _truck = switch (d_enemy_side_short) do {
-			case "E": {"O_Truck_02_medical_F"};
+			case "E": {"rhs_gaz66_ap2_msv"};
 			case "W": {"B_Truck_01_medical_F"};
 			case "G": {"I_Truck_02_medical_F"};
 		};
@@ -172,7 +172,7 @@ switch (_sec_kind) do {
 	};
 	case 6: {
 		__getPos;
-		private _fact = "Land_dp_transformer_F";
+		private _fact = "rhs_2P3_2";
 		private _vec = createVehicle [_fact, _poss, [], 0, "NONE"];
 		private _svec = sizeOf _fact;
 		private _isFlat = (getPosATL _vec) isFlatEmpty [_svec / 2, -1, 0.7, _svec, 0, false, _vec]; // 150
@@ -195,7 +195,7 @@ switch (_sec_kind) do {
 			case "W": {"Land_spp_Transformer_F"};
 			case "G": {"Land_spp_Transformer_F"};
 		};*/
-		private _fact = "Land_spp_Transformer_F";
+		private _fact = "rhs_2P3_2";
 		private _vec = createVehicle [_fact, _poss, [], 0, "NONE"];
 		private _svec = sizeOf _fact;
 		private _isFlat = (getPosATL _vec) isFlatEmpty [_svec / 2, -1, 0.7, _svec, 0, false, _vec]; // 150
