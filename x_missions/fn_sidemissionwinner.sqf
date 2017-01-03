@@ -10,7 +10,7 @@ sleep 1;
 
 d_cur_sm_txt = localize "STR_DOM_MISSIONSTRING_712";
 
-if (d_sm_winner != 0) then {
+if (d_sm_winner < 0) then {
 	/*
 	if (d_with_ranked) then {
 		private _get_points = false;
@@ -36,7 +36,7 @@ if (d_sm_winner != 0) then {
 	};
 	*/
 	if (d_MissionType != 2) then {
-		private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];
+		/*private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];*/
 #ifdef __TT__
 		if (d_sm_winner == 1 && {d_player_side == opfor} || {d_sm_winner == 2 && {d_player_side == blufor} || {d_sm_winner == 123}}) then {
 #endif
