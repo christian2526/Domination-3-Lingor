@@ -15008,6 +15008,10 @@
 <Hungarian>Carry</Hungarian>
 <Portuguese>Carry</Portuguese>
 </Key>
+<Key ID="STR_DOM_MISSIONSTRING_1735">
+<English>This position is whitelisted, register on forums.</English>
+<German>Diese Position is Whitelist gesichert, regestriere dich im Forum.</German>
+</Key>
 </Container>
 </Package>
 </Project>
