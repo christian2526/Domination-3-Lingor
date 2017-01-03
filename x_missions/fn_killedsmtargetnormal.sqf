@@ -9,11 +9,10 @@ params ["_dvec", "_killer"];
 if !(_dvec isKindOf "CAManBase") then {
 	addToRemainsCollector [_dvec];
 };
-_killer = if (isNull _killer) then {
-_dvec getVariable ["ace_medical_lastDamageSource", _killer];
+
 #ifndef __TT__
-if (!isNull _killer && {_killer != _dvec}) then {
-	d_sm_winner = [-1, 2] select (side (group _killer) == d_side_player);
+if (true) then {
+	d_sm_winner = 2;
 } else {
 	d_sm_winner = -1;
 };
@@ -34,11 +33,11 @@ d_sm_winner = if (d_sm_points_blufor > d_sm_points_opfor) then {
 		-1
 	};
 };
-_dvec removeAllMPEventHandlers "MPhit";
+_dvec removeAllEventHandlers "hit";
 __TRACE_2("","d_sm_points_blufor","d_sm_points_opfor")
 #endif
 
-_dvec removeAllMPEventHandlers "MPkilled";
+_dvec removeAllEventHandlers "killed";
 d_sm_resolved = true;
 if (d_IS_HC_CLIENT) then {
 	[missionNamespace, ["d_sm_winner", d_sm_winner]] remoteExecCall ["setVariable", 2];
