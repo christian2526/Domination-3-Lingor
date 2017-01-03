@@ -52,7 +52,7 @@ private _pcheck_fnc = {
 	[_u] join _p;
 	deleteGroup _ogroup;
 };
-
+/*
 private _aiver_check_fnc = {
 	if (!d_with_ai) then {
 		(str _this) in d_can_use_artillery
@@ -60,7 +60,7 @@ private _aiver_check_fnc = {
 		true
 	}
 };
-
+*/
 #ifdef __TT__
 private _which_base = 0;
 #endif
@@ -78,7 +78,7 @@ while {!_pilots_at_base && {!_is_dead}} do {
 				__TRACE_1("","_nobjs")
 				if !(_nobjs isEqualTo []) then {
 					{
-						if (alive _x && {isPlayer _x && {!(_x getVariable ["xr_pluncon", false]) && {!(_x getVariable ["ace_isunconscious", false]) && {_x call _aiver_check_fnc}}}}) exitWith {
+						if (alive _x && {isPlayer _x && {!(_x getVariable ["xr_pluncon", false]) && {!(_x getVariable ["ace_isunconscious", false])}}}) exitWith {
 							_resctimestarted = time;
 							_rescued = true;
 							__TRACE_1("found player","_x")
@@ -89,7 +89,7 @@ while {!_pilots_at_base && {!_is_dead}} do {
 					} forEach _nobjs;
 				};
 			};
-			
+
 			if (!_rescued) then {
 				if (alive _pilot2) then {
 					__TRACE("_pilot2 alive")
@@ -108,7 +108,7 @@ while {!_pilots_at_base && {!_is_dead}} do {
 						} forEach _nobjs;
 					};
 				};
-				
+
 				if (!_rescued && {time - _resctimestarted > 3600}) then {
 					_is_dead = true;
 				};

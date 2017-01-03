@@ -40,7 +40,7 @@ private _hostages_reached_dest = false;
 private _all_dead = false;
 private _rescued = false;
 private _mforceendtime = time + 2400;
-
+/*
 private _aiver_check_fnc = {
 	if (!d_with_ai) then {
 		(str _this) in d_can_use_artillery
@@ -48,7 +48,7 @@ private _aiver_check_fnc = {
 		true
 	}
 };
-
+*/
 private _rescuer = objNull;
 #ifdef __TT__
 private _winner = 0;
@@ -63,7 +63,7 @@ while {!_hostages_reached_dest && {!_all_dead}} do {
 		private _nobjs = _leader nearEntities ["CAManBase", 20];
 		if !(_nobjs isEqualTo []) then {
 			{
-				if (alive _x && {isPlayer _x && {!(_x getVariable ["xr_pluncon", false]) && {!(_x getVariable ["ace_isunconscious", false]) && {_x call _aiver_check_fnc}}}}) exitWith {
+				if (alive _x && {isPlayer _x && {!(_x getVariable ["xr_pluncon", false]) && {!(_x getVariable ["ace_isunconscious", false])}}}) exitWith {
 					_rescued = true;
 					_mforceendtime = time + 2400;
 					_rescuer = _x;
@@ -76,7 +76,7 @@ while {!_hostages_reached_dest && {!_all_dead}} do {
 					} count _units;
 					_units join _rescuer;
 #ifdef __TT__
-					_winner = switch (side (group _rescuer)) do {case blufor: {2}; case opfor: {1};default {0}}; 
+					_winner = switch (side (group _rescuer)) do {case blufor: {2}; case opfor: {1};default {0}};
 #endif
 				};
 				sleep 0.01;
@@ -94,7 +94,7 @@ while {!_hostages_reached_dest && {!_all_dead}} do {
 		private _tmp_flag = if (_winner == 1) then {d_EFLAG_BASE} else {d_WFLAG_BASE};
 #endif
 		_hostages_reached_dest = {alive _x && {(vehicle _x) distance2D _tmp_flag < 50}} count _units > 0;
-		
+
 		if (!_hostages_reached_dest) then {
 			{
 				if (alive _x) exitWith {
