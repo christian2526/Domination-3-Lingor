@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=156;
+		nextID=164;
 	};
 	class Camera
 	{
@@ -421,6 +421,8 @@ randomSeed=14540839;
 class ScenarioData
 {
 	author="Chris";
+	overviewText="{MISSIONINFO}";
+	onLoadMission="{MISSIONINFO}";
 };
 class Mission
 {
@@ -2070,7 +2072,7 @@ class Mission
 			name="d_target_0";
 			id=230;
 			type="LocationCityCapital_F";
-			atlOffset=2.9727116;
+			atlOffset=14.04519;
 		};
 		class Item166
 		{
