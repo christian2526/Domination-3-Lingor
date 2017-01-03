@@ -9,7 +9,6 @@ if (isDedicated || {d_IS_HC_CLIENT}) exitWith {};
 sleep 1;
 
 d_cur_sm_txt = localize "STR_DOM_MISSIONSTRING_712";
-diag_log d_sm_winner
 if (d_sm_winner > 0) then {
 	/*
 	if (d_with_ranked) then {
