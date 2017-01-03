@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=148;
+		nextID=156;
 	};
 	class Camera
 	{
@@ -426,6 +426,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="{MISSIONINFO}";
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
 		startWind=0.1;
