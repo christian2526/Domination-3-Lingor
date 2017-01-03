@@ -11,6 +11,9 @@ sleep 1;
 d_cur_sm_txt = localize "STR_DOM_MISSIONSTRING_712";
 
 if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
+	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+	["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+	/**************************************************************/
 	if (d_with_ranked) then {
 		private _get_points = false;
 		if (alive player && {!(player getVariable ["xr_pluncon", false]) && {!(player getVariable ["ace_isunconscious", false])}}) then {
@@ -44,11 +47,7 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text, lineBreak, lineBreak,
 			_bonus_string
-
 		];
-		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-		["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-		/**************************************************************/
 #ifdef __TT__
 		} else {
 			hint composeText[
@@ -63,9 +62,6 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text
 		];
-		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-		["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-		/**************************************************************/
 	};
 } else {
 	private _s = switch (d_sm_winner) do {
