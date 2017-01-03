@@ -10,7 +10,8 @@ sleep 1;
 
 d_cur_sm_txt = localize "STR_DOM_MISSIONSTRING_712";
 
-if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
+if (d_sm_winner != 0) then {
+	/*
 	if (d_with_ranked) then {
 		private _get_points = false;
 		if (alive player && {!(player getVariable ["xr_pluncon", false]) && {!(player getVariable ["ace_isunconscious", false])}}) then {
@@ -33,6 +34,7 @@ if (d_sm_winner != 0 && {_bonus_vecn != ""}) then {
 		};
 		d_sm_p_pos = nil;
 	};
+	*/
 
 	if (d_MissionType != 2) then {
 		private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];

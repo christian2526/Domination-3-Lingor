@@ -368,10 +368,10 @@ class Params {
 		title = "$STR_DOM_MISSIONSTRING_1732";
 		values[] = {0,1};
 #ifdef __ALTIS__
-		default = 0;
+		default = 1;
 #endif
 #ifdef __STRATIS__
-		default = 0;
+		default = 1;
 #endif
 #ifdef __TANOA__
 		default = 1;
@@ -380,10 +380,10 @@ class Params {
 		default = 1;
 #endif
 #ifdef __CUP_TAKISTAN__
-		default = 0;
+		default = 1;
 #endif
 #ifdef __CUP_SARA__
-		default = 0;
+		default = 1;
 #endif
 #ifdef __TT__
 		default = 1;
