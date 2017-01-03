@@ -4,7 +4,7 @@
 
 if (isDedicated || {d_IS_HC_CLIENT}) exitWith {};
 
-private _bonus_vecn = _this;
+/*private _bonus_vecn = _this;*/
 
 sleep 1;
 
@@ -43,8 +43,7 @@ if (d_sm_winner < 0) then {
 		hint composeText[
 			parseText("<t color='#ffffffff' size='1.5'>" + localize "STR_DOM_MISSIONSTRING_1708" + "</t>"), lineBreak,lineBreak,
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
-			d_current_mission_resolved_text, lineBreak, lineBreak,
-			_bonus_string
+			d_current_mission_resolved_text
 		];
 #ifdef __TT__
 		} else {
