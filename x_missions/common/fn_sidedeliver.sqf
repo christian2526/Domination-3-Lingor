@@ -8,13 +8,13 @@ params ["_spos","_epos","_sdir","_edir"];
 
 if (isNil "d_sm_deliver_truck") then {
 	d_sm_deliver_truck = switch (d_enemy_side) do {
-		case "EAST": {["B_Truck_01_Repair_F", "B_Truck_01_ammo_F", "B_Truck_01_fuel_F", "B_Truck_01_medical_F"]};
+		case "EAST": {["rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd", "rhsusf_M978A4_BKIT_usarmy_wd", "rhsusf_M977A4_BKIT_M2_usarmy_wd"]};
 		case "WEST": {["O_Truck_03_repair_F", "O_Truck_03_ammo_F", "O_Truck_03_fuel_F", "O_Truck_03_medical_F"]};
 		case "GUER": {["I_Truck_03_repair_F", "I_Truck_03_ammo_F", "I_Truck_03_fuel_F", "I_Truck_03_medical_F"]};
 	};
 };
 
-private _hangar = createVehicle ["Land_TentHangar_V1_F", _spos, [], 0, "NONE"];
+private _hangar = createVehicle ["Land_JumpTarget_F", _spos, [], 0, "NONE"];
 _hangar setDir _sdir;
 _hangar setPos _spos;
 d_x_sm_vec_rem_ar pushBack _hangar;
@@ -28,11 +28,11 @@ clearWeaponCargoGlobal _vec;
 clearMagazineCargoGlobal _vec;
 clearBackpackCargoGlobal _vec;
 clearItemCargoGlobal _vec;
-_vec addItemCargoGlobal ["ToolKit",1];
-_vec addItemCargoGlobal ["FirstAidKit",3];
+//_vec addItemCargoGlobal ["ToolKit",1];
+//_vec addItemCargoGlobal ["FirstAidKit",3];
 d_x_sm_vec_rem_ar pushBack _vec;
 
-private _hangar2 = createVehicle ["Land_TentHangar_V1_F", _epos, [], 0, "NONE"];
+private _hangar2 = createVehicle ["Land_JumpTarget_F", _epos, [], 0, "NONE"];
 _hangar2 setDir _edir;
 _hangar2 setPos _epos;
 d_x_sm_vec_rem_ar pushBack _hangar2;
@@ -58,7 +58,7 @@ private _reached_base = false;
 private _markern = format ["d_smvecposc_%1", _vec];
 
 [_markern, [0, 0, 0], "ICON", "ColorBlue", [0.5, 0.5], localize "STR_DOM_MISSIONSTRING_1584" , 0, "mil_dot"] remoteExecCall ["d_fnc_CreateMarkerGlobal", 2];
-	
+
 while {alive _vec && {!_reached_base}} do {
 	call d_fnc_mpcheck;
 	_markern setMarkerPos (getPosWorld _vec);
