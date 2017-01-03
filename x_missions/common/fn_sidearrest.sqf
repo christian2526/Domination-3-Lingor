@@ -41,15 +41,13 @@ while {!_offz_at_base && {!_is_dead && {d_sm_arrest_not_failed}}} do {
 				];
 			};
 		} else {
-			for "_i" from 1 to 5 do {
-				private _res = missionNamespace getVariable format ["d_artop_%1", _i];
-				if (!isNil "_res" && {alive _res && {!(_res getVariable ["xr_pluncon", false]) && {!(_res getVariable ["ace_isunconscious", false]) && {_res distance2D _officer < 20}}}}) exitWith {
+			private _nobjs = (_officer nearEntities ["CAManBase", 20]) select {isPlayer _x && {alive _x && {!(_x getVariable ["xr_pluncon", false]) && {!(_x getVariable ["ace_isunconscious", false])}}}};
+			if !(_nobjs isEqualTo []) then {
 					_rescued = true;
 					_officer enableAI "PATH";
 					[_officer] join _res;
 					[_officer, true] remoteExecCall ["setCaptive", _officer];
 				};
-			};
 		};
 	} else {
 #ifndef __TT__
