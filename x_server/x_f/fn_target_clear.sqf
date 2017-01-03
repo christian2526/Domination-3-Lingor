@@ -89,9 +89,6 @@ if (d_kill_points_blufor > d_kill_points_opfor) then {
 	};
 };
 
-/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-["tf47_changetickets", [WEST, 2, 20, "Main Target"]] call CBA_fnc_globalEvent;
-/**************************************************************/
 
 publicVariable "d_mt_winner";
 d_points_array = [d_points_blufor, d_points_opfor, d_kill_points_blufor, d_kill_points_opfor];
@@ -114,6 +111,9 @@ if (!isNil "d_HC_CLIENT_OBJ_OWNER") then {
 
 sleep 0.5;
 
+/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+["tf47_changetickets", [WEST, 2, 20, "Main Target"]] call CBA_fnc_globalEvent;
+/**************************************************************/
 
 	d_target_clear = true; publicVariable "d_target_clear";
 	["d_" + _cur_tgt_name + "_dommtm", "ColorGreen"] remoteExecCall ["setMarkerColor", 2];
