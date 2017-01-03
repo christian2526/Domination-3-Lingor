@@ -18,11 +18,11 @@ remoteExecCall ["d_fnc_rebbserv", 2];
 
 d_cur_sm_idx = -1; publicVariable "d_cur_sm_idx";
 __TRACE_2("","d_sm_winner")
-/*
+
 if (d_sm_winner > 0) then {
 	[d_sm_winner, d_current_sm_bonus_vec] remoteExec ["d_fnc_getbonus", 2];
 };
-*/
+
 if (d_sm_winner in [-1,-2,-300,-400,-500,-600,-700,-878,-879,-880,-881,-900]) then {
 	[d_sm_winner, ""] remoteExecCall ["d_fnc_sm_res_client", [0, -2] select isDedicated];
 #ifndef __TT__

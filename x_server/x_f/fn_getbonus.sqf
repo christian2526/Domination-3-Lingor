@@ -31,7 +31,7 @@ if (d_MissionType == 2) exitWith {
 switch (d_sm_winner) do {
 	case 1: {d_points_opfor = d_points_opfor + (d_tt_points select 4)};
 	case 2: {d_points_blufor = d_points_blufor + (d_tt_points select 4)};
-};	
+};
 #endif
 
 #ifndef __TT__
@@ -52,7 +52,7 @@ if (d_current_sm_bonus_vec == "") then {
 			_chance = floor (random 100);
 		};
 	};
-	
+
 	__TRACE_1("","_chance")
 
 	private _btype = "";
@@ -78,7 +78,7 @@ if (d_current_sm_bonus_vec == "") then {
 	_vec_type = d_current_sm_bonus_vec;
 	d_current_sm_bonus_vec = "";
 };
-
+/*
 __TRACE_1("","_vec_type")
 
 d_last_bonus_vec = _vec_type;
@@ -89,7 +89,7 @@ private _chance = floor (random 100);
 private _btype_e = "";
 private _btype_w = "";
 private ["_d_bonus_create_pos", "_vec_type", "_d_bonus_air_positions", "_d_bonus_vec_positions", "_d_bvp_counter", "_d_bap_counter", "_d_bonus_vec_positions2", "_d_bonus_create_pos2", "_vec_type2", "_d_bonus_air_positions2", "_d_bvp_counter2", "_d_bap_counter2"];
-
+/*
 switch (d_sm_winner) do {
 	case 1: {
 		if (d_current_sm_bonus_vec select 1 == "") then {
@@ -171,7 +171,7 @@ switch (d_sm_winner) do {
 		_d_bonus_vec_positions = d_bonus_vec_positions_e;
 		_d_bvp_counter = d_bvp_counter_e;
 		_d_bap_counter = d_bap_counter_e;
-		
+
 		if (d_current_sm_bonus_vec select 0 == "") then {
 			while {_btype_w == ""} do {
 				private _vec_typex = selectRandom (d_sm_bonus_vehicle_array select 0);
@@ -191,7 +191,7 @@ switch (d_sm_winner) do {
 		} else {
 			_btype_w = d_current_sm_bonus_vec select 0;
 		};
-		
+
 		_d_bonus_create_pos2 = d_bonus_create_pos_w;
 		_vec_type2 = _btype_w;
 		_d_bonus_air_positions2 = d_bonus_air_positions_w;
@@ -200,6 +200,8 @@ switch (d_sm_winner) do {
 		_d_bap_counter2 = d_bap_counter_w;
 	};
 };
+*/
+/*
 __TRACE_3("","_d_bonus_create_pos","_vec_type","_d_bvp_counter")
 d_current_sm_bonus_vec = ["",""];
 #endif
@@ -365,7 +367,7 @@ _vec2 addEventHandler ["getOut", {
 }];
 };
 #endif
-
+*/
 __TRACE_1("","d_sm_winner")
 [d_sm_winner, _vec_type] remoteExecCall ["d_fnc_sm_res_client", [0, -2] select isDedicated];
 #ifndef __TT__
