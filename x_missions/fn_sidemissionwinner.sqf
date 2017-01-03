@@ -9,7 +9,7 @@ if (isDedicated || {d_IS_HC_CLIENT}) exitWith {};
 sleep 1;
 
 d_cur_sm_txt = localize "STR_DOM_MISSIONSTRING_712";
-
+diag_log d_sm_winner
 if (d_sm_winner > 0) then {
 	/*
 	if (d_with_ranked) then {
@@ -35,8 +35,8 @@ if (d_sm_winner > 0) then {
 		d_sm_p_pos = nil;
 	};
 	*/
-	if (d_MissionType != 2) then {
-		/*private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];*/
+	/*if (d_MissionType != 2) then {
+		private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];
 #ifdef __TT__
 		if (d_sm_winner == 1 && {d_player_side == opfor} || {d_sm_winner == 2 && {d_player_side == blufor} || {d_sm_winner == 123}}) then {
 #endif
@@ -53,13 +53,13 @@ if (d_sm_winner > 0) then {
 			];
 		};
 #endif
-	} else {
+	} else {*/
 		hint composeText[
 			parseText("<t color='#ffffffff' size='1.5'>" + localize "STR_DOM_MISSIONSTRING_1708" + "</t>"), lineBreak,lineBreak,
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text
 		];
-	};
+	/*};*/
 } else {
 	private _s = switch (d_sm_winner) do {
 		case -1: {localize "STR_DOM_MISSIONSTRING_716"};
