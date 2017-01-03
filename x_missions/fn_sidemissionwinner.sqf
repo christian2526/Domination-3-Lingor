@@ -10,7 +10,7 @@ sleep 1;
 
 d_cur_sm_txt = localize "STR_DOM_MISSIONSTRING_712";
 
-if (d_sm_winner < 0) then {
+if (d_sm_winner > 0) then {
 	/*
 	if (d_with_ranked) then {
 		private _get_points = false;
