@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=164;
+		nextID=172;
 	};
 	class Camera
 	{
@@ -2072,7 +2072,7 @@ class Mission
 			name="d_target_0";
 			id=230;
 			type="LocationCityCapital_F";
-			atlOffset=14.04519;
+			atlOffset=2.9727116;
 		};
 		class Item166
 		{
