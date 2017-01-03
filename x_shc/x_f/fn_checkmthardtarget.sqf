@@ -13,7 +13,7 @@ _vec addEventHandler ["killed", {
 	[missionNamespace, ["d_mt_radio_down", true]] remoteExecCall ["setVariable", 2];
 	"d_main_target_radiotower" remoteExecCall ["deleteMarker", 2];
 	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-	["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+	["tf47_changetickets", [WEST, 2, 5,"Radio Tower"]] call CBA_fnc_globalEvent;
 	/**************************************************************/
 #ifndef __TT__
 	[37] remoteExecCall ["d_fnc_DoKBMsg", 2];

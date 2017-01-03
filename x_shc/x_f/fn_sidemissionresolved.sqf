@@ -20,6 +20,9 @@ d_cur_sm_idx = -1; publicVariable "d_cur_sm_idx";
 __TRACE_2("","d_sm_winner")
 
 if (d_sm_winner > 0) then {
+	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+	["tf47_changetickets", [WEST, 2, 20, "Side Mission"]] call CBA_fnc_globalEvent;
+	/**************************************************************/
 	[d_sm_winner, d_current_sm_bonus_vec] remoteExec ["d_fnc_getbonus", 2];
 };
 

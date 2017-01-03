@@ -90,7 +90,7 @@ if (d_kill_points_blufor > d_kill_points_opfor) then {
 };
 
 /*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-["tf47_changetickets", [WEST, 2, 20]] call CBA_fnc_globalEvent;
+["tf47_changetickets", [WEST, 2, 20, "Main Target"]] call CBA_fnc_globalEvent;
 /**************************************************************/
 
 publicVariable "d_mt_winner";

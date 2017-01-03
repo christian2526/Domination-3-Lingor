@@ -39,9 +39,6 @@ if (d_sm_winner != 0) then {
 		private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];
 #ifdef __TT__
 		if (d_sm_winner == 1 && {d_player_side == opfor} || {d_sm_winner == 2 && {d_player_side == blufor} || {d_sm_winner == 123}}) then {
-			/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-			["tf47_changetickets", [WEST, 2, 20]] call CBA_fnc_globalEvent;
-			/**************************************************************/
 #endif
 		hint composeText[
 			parseText("<t color='#ffffffff' size='1.5'>" + localize "STR_DOM_MISSIONSTRING_1708" + "</t>"), lineBreak,lineBreak,
