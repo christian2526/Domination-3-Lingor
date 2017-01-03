@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=172;
+		nextID=180;
 	};
 	class Camera
 	{
-		pos[]={2572.4614,29.811831,6563.0771};
-		dir[]={0.87127447,-0.28902772,0.39683145};
-		up[]={0.26313648,0.95728892,0.11984645};
-		aside[]={0.41452557,-9.4086863e-007,-0.91012138};
+		pos[]={3042.4541,74.490662,6690.9648};
+		dir[]={-0.45274919,-0.61120468,-0.64930815};
+		up[]={-0.34963498,0.79141384,-0.50142193};
+		aside[]={-0.82035017,-8.9628156e-007,0.57201475};
 	};
 };
 binarizationWanted=0;
@@ -2072,7 +2072,7 @@ class Mission
 			name="d_target_0";
 			id=230;
 			type="LocationCityCapital_F";
-			atlOffset=2.9727116;
+			atlOffset=14.04519;
 		};
 		class Item166
 		{
@@ -8391,8 +8391,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						createAsSimpleObject=1;
-						disableSimulation=1;
 					};
 					id=535;
 					type="Land_Medevac_HQ_V1_F";
