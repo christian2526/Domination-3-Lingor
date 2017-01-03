@@ -1,4 +1,4 @@
-_veh = _this select 0;
+_veh = _this select 0;	
 _veh setVariable ["loadoutName", "Combined Operations Loadout", true];
 //Clear Cargo
 clearItemCargoGlobal _veh;
@@ -28,58 +28,35 @@ _veh addItemCargoGlobal ["ACE_packingBandage",15];
 _veh addItemCargoGlobal ["ACE_morphine",10];
 _veh addItemCargoGlobal ["ACE_atropine",10];
 _veh addItemCargoGlobal ["ACE_epinephrine",10];
-//Items
-_veh addItemCargoGlobal ["ACE_NVG_Gen1",2];
-// Weapons
-_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
-_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle",1];
-_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle_M203",1];
 
-// Ammo
-_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
-_veh addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
-
-// Launcher
-_veh addWeaponCargoGlobal ["rhs_weap_fim92",1];
-_veh addWeaponCargoGlobal ["rhs_weap_fgm148", 1];
-_veh addWeaponCargoGlobal ["tf47_m3_maaws",1];
-_veh addWeaponCargoGlobal ["tf47_at4_heat",1];
-
-// Launcher Ammo
-_veh addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",2];
-_veh addMagazineCargoGlobal ["rhs_fim92_mag",1];
-_veh addMagazineCargoGlobal ["tf47_m3maaws_he",1];
-_veh addMagazineCargoGlobal ["tf47_m3maaws_heat",1];
-_veh addItemCargoGlobal ["tf_rt1523g",1];
-_veh addItemCargoGlobal ["tf_anprc152",6];
-/*// Weapons + Ammo
-switch (tf47_param_vehiclemod) do {
+// Weapons + Ammo
+switch (tf47_param_vehiclemod) do { 
 	// Vanilla
-	case 0 : {
+	case 0 : { 
 		// Items
 		_veh addItemCargoGlobal ["NVGoggles",4];
 		// Weapons
 		_veh addWeaponCargoGlobal ["arifle_MX_F",2];
 		_veh addWeaponCargoGlobal ["arifle_MXC_F",1];
 		_veh addWeaponCargoGlobal ["arifle_MX_GL_F",1];
-
+		
 		// Ammo
 		_veh addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",30];
 		_veh addMagazineCargoGlobal ["3Rnd_HE_Grenade_shell",10];
-
+		
 		// Launcher
-		_veh addWeaponCargoGlobal ["launch_B_Titan_F",1];
-		_veh addWeaponCargoGlobal ["launch_B_Titan_short_F", 1];
+		_veh addWeaponCargoGlobal ["launch_B_Titan_F",1];  
+		_veh addWeaponCargoGlobal ["launch_B_Titan_short_F", 1]; 
 		_veh addWeaponCargoGlobal ["launch_NLAW_F",3];
-
+		
 		// Launcher Ammo
 		_veh addMagazineCargoGlobal ["Titan_AT",2];
 		_veh addMagazineCargoGlobal ["Titan_AP",2];
-		_veh addMagazineCargoGlobal ["Titan_AA",1];
-
-	};
+		_veh addMagazineCargoGlobal ["Titan_AA",1];    
+		
+	}; 
 	// CUP
-	case 1 : {
+	case 1 : { 
 		// Items
 		_veh addItemCargoGlobal ["CUP_NVG_PVS7",4];
 		// Weapons
@@ -90,10 +67,10 @@ switch (tf47_param_vehiclemod) do {
 		// Ammo
 		_veh addMagazineCargoGlobal ["30Rnd_556x45_Stanag",30];
 		_veh addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
-
+	
 		// Launcher
 		_veh addWeaponCargoGlobal ["CUP_launch_FIM92Stinger",1];
-		_veh addWeaponCargoGlobal ["CUP_Javelin", 1];
+		_veh addWeaponCargoGlobal ["CUP_Javelin", 1]; 
 		_veh addWeaponCargoGlobal ["tf47_m3maaws",1];
 		_veh addWeaponCargoGlobal ["tf47_at4_heat",1];
 
@@ -106,7 +83,7 @@ switch (tf47_param_vehiclemod) do {
 	// RHS
 	case 2 : {
 		//Items
-		_veh addItemCargoGlobal ["ACE_NVG_Gen1",2];
+		_veh addItemCargoGlobal ["rhsusf_ANPVS_15",2];
 		// Weapons
 		_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
 		_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle",1];
@@ -115,10 +92,10 @@ switch (tf47_param_vehiclemod) do {
 		// Ammo
 		_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
 		_veh addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
-
+	
 		// Launcher
 		_veh addWeaponCargoGlobal ["rhs_weap_fim92",1];
-		_veh addWeaponCargoGlobal ["rhs_weap_fgm148", 1];
+		_veh addWeaponCargoGlobal ["rhs_weap_fgm148", 1]; 
 		_veh addWeaponCargoGlobal ["rhs_weap_smaw",1];
 		_veh addWeaponCargoGlobal ["tf47_at4_heat",1];
 
@@ -145,4 +122,3 @@ switch (f_var_radios) do {
 		_veh addItemCargoGlobal ["tf_anprc152",6];
 	};
 };
-*/

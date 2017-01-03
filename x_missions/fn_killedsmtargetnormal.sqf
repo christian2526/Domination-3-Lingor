@@ -34,11 +34,11 @@ d_sm_winner = if (d_sm_points_blufor > d_sm_points_opfor) then {
 		-1
 	};
 };
-_dvec removeAllEventHandlers "hit";
+_dvec removeAllEventHandlers "MPhit";
 __TRACE_2("","d_sm_points_blufor","d_sm_points_opfor")
 #endif
 
-_dvec removeAllEventHandlers "killed";
+_dvec removeAllEventHandlers "MPkilled";
 d_sm_resolved = true;
 if (d_IS_HC_CLIENT) then {
 	[missionNamespace, ["d_sm_winner", d_sm_winner]] remoteExecCall ["setVariable", 2];

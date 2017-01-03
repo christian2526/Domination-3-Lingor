@@ -108,6 +108,9 @@ switch (tf47_param_vehiclemod) do {
 		_veh addItemCargoGlobal ["rhsusf_acc_eotech_552",2];
 		_veh addItemCargoGlobal ["rhsusf_acc_ACOG_USMC",2];
 		_veh addItemCargoGlobal ["rhsusf_acc_anpeq15",4];
+		_veh addItemCargoGlobal ["U_B_Wetsuit",6];
+		_veh addItemCargoGlobal ["V_RebreatherB",6];
+		_veh addItemCargoGlobal ["G_Diving",6];
 
 		// Launcher
 		_veh addWeaponCargoGlobal ["tf47_at4_heat",3];

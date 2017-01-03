@@ -9,7 +9,7 @@ d_sm_points_blufor = 0;
 d_sm_points_opfor = 0;
 #endif
 
-_this addEventHandler ["killed", {
+_this addEventHandler ["MPkilled", {
 	__TRACE_1("killed","_this")
 #ifndef __TT__
 	d_sm_winner = 2;
@@ -31,7 +31,7 @@ _this addEventHandler ["killed", {
 		};
 	};
 	__TRACE_2("","d_sm_points_blufor","d_sm_points_opfor")
-	(param [0]) removeAllEventHandlers "hit";
+	(param [0]) removeAllEventHandlers "MPhit";
 #endif
 	__TRACE_1("","d_sm_winner")
 	d_sm_resolved = true;
@@ -42,7 +42,7 @@ _this addEventHandler ["killed", {
 }];
 _this addEventHandler ["handleDamage", {_this call d_fnc_CheckSMShotHD}];
 #ifdef __TT__
-_this addEventHandler ["hit", {
+_this addEventHandler ["MPhit", {
 	__TRACE_1("hit","_this")
 	private _obj = param [1];
 	if (!isNull _obj && {isPlayer _obj}) then {
