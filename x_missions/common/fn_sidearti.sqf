@@ -9,7 +9,7 @@ params ["_poss"];
 #ifndef __TT__
 d_sm_arty_crewman = getText (configFile>>"CfgVehicles">>d_sm_arty>>"crew");
 #else
-d_sm_arty_crewman = "I_Crew_F";
+d_sm_arty_crewman = "rhsgref_ins_pilot";
 #endif
 
 // calc positions
