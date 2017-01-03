@@ -13,7 +13,7 @@ allowFunctionsLog = 1;
 #include "cfgfunctions.hpp"
 
 author = "Xeno";
-OnLoadName = {MISSIONINFO};
+OnLoadName = "{MISSIONINFO}";
 onLoadMission = __D_VER_NAME__;
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
