@@ -7,9 +7,7 @@ d_side_main_done = true;
 if (d_IS_HC_CLIENT) then {
 	[missionNamespace, ["d_side_main_done", true]] remoteExecCall ["setVariable", 2];
 };
-/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-["tf47_changetickets", [WEST, 2, 5,"Secondary Main Target"]] call CBA_fnc_globalEvent;
-/**************************************************************/
+
 private _type = param [count _this - 1];
 #ifdef __TT__
 private _killer = param [1];
