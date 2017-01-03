@@ -35,22 +35,20 @@ if (d_sm_winner != 0) then {
 		d_sm_p_pos = nil;
 	};
 	*/
-
 	if (d_MissionType != 2) then {
 		private _bonus_string = format[localize "STR_DOM_MISSIONSTRING_714", [_bonus_vecn, "CfgVehicles"] call d_fnc_GetDisplayName];
 #ifdef __TT__
 		if (d_sm_winner == 1 && {d_player_side == opfor} || {d_sm_winner == 2 && {d_player_side == blufor} || {d_sm_winner == 123}}) then {
+			/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+			["tf47_changetickets", [WEST, 2, 20]] call CBA_fnc_globalEvent;
+			/**************************************************************/
 #endif
 		hint composeText[
 			parseText("<t color='#ffffffff' size='1.5'>" + localize "STR_DOM_MISSIONSTRING_1708" + "</t>"), lineBreak,lineBreak,
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text, lineBreak, lineBreak,
 			_bonus_string
-
 		];
-		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-		["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-		/**************************************************************/
 #ifdef __TT__
 		} else {
 			hint composeText[
@@ -65,9 +63,6 @@ if (d_sm_winner != 0) then {
 			localize "STR_DOM_MISSIONSTRING_572", lineBreak,lineBreak,
 			d_current_mission_resolved_text
 		];
-		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-		["tf47_changetickets", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-		/**************************************************************/
 	};
 } else {
 	private _s = switch (d_sm_winner) do {
