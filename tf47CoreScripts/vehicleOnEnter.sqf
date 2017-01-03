@@ -87,7 +87,8 @@ if (_player == player) then {
 
 			if ((count(_vrList)>0) && !(_playerSlot in _vrList)) then {
 				["tf47_diaglog", format["Player %1 (UID %2) was trying to enter Position %3 of Vehicle %4: FAILED (Slot)", _player, _playerid, _position, _vehicle]] call CBA_fnc_globalEvent;
-				["tf47_player_message", [_player, "taskFailed", "Diese Fahrzeugposition darfst du nur mit bestimmten Slot verwenden.\n\nThis Vehicle Position can only be used by certain slots."]] call CBA_fnc_globalEvent;
+				//["tf47_player_message", [_player, "taskFailed", "Diese Fahrzeugposition darfst du nur mit bestimmten Slot verwenden.\n\nThis Vehicle Position can only be used by certain slots."]] call CBA_fnc_globalEvent;
+				["PlayerWarning", [format [localize "STR_DOM_MISSIONSTRING_1735"], _player]] call BIS_fnc_showNotification;
 
 				//pv_taskhint = [_player, "Diese Fahrzeugposition darfst du nur mit bestimmten Slot verwenden.\n\nThis Vehicle Position can only be used by certain slots."];
 				//publicVariable "pv_taskhint";
