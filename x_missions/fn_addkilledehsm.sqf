@@ -9,7 +9,7 @@ d_sm_points_blufor = 0;
 d_sm_points_opfor = 0;
 #endif
 
-_this addEventHandler ["MPkilled", {
+_this addMPEventHandler ["MPkilled", {
 	__TRACE_1("killed","_this")
 #ifndef __TT__
 	d_sm_winner = 2;
@@ -31,7 +31,7 @@ _this addEventHandler ["MPkilled", {
 		};
 	};
 	__TRACE_2("","d_sm_points_blufor","d_sm_points_opfor")
-	(param [0]) removeAllEventHandlers "MPhit";
+	(param [0]) removeAllMPEventHandlers "MPhit";
 #endif
 	__TRACE_1("","d_sm_winner")
 	d_sm_resolved = true;
@@ -40,9 +40,9 @@ _this addEventHandler ["MPkilled", {
 		[missionNamespace, ["d_sm_resolved", true]] remoteExecCall ["setVariable", 2];
 	};
 }];
-_this addEventHandler ["handleDamage", {_this call d_fnc_CheckSMShotHD}];
+_this addMPEventHandler ["handleDamage", {_this call d_fnc_CheckSMShotHD}];
 #ifdef __TT__
-_this addEventHandler ["MPhit", {
+_this addMPEventHandler ["MPhit", {
 	__TRACE_1("hit","_this")
 	private _obj = param [1];
 	if (!isNull _obj && {isPlayer _obj}) then {
