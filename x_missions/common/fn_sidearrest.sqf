@@ -43,9 +43,10 @@ while {!_offz_at_base && {!_is_dead && {d_sm_arrest_not_failed}}} do {
 		} else {
 			private _nobjs = (_officer nearEntities ["CAManBase", 20]) select {isPlayer _x && {alive _x && {!(_x getVariable ["xr_pluncon", false]) && {!(_x getVariable ["ace_isunconscious", false])}}}};
 			if !(_nobjs isEqualTo []) then {
+					private _rescuer = _nobjs select 0;
 					_rescued = true;
 					_officer enableAI "PATH";
-					[_officer] join _res;
+					[_officer] join _rescuer;
 					[_officer, true] remoteExecCall ["setCaptive", _officer];
 				};
 		};
