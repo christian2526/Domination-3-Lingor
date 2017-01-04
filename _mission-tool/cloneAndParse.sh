@@ -30,7 +30,7 @@ echo "clone '$STASH_REPOSITORY' to '$TARGET_DIR'"
 git clone "$STASH_REPOSITORY" "$TARGET_DIR"
 
 cd "$TARGET_DIR"
-VERSION=$(git describe)
+VERSION=$(git describe --tags)
 
 echo "Repository Version: $VERSION"
 

@@ -16,3 +16,4 @@ echo let's build our final pbo with cpbo
 echo ######################################
 cpbo -y -p "%MISSIONFOLDER%"
 rd /s /q "%MISSIONFOLDER%"
+pause
