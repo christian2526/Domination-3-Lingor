@@ -276,15 +276,7 @@
 		[_X, [
 			//UNIFORM
 			"rhs_uniform_cu_ocp",
-			"rhs_uniform_cu_ocp_101st",
-			"rhs_uniform_cu_ocp_10th",
-			"rhs_uniform_cu_ocp_1stcav",
-			"rhs_uniform_cu_ocp_82nd",
 			"rhs_uniform_cu_ucp",
-			"rhs_uniform_cu_ucp_101st",
-			"rhs_uniform_cu_ucp_10th",
-			"rhs_uniform_cu_ucp_1stcav",
-			"rhs_uniform_cu_ucp_82nd",
 			"rhs_uniform_FROG01_d",
 			"rhs_uniform_FROG01_wd",
 			"rhs_uniform_g3_m81",
@@ -675,12 +667,18 @@
 
 
 		], false, true] call xla_fnc_addVirtualItemCargo;
-
+		// TFAR UNIQUE TO GENERIC
+		_forceReplace = [];
+		_forceReplace resize 1998;
+		for [{_i=0}, {_i<999}, {_i=_i+1}] do {
+				_forceReplace set [_i, ["tf_anprc152_" + (str (_i+1)), "tf_anprc152"]];
+				_forceReplace set [_i+999, ["tf_rf7800str_" + (str (_i+1)), "tf_rf7800str"]];
+		};
 		//[_X, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
 		//[_X, ["arifle_Katiba_BASE_F"],true,false] call XLA_fnc_addVirtualWeaponCargo;
 
 		// Start the arsenal on it
 		_addActionText = "<t color=""#11F22F"">" + "Arsenal";
-		["AmmoboxInit",[_X,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
+		["AmmoboxInit",[_X,false,{true},_addActionText,false,_forceReplace]] spawn XLA_fnc_arsenal;
 
 } forEach [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
