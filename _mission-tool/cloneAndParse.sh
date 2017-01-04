@@ -53,7 +53,6 @@ fi
 MISSION_NAME=$(cat README.md|grep NAME_TPL | cut -d "[" -f2 | cut -d "]" -f1 | sed "s/{VERSION}/$VERSION/g")
 
 echo "write '$MISSION_NAME' to files"
-
 # replace MISSION_NAME in cfgTF47.sqf and mission.sqm
 FILES="cfgTF47.sqf mission.sqm stringtable.xml description.ext x_client/x_intro.sqf"
 for file in $FILES
