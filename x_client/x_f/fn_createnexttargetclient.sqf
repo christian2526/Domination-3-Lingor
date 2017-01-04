@@ -15,7 +15,7 @@ if (!isNil "d_obj00_task") then {
 
 if (isNil "d_current_seize") then {d_current_seize = ""};
 
-if (d_current_seize != d_cur_tgt_name) then {	
+if (d_current_seize != d_cur_tgt_name) then {
 	private _dtnum = d_current_target_index + 2;
 	private _tname = format ["d_obj%1", _dtnum];
 	[true, _tname, [format [localize "STR_DOM_MISSIONSTRING_202", d_cur_tgt_name], format [localize "STR_DOM_MISSIONSTRING_203", d_cur_tgt_name], format [localize "STR_DOM_MISSIONSTRING_203", d_cur_tgt_name]], d_cur_tgt_pos, true, 2, true, "Attack", false] call BIS_fnc_taskCreate;
@@ -28,3 +28,4 @@ playSound "d_IncomingChallenge2";
 if (!d_still_in_intro) then {
 	hint format [localize "STR_DOM_MISSIONSTRING_204", d_cur_tgt_name];
 };
+["tf47_changetickets", [WEST, 97, 0, format ["Next Main Target is: %1", d_cur_tgt_name]]] call CBA_fnc_globalEvent;
