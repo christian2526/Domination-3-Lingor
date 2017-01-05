@@ -548,7 +548,7 @@ class Params {
 	class d_show_player_marker {
 		title = "$STR_DOM_MISSIONSTRING_1177";
 		values[] = {0,1,2,3};
-		default = 1;
+		default = 0;
 		texts[] = {"$STR_DOM_MISSIONSTRING_1058","$STR_DOM_MISSIONSTRING_1178","$STR_DOM_MISSIONSTRING_1179","$STR_DOM_MISSIONSTRING_1163"};
 	};
 
