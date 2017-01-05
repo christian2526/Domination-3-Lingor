@@ -100,7 +100,7 @@ class FSM
        "" \n
        "if (_curside == d_enemy_side && {_friendly > 0 && {_enemy == 0}}) then {" \n
        "	if (_curcapturer == d_enemy_side) then {" \n
-       "		_wf setVariable [""D_CAPTIME"", 40 + (floor random 10), true];" \n
+       "		_wf setVariable [""D_CAPTIME"", 120 + (floor random 10), true];" \n
        "		_curcaptime = 0;" \n
        "		_wf setVariable [""D_CURCAPTURER"", d_own_side];" \n
        "	};" \n
@@ -112,7 +112,7 @@ class FSM
        "} else {" \n
        "	if (_curside == d_own_side && {_enemy > 0 && {_friendly == 0}}) then {" \n
        "		if (_curcapturer == d_own_side) then {" \n
-       "			_wf setVariable [""D_CAPTIME"", 10, true];" \n
+       "			_wf setVariable [""D_CAPTIME"", 30, true];" \n
        "			_curcaptime = 0;" \n
        "			_wf setVariable [""D_CURCAPTURER"", d_enemy_side];" \n
        "		};" \n
