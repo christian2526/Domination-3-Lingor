@@ -4,6 +4,7 @@
 #define __ctrl(numcontrol) (_disp displayCtrl numcontrol)
 
 params ["_disp"];
+__ctrl(1002) ctrlEnable false;
 
 if (d_disable_viewdistance) then {
 	__ctrl(1000) ctrlEnable false;
@@ -48,7 +49,7 @@ __ctrl(2005) ctrlSetText str(d_points_needed select 4);
 __ctrl(2006) ctrlSetText str(d_points_needed select 5);
 __ctrl(2011) ctrlSetText str(d_points_needed select 6);
 
-#define __str _str = _str + 
+#define __str _str = _str +
 
 private _str = "";
 if (d_no_ai) then {
