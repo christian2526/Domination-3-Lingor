@@ -27,15 +27,15 @@ _veh addItemCargoGlobal ["ACE_Tripod",2];
 _veh addWeaponCargoGlobal ["ACE_Vector",2];
 
 // Weapons + Ammo
-switch (tf47_param_vehiclemod) do { 
+switch (tf47_param_vehiclemod) do {
 	// Vanilla
-	case 0 : { 		
+	case 0 : {
 		//Items
 		_veh addItemCargoGlobal ["NVGoggles",2];
 		//Weapons
 		_veh addWeaponCargoGlobal ["arifle_MX_F",2];
 		_veh addWeaponCargoGlobal ["30Rnd_65x39_caseless_mag",30];
-	}; 
+	};
 	// CUP
 	case 1 : {
 		//Items
@@ -43,15 +43,15 @@ switch (tf47_param_vehiclemod) do {
 		//Weapons
 		_veh addWeaponCargoGlobal ["CUP_arifle_M4A1_black",2];
 		_veh addMagazineCargoGlobal ["30Rnd_556x45_Stanag",30];
-	}; 	
+	};
 	// RHS
-	case 2 : { 
+	case 2 : {
 		//Items
 		_veh addItemCargoGlobal ["rhsusf_ANPVS_15",2];
 		//Weapons
 		_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
 		_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
-	}; 
+	};
 };
 
 // Radio

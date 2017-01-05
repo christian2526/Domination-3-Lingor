@@ -1,9 +1,9 @@
-_veh = _this select 0;	
+_veh = _this select 0;
 _veh setVariable ["loadoutName", "Medical Loadout", true];
 //Clear Cargo
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;	
+clearMagazineCargoGlobal _veh;
 
 //Medic
 _veh addItemCargoGlobal ["ACE_fieldDressing",50];
@@ -30,17 +30,7 @@ _veh addMagazineCargoGlobal ["SmokeShell",20];
 _veh addMagazineCargoGlobal ["SmokeShellGreen",10];
 _veh addMagazineCargoGlobal ["SmokeShellRed",10];
 _veh addMagazineCargoGlobal ["SmokeShellBLue",5];
-
 // Radios
-switch (f_var_radios) do {
-	case 1: {
-	// ACRE 2
-		_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
-	};
-	// TFR
-	case 2: {
-		_veh addBackpackCargoGlobal ["tf_rt1523g",1];
-	};
-};
 
-
+_veh addItemCargoGlobal ["tf_rt1523g",1];
+_veh addItemCargoGlobal ["tf_anprc152",6];

@@ -1,9 +1,9 @@
-_veh = _this select 0;	
+_veh = _this select 0;
 _veh setVariable ["loadoutName", "Paratrooper", true];
 //Clear Cargo
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;	
+clearMagazineCargoGlobal _veh;
 
 //Grenades
 _veh addMagazineCargoGlobal ["SmokeShell",10];
@@ -23,16 +23,6 @@ _veh addBackpackCargoGlobal ["ACE_ReserveParachute",10];
 _veh addBackpackCargoGlobal ["BIS_Steerable_Parachute",10];
 
 // Radios
-switch (f_var_radios) do {
-	// ACRE 2
-	case 1: {
-		_veh addWeaponCargoGlobal ["ACRE_PRC343",10];
-		_veh addWeaponCargoGlobal ["ACRE_PRC152",10];
-		_veh addWeaponCargoGlobal ["ACRE_PRC117F",3];
-	};
-	// TFR
-	case 2: {
-		_veh addWeaponCargoGlobal ["tf_rt1523g",3];
-		_veh addWeaponCargoGlobal ["tf_anprc152",10];
-	};
-};
+
+_veh addItemCargoGlobal ["tf_rt1523g",1];
+_veh addItemCargoGlobal ["tf_anprc152",6];

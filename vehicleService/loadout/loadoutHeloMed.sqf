@@ -34,13 +34,6 @@ _veh addMagazineCargoGlobal ["SmokeShellBLue",5];
 _veh addBackpackCargoGlobal ["BIS_Steerable_Parachute",10];
 
 // Radios
-switch (f_var_radios) do {
-	// ACRE 2
-	case 1: {
-		_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
-	};
-	// TFR
-	case 2: {
-		_veh addWeaponCargoGlobal ["tf_rt1523g",1];
-	};
-};
+
+_veh addItemCargoGlobal ["tf_rt1523g",1];
+_veh addItemCargoGlobal ["tf_anprc152",6];

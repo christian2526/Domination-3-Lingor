@@ -227,8 +227,10 @@
 			"Chemlight_yellow",
 			"Chemlight_blue",
 			"B_IR_Grenade",
-
-
+			"rhs_fgm148_magazine_AT",
+			"rhsusf_5Rnd_762x51_m118_special_Mag",
+			"rhsusf_5Rnd_762x51_m993_Mag",
+			"rhsusf_5Rnd_762x51_m62_Mag",
 			//LASER BATTERIES
 			"Laserbatteries"
 
