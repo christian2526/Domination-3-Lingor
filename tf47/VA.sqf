@@ -542,7 +542,6 @@
 			"ACE_HandFlare_Yellow",
 			"ACE_TacticalLadder_Pack",
 			"ACE_NonSteerableParachute",
-			"ACE_Vector",
 			"ACE_Yardage450",
 			"ACE_MX2A",
 			"ACE_Altimeter",
