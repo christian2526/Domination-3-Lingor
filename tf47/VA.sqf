@@ -88,7 +88,8 @@
 			"rhs_weap_mk18_bk",
 			"rhs_weap_mk18_KAC_bk",
 			"rhs_weap_mk18_KAC",
-			"rhsusf_weap_MP7A1_base_f"
+			"rhsusf_weap_MP7A1_base_f",
+			"ACE_Vector"
 
 		],false, true] call xla_fnc_addVirtualWeaponCargo;
 
@@ -200,7 +201,6 @@
 			"ClaymoreDirectionalMine_Remote_Mag",
 			"DemoCharge_Remote_Mag",
 			"rhs_mine_M19_mag",
-			"rhsusf_m112x4_mag",
 			"rhsusf_m112_mag",
 
 			//GRENADES
