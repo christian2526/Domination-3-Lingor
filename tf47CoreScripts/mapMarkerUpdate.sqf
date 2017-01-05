@@ -1,11 +1,11 @@
 /*
 * Updates Mapmarkers
-* 
+*
 * Long Description
-* 
+*
 * Tested with :
 * Arma 3 1.23
-* 
+*
 * @category   Clientside & Serverside Scripts
 * @package    TF47 CoreScripts
 * @author     [TF47] Amadox
@@ -36,9 +36,6 @@ _text = _statusMarkersLine select 3;
 _isslot = _statusMarkersLine select 4;
 _isonline = false;
 
-_unit = objNull;
-call compile format["_unit = %1;", _unitname];
-
 _emptyHash = [[], [false, false, false]] call CBA_fnc_hashCreate;
 _vehMemory = missionNamespace getVariable ["vehicleMarkerMemory", _emptyHash];
 _thisVehMemory = [_vehMemory, _unitname] call CBA_fnc_hashGet;
@@ -57,7 +54,8 @@ if(!_wasinitialized) then {
 
 // Check if Unit even exists
 if (!isNil _unitname) then {
-
+	_unit = objNull;
+	call compile format["_unit = %1;", _unitname];
 	// If Unit is a Vehicle, we need to check the driver, not the unit itself
 	_status = 0;
 	if (!_isslot) then {
@@ -68,16 +66,16 @@ if (!isNil _unitname) then {
 	// Checking if the Unit is a Player, thus marking Unit as online
 	if (isPlayer _unit) then {
 		_isonline = true;
-	};		
+	};
 
 	// If this is the first time running this, make sure there is a change
 	if (!_wasinitialized || _wasdestroyed) then {
 		_wasonline = !_isonline;
 	};
-	
+
 	// Check if there has been a change
 	if((!_wasonline && _isonline) || (_wasonline && !_isonline)) then {
-	
+
 		// Slot/Vehicle is in use by a player
 		if (_isonline) then {
 			_playername = name _unit;
@@ -101,11 +99,11 @@ if (!isNil _unitname) then {
 				} else {
 					_marker setMarkerColor "ColorBlack";
 					_marker setMarkerAlpha 0.2;
-					_marker setMarkerText format["%1: N/A", _text];						
+					_marker setMarkerText format["%1: N/A", _text];
 				};
 			};
 		};
-		
+
 		_thisVehMemory set [1, _isonline];
 		_thisVehMemory set [2, false];
 	};
