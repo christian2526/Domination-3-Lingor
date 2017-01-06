@@ -68,6 +68,11 @@ _pos_array = nil;
 for "_i" from 1 to 3 do {
 	private _truck = createVehicle [d_sm_ammotrucktype, _poss, [], 0, "FORM"];
 	_truck lock true;
+	clearItemCargoGlobal _truck;
+	clearWeaponCargoGlobal _truck;
+	clearItemCargoGlobal _truck;
+	_truck addItemCargoGlobal ["ACE_M26_Clacker", 1];
+	_truck addItemCargoGlobal ["DemoCharge_Remote_Mag", 8];
 	d_x_sm_vec_rem_ar pushBack _truck;
 	sleep 0.523;
 };
