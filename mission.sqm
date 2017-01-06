@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=517;
+	toggles=645;
 	class ItemIDProvider
 	{
-		nextID=1129;
+		nextID=1132;
 	};
 	class MarkerIDProvider
 	{
-		nextID=9;
+		nextID=15;
 	};
 	class LayerIndexProvider
 	{
-		nextID=212;
+		nextID=220;
 	};
 	class Camera
 	{
-		pos[]={2987.0056,22.163679,6496.0142};
-		dir[]={0.80021572,-0.5909887,0.10303917};
-		up[]={0.58626443,0.8065936,0.075486846};
-		aside[]={0.1277241,-1.3881945e-006,-0.99192899};
+		pos[]={2665.5503,87.336746,6505.7778};
+		dir[]={0.33762556,-0.81408793,0.47276181};
+		up[]={0.4731454,0.58068174,0.66251814};
+		aside[]={0.81387758,-3.0752562e-007,-0.58123857};
 	};
 };
 binarizationWanted=0;
@@ -459,7 +459,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=542;
+		items=543;
 		class Item0
 		{
 			dataType="Marker";
@@ -24524,15 +24524,15 @@ class Mission
 		class Item525
 		{
 			dataType="Trigger";
-			position[]={2591,0,6580.5};
-			angle=2.3313062;
+			position[]={2696.5,-0.00012397766,6549};
+			angle=5.3964176;
 			class Attributes
 			{
-				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0;";
+				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 5) > 0;";
 				onActivation="{if(isPlayer _x) then {[[[thislist, thisTrigger, ""Ship""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
-				sizeA=40;
-				sizeB=80;
-				sizeC=3;
+				sizeA=30;
+				sizeB=20;
+				sizeC=20;
 				interuptable=1;
 				repeatable=1;
 				activationBy="WEST";
@@ -24540,18 +24540,18 @@ class Mission
 			};
 			id=1088;
 			type="EmptyDetector";
-			atlOffset=7.1241903;
+			atlOffset=11.012001;
 		};
 		class Item526
 		{
 			dataType="Marker";
-			position[]={2580.4031,-5.8518734e-027,6574.3018};
+			position[]={2697,0,6549};
 			name="marker_8";
 			text="Ship Service Point ";
 			type="b_maint";
 			colorName="ColorBrown";
 			id=1090;
-			atlOffset=10.358788;
+			atlOffset=11.022561;
 		};
 		class Item527
 		{
@@ -24870,6 +24870,7 @@ class Mission
 			};
 			id=1121;
 			type="rhs_7ya37_1_single";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25455,6 +25456,22 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item542
+		{
+			dataType="Marker";
+			position[]={2697,1.75147e+031,6549};
+			name="marker_14";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorBrown";
+			fillName="Border";
+			a=30;
+			b=20;
+			angle=128.95912;
+			drawBorder=1;
+			id=1131;
+			atlOffset=1.75147e+031;
 		};
 	};
 	class Connections
