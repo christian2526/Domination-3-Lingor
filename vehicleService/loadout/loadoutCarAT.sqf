@@ -21,7 +21,7 @@ _veh addWeaponCargoGlobal ["rhs_weap_fim92", 1];
 _veh addMagazineCargoGlobal ["rhs_fim92_mag",4];
 _veh addMagazineCargoGlobal ["tf47_m3maaws_heat", 12];
 _veh addMagazineCargoGlobal ["tf47_m3maaws_he", 4];
-_veh addWeaponCargoGlobal ["tf47_m3_maaws",4];
+_veh addWeaponCargoGlobal ["tf47_m3maaws",4];
 _veh addItemCargoGlobal ["tf47_optic_m3maaws", 4];
 // Radios
 

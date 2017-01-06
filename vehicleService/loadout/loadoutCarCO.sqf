@@ -44,7 +44,7 @@ _veh addWeaponCargoGlobal ["rhs_weap_fim92",1];
 _veh addWeaponCargoGlobal ["rhs_weap_fgm148", 1];
 _veh addWeaponCargoGlobal ["tf47_at4_heat",4];
 
-_veh addWeaponCargoGlobal ["tf47_m3_maaws",4];
+_veh addWeaponCargoGlobal ["tf47_m3maaws",4];
 _veh addItemCargoGlobal ["tf47_optic_m3maaws", 4];
 // Launcher Ammo
 _veh addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",2];
