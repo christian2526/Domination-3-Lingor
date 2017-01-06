@@ -22,7 +22,7 @@ __TRACE_2("","d_sm_winner")
 if (d_sm_winner > 0) then {
 	[d_sm_winner, ""] remoteExecCall ["d_fnc_sm_res_client", [0, -2] select isDedicated];
 	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-	["tf47_changetickets", [WEST, 2, 20, "Side Mission"]] call CBA_fnc_globalEvent;
+	["tf47_changetickets", [WEST, 2, 10, "Side Mission"]] call CBA_fnc_globalEvent;
 	/**************************************************************/
 };
 
