@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=220;
+		nextID=228;
 	};
 	class Camera
 	{
-		pos[]={2665.5503,87.336746,6505.7778};
-		dir[]={0.33762556,-0.81408793,0.47276181};
-		up[]={0.4731454,0.58068174,0.66251814};
-		aside[]={0.81387758,-3.0752562e-007,-0.58123857};
+		pos[]={2523.6328,90.097214,6484.3481};
+		dir[]={0.59909856,-0.7042253,0.38129014};
+		up[]={0.59417593,0.70988637,0.37815288};
+		aside[]={0.53697997,-2.8579962e-008,-0.84373248};
 	};
 };
 binarizationWanted=0;
@@ -24524,11 +24524,11 @@ class Mission
 		class Item525
 		{
 			dataType="Trigger";
-			position[]={2696.5,-0.00012397766,6549};
+			position[]={2696.5,-8,6549};
 			angle=5.3964176;
 			class Attributes
 			{
-				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 5) > 0;";
+				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 15) > 0;";
 				onActivation="{if(isPlayer _x) then {[[[thislist, thisTrigger, ""Ship""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=30;
 				sizeB=20;
@@ -24540,7 +24540,7 @@ class Mission
 			};
 			id=1088;
 			type="EmptyDetector";
-			atlOffset=11.012001;
+			atlOffset=3.012125;
 		};
 		class Item526
 		{
