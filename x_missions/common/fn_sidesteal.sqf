@@ -45,9 +45,14 @@ if (alive _vec && {_reached_base}) then {
 #else
 	d_sm_winner = _winner;
 #endif
+
 } else {
 	d_sm_winner = -600;
 };
+{
+	if (alive _vec && {_reached_base})
+	then {moveOut _x} sleep 3; deleteVehicle _vec;
+} forEach crew _vec;
 
 _vma remoteExecCall ["deleteMarker", 2];
 
