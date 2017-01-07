@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=645;
+	toggles=517;
 	class ItemIDProvider
 	{
 		nextID=1132;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=220;
+		nextID=244;
 	};
 	class Camera
 	{
-		pos[]={2665.5503,87.336746,6505.7778};
-		dir[]={0.33762556,-0.81408793,0.47276181};
-		up[]={0.4731454,0.58068174,0.66251814};
-		aside[]={0.81387758,-3.0752562e-007,-0.58123857};
+		pos[]={2847.2515,164.05905,6542.0708};
+		dir[]={0.6950956,-0.71901459,0.010501543};
+		up[]={0.71900356,0.69491172,0.010859702};
+		aside[]={0.015103007,3.6820893e-007,-1.0000083};
 	};
 };
 binarizationWanted=0;
@@ -4446,7 +4446,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="pflanze";
+							value="India65";
 						};
 					};
 				};
@@ -4484,7 +4484,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Radio Communication - DEV";
+							value="Radio Communication - Public I";
 						};
 					};
 				};
@@ -4560,7 +4560,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=7;
+							value=8;
 						};
 					};
 				};
@@ -24524,11 +24524,11 @@ class Mission
 		class Item525
 		{
 			dataType="Trigger";
-			position[]={2696.5,-0.00012397766,6549};
-			angle=5.3964176;
+			position[]={2696.5,-11.012125,6549};
+			angle=5.3964167;
 			class Attributes
 			{
-				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 5) > 0;";
+				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 15) > 0;";
 				onActivation="{if(isPlayer _x) then {[[[thislist, thisTrigger, ""Ship""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=30;
 				sizeB=20;
@@ -24540,7 +24540,6 @@ class Mission
 			};
 			id=1088;
 			type="EmptyDetector";
-			atlOffset=11.012001;
 		};
 		class Item526
 		{
