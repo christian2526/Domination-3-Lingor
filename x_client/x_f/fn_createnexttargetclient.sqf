@@ -28,4 +28,3 @@ playSound "d_IncomingChallenge2";
 if (!d_still_in_intro) then {
 	hint format [localize "STR_DOM_MISSIONSTRING_204", d_cur_tgt_name];
 };
-["tf47_changetickets", [WEST, 97, 0, format ["Next Main Target is: %1", d_cur_tgt_name]]] call CBA_fnc_globalEvent;

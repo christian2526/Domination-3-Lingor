@@ -82,9 +82,6 @@ if (d_sm_winner > 0) then {
 			parseText("<t color='#ffffffff' size='1.5'>" + (localize "STR_DOM_MISSIONSTRING_725") + "</t>"), lineBreak,lineBreak,
 			_s
 		];
-		["tf47_changetickets", [WEST, 97, 0, "Side Mission failed"]] call CBA_fnc_globalEvent;
-
-
 	};
 };
 
