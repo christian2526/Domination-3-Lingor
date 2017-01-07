@@ -50,11 +50,11 @@ if (surfaceIsWater (d_enemyai_respawn_pos select 0)) then {
 		_counter = _counter + 1;
 		_incdir = _incdir * -1;
 	};
-	
+
 	if (surfaceIsWater _tmppos) then {
 		_tmppos = d_cur_tgt_pos;
 	};
-	
+
 	d_enemyai_respawn_pos set [0, _tmppos];
 	_dirn = d_cur_tgt_pos getDir _tmppos;
 	_dirn = _dirn + 180;

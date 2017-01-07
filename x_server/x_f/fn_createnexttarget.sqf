@@ -24,7 +24,7 @@ d_cur_target_radius = _d_t_n_c_t_i select 2;
 publicVariable "d_cur_target_radius";
 d_mttarget_radius_patrol = d_cur_target_radius + 200 + random 200;
 publicVariable "d_mttarget_radius_patrol";
-
+["tf47_changetickets", [WEST, 97, 0, format ["Next Main Target is: %1", d_cur_tgt_name]]] call CBA_fnc_globalEvent;
 sleep 1.0123;
 if (d_first_time_after_start) then {
 	d_first_time_after_start = false;

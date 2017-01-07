@@ -27,6 +27,7 @@ if (d_sm_winner > 0) then {
 };
 
 if (d_sm_winner in [-1,-2,-300,-400,-500,-600,-700,-878,-879,-880,-881,-900]) then {
+	["tf47_changetickets", [WEST, 97, 0, "Side Mission failed"]] call CBA_fnc_globalEvent;
 	[d_sm_winner, ""] remoteExecCall ["d_fnc_sm_res_client", [0, -2] select isDedicated];
 #ifndef __TT__
 	[35] remoteExecCall ["d_fnc_DoKBMsg", 2];
