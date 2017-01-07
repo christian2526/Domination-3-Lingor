@@ -8,7 +8,7 @@ class EditorData
 	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=1132;
+		nextID=1134;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=244;
+		nextID=268;
 	};
 	class Camera
 	{
-		pos[]={2847.2515,164.05905,6542.0708};
-		dir[]={0.6950956,-0.71901459,0.010501543};
-		up[]={0.71900356,0.69491172,0.010859702};
-		aside[]={0.015103007,3.6820893e-007,-1.0000083};
+		pos[]={2887.0786,59.066429,6537.7876};
+		dir[]={0.89816642,-0.40021741,-0.18272002};
+		up[]={0.39236072,0.91633463,-0.079820454};
+		aside[]={-0.19938464,-2.5534246e-006,-0.98004758};
 	};
 };
 binarizationWanted=0;
@@ -7159,8 +7159,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2572.5,3.0666373,6591};
-				angles[]={0,3.97298,0};
+				position[]={2894,3.0662911,6579.5};
+				angles[]={0,4.237391,0};
 			};
 			side="Empty";
 			class Attributes
@@ -7172,7 +7172,7 @@ class Mission
 			};
 			id=486;
 			type="rhsusf_mkvsoc";
-			atlOffset=9.6309996;
+			atlOffset=3.7019005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7221,8 +7221,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2596.5,2.5659511,6572.5};
-				angles[]={0,3.6365156,0};
+				position[]={2859,2.5662911,6560};
+				angles[]={0,4.2259622,0};
 			};
 			side="Empty";
 			class Attributes
@@ -7234,7 +7234,7 @@ class Mission
 			};
 			id=487;
 			type="rhsusf_mkvsoc";
-			atlOffset=7.3449998;
+			atlOffset=3.7218027;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7283,8 +7283,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2598.2991,2.1295137,6599.272};
-				angles[]={6.173666,2.4259379,0.11175343};
+				position[]={2826.8621,3.3648677,6537.3647};
+				angles[]={0,2.695147,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7297,7 +7297,6 @@ class Mission
 			};
 			id=488;
 			type="B_Boat_Transport_01_F";
-			atlOffset=-0.090000033;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7327,8 +7326,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2602.147,2.3519659,6594.7412};
-				angles[]={6.173666,3.3160558,0.21917844};
+				position[]={2829.231,3.3423762,6538.3672};
+				angles[]={0,2.6031394,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7341,7 +7340,7 @@ class Mission
 			};
 			id=489;
 			type="B_Boat_Transport_01_F";
-			atlOffset=-0.061000109;
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23691,8 +23690,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2613.8687,2.4597797,6590.603};
-				angles[]={6.0693822,2.4259379,5.9716616};
+				position[]={2831.8735,3.2939754,6539.748};
+				angles[]={0,2.5813403,0};
 			};
 			side="Empty";
 			flags=4;
@@ -23705,7 +23704,6 @@ class Mission
 			};
 			id=1004;
 			type="B_Boat_Transport_01_F";
-			atlOffset=-0.11899984;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23735,8 +23733,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2618.5,1.5158911,6592.5};
-				angles[]={5.9696193,3.3160558,6.0715466};
+				position[]={2834,3.3775356,6541};
+				angles[]={0,2.5896876,0};
 			};
 			side="Empty";
 			flags=4;
@@ -23749,7 +23747,6 @@ class Mission
 			};
 			id=1005;
 			type="B_Boat_Transport_01_F";
-			atlOffset=5.9604645e-008;
 			class CustomAttributes
 			{
 				class Attribute0
