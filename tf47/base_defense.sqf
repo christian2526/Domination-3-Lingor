@@ -7,11 +7,13 @@ _reloadTime = _this select 1;
 createVehicleCrew _veh;
 sleep 2;
 _crewveh = crew _veh;
+
 {
 	_x allowCrewInImmobile true;
 	_x setBehaviour "careless";
 	_x allowFleeing 0;
 } forEach _crewveh;
+
 while {alive _veh} do {
 	_veh setVehicleAmmo 1;
 	_veh setFuel 0;

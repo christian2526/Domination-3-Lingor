@@ -28,22 +28,23 @@ while {true} do {
 	private _num_p = call d_fnc_PlayersNumber;
 #ifndef __DEBUG__
 	sleep (call {
-		if (_num_p < 5) exitWith {1800};
-		if (_num_p < 10) exitWith {1200};
-		if (_num_p < 20) exitWith {800};
+		if (_num_p < 5) exitWith {2400};
+		if (_num_p < 10) exitWith {1800};
+		if (_num_p < 20) exitWith {1800};
 		400;
 	});
 #endif
 	call d_fnc_mpcheck;
 	while {d_mt_radio_down} do {sleep 6.123};
 	private _pos = call d_fnc_GetRanPointOuterAir;
-	
-	private _grpskill = 0.6 + (random 0.3);
+
+	private _grpskill = 0.3 + (random 0.3);
 	__TRACE_2("","_pos","_grpskill")
 
 	private _grp = [d_side_enemy] call d_fnc_creategroup;
 	__TRACE_1("","_grp")
 	private _heli_type = "";
+	private _numair = 0;
 	private _numair = 0;
 	switch (_type) do {
 		case "HAC": {
@@ -59,9 +60,9 @@ while {true} do {
 			_numair = d_number_attack_choppers;
 		};
 	};
-	
+
 	__TRACE_2("","_heli_type","_numair")
-	
+
 	waitUntil {sleep 0.323; d_current_target_index >= 0};
 	private _cdir = _pos getDir d_island_center;
 #ifndef __TT__
@@ -74,17 +75,17 @@ while {true} do {
 	for "_xxx" from 1 to _numair do {
 		private _vec_array = [[_pos select 0, _pos select 1, 400], _cdir, _heli_type, _grp] call d_fnc_spawnVehicle;
 		__TRACE_1("","_vec_array")
-		
+
 		_vec = _vec_array select 0;
 		_vec setPos [_pos select 0, _pos select 1, 400];
 		_vehicles pushBack _vec;
 		__TRACE_1("","_vehicles")
-		
+
 		_funits append (_vec_array select 1);
 		__TRACE_1("","_funits")
 
 		addToRemainsCollector [_vec];
-		
+
 		if (d_LockAir == 0) then {_vec lock true};
 		_vec flyInHeight 100;
 
@@ -92,13 +93,13 @@ while {true} do {
 		__TRACE_1("","_vec")
 		sleep 0.1;
 	};
-	
+
 	(leader _grp) setSkill _grpskill;
-	
+
 	sleep 1.011;
-	
+
 	_grp allowFleeing 0;
-	
+
 	waitUntil {sleep 0.323; d_current_target_index >= 0};
 	private _cur_tgt_pos =+ d_cur_tgt_pos;
 	_cur_tgt_pos set [2, 0];
@@ -112,18 +113,18 @@ while {true} do {
 		waitUntil {sleep 0.323; d_current_target_index >= 0};
 		_cur_tgt_pos =+ d_cur_tgt_pos;
 		_cur_tgt_pos set [2, 0];
-		
+
 		sleep 3 + random 2;
-		
+
 		private _radius = switch (_type) do {
 			case "HAC";
 			case "LAC": {d_cur_target_radius * 3};
 			case "AP": {d_cur_target_radius * 5};
 			default {d_cur_target_radius};
 		};
-		
+
 		__TRACE_1("","_radius")
-		
+
 #define __patternpos \
 _pat_pos = _cur_tgt_pos getPos [random _radius, random 360]; \
 _pat_pos set [2, _cur_tgt_pos select 2]
@@ -180,12 +181,12 @@ _pat_pos set [2, _cur_tgt_pos select 2]
 				sleep 80 + random 80;
 			};
 		};
-		
+
 		sleep 3 + random 2;
 
 		__TRACE("call mpcheck")
 		call d_fnc_mpcheck;
-		
+
 		sleep 1;
 
 		if !(_vehicles isEqualTo []) then {
@@ -222,8 +223,8 @@ _pat_pos set [2, _cur_tgt_pos select 2]
 	_num_p = call d_fnc_PlayersNumber;
 	private _re_random = call {
 		if (_num_p < 5) exitWith {1800};
-		if (_num_p < 10) exitWith {1200};
-		if (_num_p < 20) exitWith {800};
+		if (_num_p < 10) exitWith {1800};
+		if (_num_p < 20) exitWith {1800};
 		400;
 	};
 	sleep (d_airai_respawntime + _re_random + (random _re_random));

@@ -52,7 +52,7 @@ private _bar = [
 	localize "STR_DOM_MISSIONSTRING_61"
 ];
 
-player createDiaryRecord ["Diary", ["Briefing", _bar joinString ""]];
+//player createDiaryRecord ["Diary", ["Briefing", _bar joinString ""]];
 
 player createDiarySubject ["dLicense","License"];
 player createDiaryRecord ["dLicense", ["License", "
