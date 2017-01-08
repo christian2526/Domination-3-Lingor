@@ -839,13 +839,13 @@ d_cas_plane =
 #ifndef __CUP__
 	// light attack chopper (for example I_Heli_light_03_F with MG)
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["RHS_Mi24P_CAS_vvsc"]};
+		case "E": {["rhsgref_ins_Mi8amt"]};
 		case "W": {["B_Heli_Light_01_armed_F"]};
 		case "G": {["I_Heli_light_03_F"]};
 	};
 #else
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["RHS_Mi24P_CAS_vvsc", "CUP_O_Mi8_RU"]};
+		case "E": {["rhsgref_ins_Mi8amt", "CUP_O_Mi8_RU"]};
 		case "W": {["B_Heli_Light_01_F"]};
 		case "G": {["I_Heli_light_03_F"]};
 	};
