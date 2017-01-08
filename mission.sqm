@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=276;
+		nextID=284;
 	};
 	class Camera
 	{
-		pos[]={2976.4995,107.77428,6434.4595};
-		dir[]={0.016004341,-0.68031234,0.73291487};
-		up[]={0.014855073,0.73280787,0.68025577};
-		aside[]={0.99987131,6.7829205e-007,-0.021843584};
+		pos[]={3299.8057,578.45392,6280.981};
+		dir[]={-0.51234227,-0.75716639,0.40552294};
+		up[]={-0.59375745,0.65311497,0.4699645};
+		aside[]={0.62070268,1.5506521e-006,0.7841875};
 	};
 };
 binarizationWanted=0;
@@ -10829,7 +10829,6 @@ class Mission
 						};
 					};
 					id=582;
-					atlOffset=-0.37501335;
 				};
 				class Item5
 				{
@@ -11245,7 +11244,7 @@ class Mission
 				};
 			};
 			id=560;
-			atlOffset=6.8569164;
+			atlOffset=1.5000558;
 		};
 		class Item294
 		{
@@ -15169,6 +15168,7 @@ class Mission
 			};
 			id=769;
 			type="Land_BagFence_Round_F";
+			atlOffset=-2.3841858e-007;
 		};
 		class Item398
 		{
@@ -15186,6 +15186,7 @@ class Mission
 			};
 			id=770;
 			type="Land_BagFence_Round_F";
+			atlOffset=-2.3841858e-007;
 		};
 		class Item399
 		{
@@ -15603,7 +15604,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit""],[2,4]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[10,2,2,2,4]],[[""ToolKit""],[1]],[[""rhsusf_falconii""],[1]]],false]";
+							value="[[[[],[]],[[],[]],[[""ToolKit""],[10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -25101,6 +25102,7 @@ class Mission
 			};
 			id=1140;
 			type="rhsusf_m1a2sep1tuskiiwd_usarmy";
+			atlOffset=0.02740097;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25323,6 +25325,7 @@ class Mission
 			};
 			id=1145;
 			type="RHS_M6_wd";
+			atlOffset=-0.00031232834;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25485,6 +25488,7 @@ class Mission
 			};
 			id=1147;
 			type="RHS_M6_wd";
+			atlOffset=-0.0017251968;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25566,6 +25570,7 @@ class Mission
 			};
 			id=1148;
 			type="RHS_M6_wd";
+			atlOffset=-0.0015830994;
 			class CustomAttributes
 			{
 				class Attribute0
