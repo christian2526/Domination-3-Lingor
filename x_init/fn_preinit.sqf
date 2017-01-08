@@ -740,9 +740,9 @@ d_cas_plane =
 	d_isle_defense_marker = "n_mech_inf";
 
 	d_air_radar = switch (d_enemy_side_short) do {
-		case "W": {"Land_Radar_Small_F"};
-		case "E": {"Land_Radar_Small_F"};
-		case "G": {"Land_Radar_Small_F"};
+		case "W": {"rhs_prv13"};
+		case "E": {"rhs_prv13"};
+		case "G": {"rhs_prv13"};
 	};
 
 	d_enemy_hq = switch (d_enemy_side_short) do {
@@ -839,13 +839,13 @@ d_cas_plane =
 #ifndef __CUP__
 	// light attack chopper (for example I_Heli_light_03_F with MG)
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["rhsgref_ins_Mi8amt"]};
+		case "E": {["rhsgref_cdf_reg_Mi17Sh"]};
 		case "W": {["B_Heli_Light_01_armed_F"]};
 		case "G": {["I_Heli_light_03_F"]};
 	};
 #else
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["rhsgref_ins_Mi8amt", "CUP_O_Mi8_RU"]};
+		case "E": {["rhsgref_cdf_reg_Mi17Sh"]};
 		case "W": {["B_Heli_Light_01_F"]};
 		case "G": {["I_Heli_light_03_F"]};
 	};
