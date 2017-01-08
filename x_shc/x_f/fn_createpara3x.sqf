@@ -25,17 +25,17 @@ private _delveccrew = {
 private _make_jump = {
 	scriptName "spawn_x_createpara3_make_jump";
 	params ["_vgrp", "_vec", "_attackpoint", "_flytopos", "_heliendpoint", "_delveccrew", "_crew_vec"];
-	
+
 	__TRACE("_make_jump")
-	
+
 	private _startpos = getPosATL _vec;
 	private _driver_vec = driver _vec;
-	
+
 	if (_vec isKindOf "Plane") then {_flytopos = _attackpoint} else {_flytopos set [2, 80]};
-	
+
 	_heliendpoint set [2, 80];
 	_attackpoint set [2, 0];
-	
+
 	private _wp = _vgrp addWaypoint [_flytopos, 0];
 	_wp setWaypointBehaviour "CARELESS";
 	_wp setWaypointSpeed "NORMAL";
@@ -48,11 +48,11 @@ private _make_jump = {
 	_wp setWaypointtype "MOVE";
 	_wp setWaypointFormation "VEE";
 	_wp setWaypointForceBehaviour true;
-	
+
 	//_vec flyInHeight 100;
-	
+
 	sleep 10.0231;
-	
+
 	private _stop_me = false;
 	private _checktime = time + 300;
 	while {_attackpoint distance2D (getPosWorld (leader _vgrp)) > 300} do {
@@ -76,9 +76,9 @@ private _make_jump = {
 		sleep 2.023;
 	};
 	if (_stop_me) exitWith {};
-	
+
 	sleep 0.534;
-	
+
 	if (alive _vec && {alive _driver_vec && {canMove _vec}}) then {
 		if (!d_mt_radio_down && {_vec distance2D d_cur_tgt_pos < ([500, 700] select (speed _vec > 300))}) then {
 			private _paragrp = [d_side_enemy] call d_fnc_creategroup;
@@ -124,7 +124,7 @@ private _make_jump = {
 			_paragrp setCombatMode "YELLOW";
 			_paragrp setBehaviour "AWARE";
 			 [_paragrp, 1] call d_fnc_setGState;
-			
+
 			[_paragrp, d_cur_tgt_pos, d_cur_target_radius] spawn {
 				scriptName "spawn_x_createpara3_usegroup";
 				params ["_grp", "_pos"];
@@ -134,17 +134,17 @@ private _make_jump = {
 					_grp setVariable ["d_PATR",true];
 				};
 			};
-			
+
 			d_c_attacking_grps pushBack _paragrp;
-			
+
 			sleep 0.112;
 			d_should_be_there = d_should_be_there - 1;
-			
+
 			while {_heliendpoint distance2D (leader _vgrp) > 1000} do {
 				if (!alive _vec || {!alive _driver_vec || {!canMove _vec}}) exitWith {};
 				sleep 5.123;
 			};
-			
+
 			if (!isNull _vec && {_heliendpoint distance2D _vec > 1000}) then {
 				[_crew_vec, _vec, 60 + random 60] spawn _delveccrew;
 			} else {
@@ -169,7 +169,7 @@ for "_i" from 1 to _number_vehicles do {
 	if (d_cur_tgt_pos distance2D _cur_tgt_pos > 500) exitWith {_stop_it = true};
 	private _vgrp = [d_side_enemy] call d_fnc_creategroup;
 	private _heli_type = selectRandom d_transport_chopper;
-	private _spos = [_startpoint select 0, _startpoint select 1, 300];
+	private _spos = [_startpoint select 0, _startpoint select 1, 400];
 	([_spos, _spos getDir _attackpoint, _heli_type, _vgrp] call d_fnc_spawnVehicle) params ["_vec", "_crew"];
 	addToRemainsCollector [_vec];
 	_vec remoteExec ["d_fnc_airmarkermove", 2];
@@ -177,7 +177,7 @@ for "_i" from 1 to _number_vehicles do {
 	_vec lock true;
 
 	sleep 5.012;
-	
+
 	//_vec flyInHeight 100;
 
 	if (d_mt_radio_down) exitWith {
@@ -185,9 +185,9 @@ for "_i" from 1 to _number_vehicles do {
 		{_vec deleteVehicleCrew _x;false} count (crew _vec);
 		deleteVehicle _vec;
 	};
-	
+
 	[_vgrp, _vec, _attackpoint, _flytopos, _heliendpoint, _delveccrew, _crew] spawn _make_jump;
-	
+
 	sleep 30 + random 30;
 };
 

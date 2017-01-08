@@ -45,6 +45,7 @@ while {true} do {
 	__TRACE_1("","_grp")
 	private _heli_type = "";
 	private _numair = 0;
+	private _numair = 0;
 	switch (_type) do {
 		case "HAC": {
 			_heli_type = selectRandom d_airai_attack_chopper;
