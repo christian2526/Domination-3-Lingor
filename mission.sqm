@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2973.7615,289.95868,6267.7979};
-		dir[]={-0.046807256,-0.62160879,0.78208452};
-		up[]={-0.037143402,0.78321159,0.62062526};
-		aside[]={0.99832404,-9.0305548e-008,0.059739187};
+		pos[]={2976.4995,107.77428,6434.4595};
+		dir[]={0.016004341,-0.68031234,0.73291487};
+		up[]={0.014855073,0.73280787,0.68025577};
+		aside[]={0.99987131,6.7829205e-007,-0.021843584};
 	};
 };
 binarizationWanted=0;
@@ -3799,11 +3799,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={172.44759,0,6316.5454};
+				position[]={172.448,0.00048065186,6316.5449};
 			};
 			id=414;
 			type="ACE_ModuleRespawn";
-			atlOffset=17.249519;
+			atlOffset=17.25;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3840,7 +3840,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
