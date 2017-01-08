@@ -1,15 +1,20 @@
 //Setup Base Def
-private ["_aabase","_reloadTime"];
+private ["_veh","_reloadTime"];
 
-_aabase = _this select 0;
+_veh = _this select 0;
 _reloadTime = _this select 1;
 
-createVehicleCrew _aabase;
+createVehicleCrew _veh;
+sleep 2;
+_crewveh = crew _veh;
+_crewveh allowFleeing 0;
+_crewveh allowCrewInImmobile true;
+_crewveh setBehaviour "careless";
 
-while {alive _aabase} do {
-	_aabase setVehicleAmmo 1;
-	_aabase setFuel 0;
-	_aabase forceSpeed 0;
-	_aabase engineOn false;
+while {alive _veh} do {
+	_veh setVehicleAmmo 1;
+	_veh setFuel 0;
+	_veh forceSpeed 0;
+	_veh engineOn false;
 	sleep _reloadTime;
 };

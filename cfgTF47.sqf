@@ -65,8 +65,8 @@ _statusMarkerData = [
 	["ch531",			["callsign_ch531",				"b_air",			"ColorOrange",	"SEAGULL",													false]],
 	["a101",			["callsign_a101",				"b_plane",			"ColorOrange",	"THUNDERBIRD-01",												false]],
 	["a102",			["callsign_a102",				"b_plane",			"ColorOrange",	"THUNDERBIRD-02",												false]],
-	["a103",			["callsign_a103",				"b_plane",			"ColorOrange",	"THUNDERBIRD-03",												false]],
-	["a104",			["callsign_a104",				"b_plane",			"ColorOrange",	"THUNDERBIRD-04",												false]],
+	["f22a1",			["callsign_f22a1",				"b_plane",			"ColorOrange",	"RAPTOR-01",												false]],
+	["f22a2",			["callsign_f22a2",				"b_plane",			"ColorOrange",	"RAPTOR-02",												false]],
 	//Tanks
 	["tank1",			["callsign_tank1",			"b_armor",			"ColorOrange",	"RHINO-01",														false]],
 	["tank2",			["callsign_tank2",			"b_armor",			"ColorOrange",	"RHINO-02",														false]],
@@ -107,8 +107,8 @@ _vehicleRestrictionData = [
 	["ch531", 				[1, 1,	["rwrt11","rwrt12","rwrt21","rwrt22"],							["rwrt13","rwrt14","rwrt23","rwrt24"]]],
 	["a101", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
 	["a102", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
-	["a103", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
-	["a104", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
+	["f22a1", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
+	["f22a1", 					[1, 1,	["fixwa11","fixwa12","fixwa13","fixwa14"], 													[]]],
 	//Tank
 	["tank1",					[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
 	["tank2",					[2, 2,	["armor13","armor23","mc5","armor11","armor12","armor21","armor22"], 													["armor13","armor23","mc5","armor11","armor12","armor21","armor22"]]],
