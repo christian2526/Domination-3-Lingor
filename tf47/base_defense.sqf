@@ -7,7 +7,6 @@ _reloadTime = _this select 1;
 createVehicleCrew _veh;
 sleep 2;
 _crewveh = crew _veh;
-_crewveh allowFleeing 0;
 _crewveh allowCrewInImmobile true;
 _crewveh setBehaviour "careless";
 
