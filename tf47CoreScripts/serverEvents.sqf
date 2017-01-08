@@ -62,6 +62,9 @@ if (isServer) then {
 
         // ... and only once!
         if (isNil "serverEventsExecuted") then {
+                "extDB3" callExtension "9:ADD_DATABASE:Database";
+                "extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Database:SQL:SQL:TEXT-NULL";
+                "extDB3" callExtension "9:LOCK";
 
                 serverEventsExecuted = true;
                 publicVariable "serverEventsExecuted";
@@ -196,7 +199,7 @@ if (isServer) then {
                                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
 
                                         if(_query != 'any' && _query != 'null') then {
-                                                "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
+                                                "extDB3" callExtension format ["1:SQL:%1", _query];
                                         };
 
                                 } else {
@@ -309,8 +312,7 @@ if (isServer) then {
 
                                         _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 98, 0, 0, "Mission Lost"];
                                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
-
-                                        "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
+                                        "extDB3" callExtension format ["1:SQL:%1", _query];
 
                                         sleep 3;
                                         [-2, {
@@ -335,9 +337,7 @@ if (isServer) then {
 
                         _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 97, 0, westTickets, _comment];
                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
-
-                        "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
-
+                        "extDB3" callExtension format ["1:SQL:%1", _query];
                 }] call CBA_fnc_addEventHandler;
 
 
@@ -350,9 +350,7 @@ if (isServer) then {
 
                         _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 95, 0, westTickets, _comment];
                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
-
-                        "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
-
+                        "extDB3" callExtension format ["1:SQL:%1", _query];
                 }] call CBA_fnc_addEventHandler;
 
 
@@ -365,9 +363,7 @@ if (isServer) then {
 
                         _query = format ["INSERT INTO gadget_ticketlog (`missionid`, `timestamp`, `action`, `change`, `count`, `comment`) VALUES ( '%1', UNIX_TIMESTAMP(), '%2', '%3', '%4', '%5')", _missionid, 96, 0, westTickets, _comment];
                         diag_log format["--- TF47 Ticket System DB Query: %1", _query];
-
-                        "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
-
+                        "extDB3" callExtension format ["1:SQL:%1", _query];
                 }] call CBA_fnc_addEventHandler;
 
 
@@ -384,10 +380,8 @@ if (isServer) then {
 
                                 _query = format ["INSERT INTO gadget_loginlog (`timestamp`, `playerid`, `nick`, `missionid`, `slot`) VALUES ( UNIX_TIMESTAMP(), '%1', '%2', '%3', '%4')", _playerid, _playername, _missionid, _slotname];
                                 diag_log format["--- TF47 Loginlog DB Query: %1", _query];
-
-                                "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
+                                "extDB3" callExtension format ["1:SQL:%1", _query];
                         };
-
                 }] call CBA_fnc_addEventHandler;
 
 
@@ -401,22 +395,20 @@ if (isServer) then {
 
 
 
+                //["tf47_checklist", [_player, _playerId, listID]] call CBA_fnc_globalEvent;
                 ["tf47_checklist", {
-                        //["tf47_checklist", [_player, _playerId, listID]] call CBA_fnc_globalEvent;
                         _player = _this select 0;
                         _playerId = _this select 1;
                         _listID = _this select 2;
-
                         _query = format ["SELECT `playerid` FROM gadget_playerlist WHERE `listid` = '%1' AND playerid = '%2'", _listID, _playerId];
                         diag_log format["--- TF47 CheckList DB Query: %1", _query];
-
-                        _get = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
-                        _result = true;
-                        diag_log format["--- Result: %1", _get];
-                        if((_get != format["[[[%1]]]", _playerId]) && (_get != format["[[[""%1""]]]", _playerId])) then {
-                                _result = false;
+                        _res = "extDB3" callExtension format ["0:SQL:%1", _query];
+                        _res = call compile _res;
+                        _result = false;
+                        diag_log format["--- Result: %1", _res];
+                        if((_res  select 1  select 0  select 0) isEqualTo _playerId) then {
+                                _result = true;
                         };
-
                         if(!isMultiplayer) then {
                                 _result = true;
                         };
@@ -437,12 +429,10 @@ if (isServer) then {
 
                         _query = format ["SELECT `value` FROM config WHERE `name` = '%1'", _varname];
                         diag_log format["--- TF47 CheckConfig DB Query: %1", _query];
-
-                        _get = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['gadget', '%1']", _query];
+                        _get = "extDB3" callExtension format ["0:SQL:%1", _query];
                         diag_log format["--- Result: %1", _get];
                         if(_get == "[[]]") then {
                                 _get = 0;
-
                         } else {
                                 //_get = [_get, '"', ''] call CBA_fnc_replace; // [[["1"]]] => [[[1]]]
                                 _get = call compile _get;
@@ -450,16 +440,10 @@ if (isServer) then {
                                 _get = _get select 0;           // [[1]] => [1]
                                 _get = _get select 0;           // [1] => 1
                         };
-
                         TF47CheckconfigResult = _get;
                         _owner = owner _player;
                         _owner publicVariableClient "TF47CheckconfigResult";
-
                 }] call CBA_fnc_addEventHandler;
-
-
-
-
                 //Show current Ticket Count
                 ["tf47_showTickets", {
                         private ["_side", "_msg"];
