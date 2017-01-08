@@ -15,9 +15,9 @@ for "_co" from 0 to 99 do {
 	private _radius = _pos distance2D [_px1,_py1,_pos select 2];
 	private _atan = (_centerx - _px1) atan2 (_centery - _py1);
 	private _isFlat = [_centerx - (_radius * sin (_atan + _angle)), _centery - (_radius * cos (_atan + _angle)), 0] isFlatEmpty [
-		2,	//--- Minimal distance from another object
+		5,	//--- Minimal distance from another object
 		-1,				//--- If 0, just check position. If >0, select new one // 0
-		0.7,				//--- Max gradient
+		5,				//--- Max gradient
 		4,	//--- Gradient area
 		0,				//--- 0 for restricted water, 2 for required water,
 		false,				//--- True if some water can be in 25m radius
