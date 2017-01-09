@@ -8,7 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=1240;
+		nextID=1241;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2805.1575,89.296402,6426.3457};
-		dir[]={0.92166156,-0.36914596,0.12049702};
-		up[]={0.36625955,0.92923445,0.047885392};
-		aside[]={0.12964925,3.3852994e-006,-0.99168277};
+		pos[]={2863.9263,178.42487,6500.1016};
+		dir[]={-0.46483144,-0.87265944,0.15047741};
+		up[]={-0.83025336,0.48821065,0.2687715};
+		aside[]={0.30802634,5.2477699e-006,0.95150334};
 	};
 };
 binarizationWanted=0;
@@ -84,13 +84,14 @@ addons[]=
 	"A3_Structures_F_Heli_Items_Airport",
 	"rhs_c_weapons",
 	"rhsusf_c_f22",
-	"RHS_US_A2Port_Armor"
+	"RHS_US_A2Port_Armor",
+	"A3_Structures_F_EPB_Naval_Fishing"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=50;
+		items=51;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -431,6 +432,13 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item50
+		{
+			className="A3_Structures_F_EPB";
+			name="Arma 3 Adapt Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=14540839;
@@ -467,7 +475,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=558;
+		items=559;
 		class Item0
 		{
 			dataType="Marker";
@@ -6680,20 +6688,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2894,3.0662911,6579.5};
-				angles[]={0,4.237391,0};
+				position[]={2894,3.06639,6579.5};
+				angles[]={0,4.2373977,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="veh = [this, 300, 1800, ""SHARK-01"", ""b_naval"", ""ColorBlue"", WEST, """", 20, 0, 0] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";this enableSimulationGlobal false;";
+				init="veh = [this, 300, 1800, ""SHARK-01"", ""b_naval"", ""ColorBlue"", WEST, """", 20, 0, 0] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";this enableSimulationGlobal false; nul = [this,120,30,0] execVM ""vehicleservice\vehicleServiceHabor.sqf"";";
 				name="mark51";
 			};
 			id=486;
 			type="rhsusf_mkvsoc";
-			atlOffset=3.7019005;
+			atlOffset=3.7019994;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6742,20 +6750,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2859,2.5662911,6560};
-				angles[]={0,4.2259622,0};
+				position[]={2859,2.5664883,6560};
+				angles[]={0,4.225966,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="veh = [this, 300, 3600, ""SHARK-02"", ""b_naval"", ""ColorBlue"", WEST, """", 20, 0, 0] execVM ""tf47CoreScripts\vehicleRespawn.sqf""; this enableSimulationGlobal false;";
+				init="veh = [this, 300, 3600, ""SHARK-02"", ""b_naval"", ""ColorBlue"", WEST, """", 20, 0, 0] execVM ""tf47CoreScripts\vehicleRespawn.sqf""; this enableSimulationGlobal false; nul = [this,120,30,0] execVM ""vehicleservice\vehicleServiceHabor.sqf"";";
 				name="mark52";
 			};
 			id=487;
 			type="rhsusf_mkvsoc";
-			atlOffset=3.7218027;
+			atlOffset=3.7219999;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23223,22 +23231,22 @@ class Mission
 		class Item505
 		{
 			dataType="Trigger";
-			position[]={2696.5,-11.012125,6549};
-			angle=5.3964167;
+			position[]={2668,-9.9998703,6550.5};
+			angle=5.3964171;
 			class Attributes
 			{
-				condition="(""Ship"" countType thislist  > 0) && count (thislist unitsBelowHeight 15) > 0;";
-				onActivation="{if(isPlayer _x) then {[[[thislist, thisTrigger, ""Ship""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
+				condition="""Ship"" countType thislist  > 0;";
+				onActivation="nul = [thislist,120,30,0] execVM ""vehicleservice\vehicleServiceHabor.sqf"";";
 				sizeA=30;
-				sizeB=20;
+				sizeB=30;
 				sizeC=20;
 				interuptable=1;
 				repeatable=1;
 				activationBy="WEST";
-				isRectangle=1;
 			};
 			id=1088;
 			type="EmptyDetector";
+			atlOffset=0.42300034;
 		};
 		class Item506
 		{
@@ -25697,6 +25705,7 @@ class Mission
 				};
 			};
 			id=1205;
+			atlOffset=-0.0062522888;
 		};
 		class Item545
 		{
@@ -25715,6 +25724,7 @@ class Mission
 			};
 			id=1208;
 			type="RHS_M6_wd";
+			atlOffset=-0.0062522888;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26054,6 +26064,7 @@ class Mission
 				};
 			};
 			id=1225;
+			atlOffset=-0.011569977;
 		};
 		class Item551
 		{
@@ -26072,6 +26083,7 @@ class Mission
 			};
 			id=1228;
 			type="RHS_M2A3_BUSKIII_wd";
+			atlOffset=-0.011569977;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26410,6 +26422,47 @@ class Mission
 				{
 					property="allowDamage";
 					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item558
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2671,5.0196319,6549.5};
+				angles[]={0,0,6.2826962};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="habor";
+				createAsSimpleObject=1;
+			};
+			id=1240;
+			type="Land_CrabCages_F";
+			atlOffset=15.059;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 					class Value
 					{
 						class data
