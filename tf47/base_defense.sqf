@@ -7,7 +7,7 @@ _veh = _this select 0;
 _reloadTime = _this select 1;
 
 _crewveh = crew _veh;
-_crewveh allowCrewInImmobile true;
+_veh allowCrewInImmobile true;
 
 {
 	_x allowDamage false;
