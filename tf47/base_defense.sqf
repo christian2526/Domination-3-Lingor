@@ -1,15 +1,16 @@
-//Setup Base Def
-private ["_veh","_reloadTime"];
+/*
+
+*/
+private ["_veh","_reloadTime","_crewveh"];
 
 _veh = _this select 0;
 _reloadTime = _this select 1;
 
-createVehicleCrew _veh;
-sleep 2;
 _crewveh = crew _veh;
+_crewveh allowCrewInImmobile true;
 
 {
-	_x allowCrewInImmobile true;
+	_x allowDamage false;
 	_x setBehaviour "careless";
 	_x allowFleeing 0;
 	_x disableAI "MOVE";
