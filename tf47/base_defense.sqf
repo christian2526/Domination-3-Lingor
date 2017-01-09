@@ -12,6 +12,7 @@ _crewveh = crew _veh;
 	_x allowCrewInImmobile true;
 	_x setBehaviour "careless";
 	_x allowFleeing 0;
+	_x disableAI "MOVE";
 } forEach _crewveh;
 
 while {alive _veh} do {
