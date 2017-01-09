@@ -1,4 +1,4 @@
-["rhsgref_ins_t72ba","rhsgref_ins_t72bb","rhsgref_ins_t72bc"],
+["rhs_t72bc_tv","rhs_t72ba_tv","rhs_t72bd_tv"],
 ["rhsgref_ins_bmp2k","rhsgref_ins_bmp2d","rhsgref_ins_bmp1p","rhsgref_ins_bmd1"],
 ["rhsgref_ins_btr60","rhsgref_ins_btr70"],
 ["rhsgref_ins_zsu234"],
